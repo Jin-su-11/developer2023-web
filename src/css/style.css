@@ -1,0 +1,251 @@
+/* 폰트 */
+/* Pretendard */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Medium';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-SemiBold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-Bold';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard-ExtraBold';
+    src: url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap');
+    font-weight: 800;
+    font-style: normal;
+}
+
+.weight-400 {
+    font-family: Pretendard-Regular, sans-serif;
+}
+
+.weight-500 {
+    font-family: Pretendard-Medium, sans-serif;
+}
+
+.weight-600 {
+    font-family: Pretendard-SemiBold, sans-serif;
+}
+
+.weight-700 {
+    font-family: Pretendard-Bold, sans-serif;
+}
+
+.weight-800 {
+    font-family: Pretendard-ExtraBold, sans-serif;
+}
+
+/* frant ruhl libre */
+.frank-400 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.frank-500 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.frank-600 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.frank-700 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.frank-800 {
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* body */
+
+body {
+    margin: 0;
+}
+
+/* a, p, ul, li */
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    display: block;
+}
+
+/* margin */
+.margin-0 {
+    margin: 0;
+}
+
+/* padding */
+.padding-10 {
+    padding: 10px;
+}
+
+.padding-20 {
+    padding: 20px;
+}
+
+.padding8-16 {
+    padding: 8px 16px;
+}
+
+.padding10-16 {
+    padding: 10px 16px;
+}
+
+/* width, height */
+.width-10 {
+    width: 10px;
+}
+
+.width-12 {
+    width: 12px;
+}
+
+.width-15 {
+    width: 15px;
+}
+
+.height-15 {
+    height: 15px;
+}
+
+/* gap */
+.gap-5p {
+    gap: 5px;
+}
+
+.gap-1r {
+    gap: 1rem;
+}
+
+.gap-5r {
+    gap: 5rem;
+}
+
+/* display */
+.display-flex {
+    display: flex;
+    align-items: center;
+}
+
+.display-block {
+    display: block;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* color */
+.color-black {
+    color: black;
+}
+
+.color-white {
+    color:white;
+}
+
+/* text */
+.deco-none {
+    text-decoration: none;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-32 {
+    font-size: 32px;
+}
+
+/* radius */
+.radius-8 {
+    border-radius: 8px;
+}
+
+.radius-12 {
+    border-radius: 12px;
+}
+
+.radius-22 {
+    border-radius: 22px;
+}
+
+/* custom-button */
+.custom-btn-primary {
+    background: #3375fa;
+    border: none;
+}
+
+.custom-btn-primary:hover {
+    background: #2e6ce0;
+}
+
+/* hover */
+.hover-pointer {
+    cursor: pointer;
+}
+
+.hover-color-black90:hover {
+    color: rgb(35, 35, 35);
+}
+
+.hover-color-black10:hover {
+    color: #f1f1f1;
+}
+
+.hover-color-blue60:hover {
+    color: #3375fa;
+}
+
+.hover-weight-600:hover {
+    font-family: Pretendard-SemiBold, sans-serif;
+}
+
+.hover-weight-700:hover {
+    font-family: Pretendard-Bold, sans-serif;
+}
