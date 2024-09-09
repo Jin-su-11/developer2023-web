@@ -5,6 +5,7 @@ function App() {
   return (
     <div>
       <Header />
+        <p>안녕</p>
     </div>
   );
 }
