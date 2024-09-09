@@ -8,7 +8,7 @@ const Header = () => {
           <nav>
               <ul className="display-flex justify-between margin-0">
                   <li>
-                      <a className="color-white frank-800" href="/">DEVELOPER</a>
+                      <a className="color-white frank-800 font-size-18" href="/">DEVELOPER</a>
                   </li>
 
                   <div className="display-flex gap-1r">
