@@ -19,30 +19,20 @@ const Project = () => {
 
     const settings = {
         dots: true,
-        infinite: false,
-        speed: 500,
+        infinite: true,
+        speed: 2000,
+        autoplay: true,
+        autoplaySpeed: 3000,
         slidesToShow: 3,
         slidesToScroll: 1,
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }
-        ]
+        className: "center",
+        // centerMode: true,
+        // centerPadding: "60px",
+        arrows: false,
     };
 
     return (
-        <div className="text-align-center padding85-200">
+        <div className="text-align-center padding85-0">
             <div className="display-flex flex-direction-column gap-05r margin-bottom-60">
                 <h2 className="font-size-36 weight-700">달려온 결과</h2>
                 <p className="font-size-20 weight-400">저희가 만든 프로젝트, 궁금하신가요?</p>
@@ -54,7 +44,7 @@ const Project = () => {
                     </div>
                 )) }
             </Slider>
-            <p className="color-gray margin-top-30 text-align-end" style={{marginRight: "25px"}}>더 보러가기 ></p>
+            <p className="color-gray margin-top-30 text-align-end hover-pointer hover-underline" style={{marginRight: "25px"}}>더 보러가기 ></p>
         </div>
     );
 }
