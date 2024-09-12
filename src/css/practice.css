@@ -1,0 +1,32 @@
+.page2 {
+    height: 100vh;
+    background-color: #d0e0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    width: 100%; /* 부모 요소의 100% 너비를 차지 */
+}
+
+.text {
+    flex: 1;
+    max-width: 600px; /* 텍스트의 최대 너비 제한 */
+}
+
+.image {
+    width: 400px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.section.row-reverse {
+    flex-direction: row-reverse; /* 좌우 반전 */
+}
