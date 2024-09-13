@@ -35,7 +35,7 @@ const Project = () => {
         <div className="text-align-center padding85-0">
             <div className="display-flex flex-direction-column gap-05r margin-bottom-60">
                 <h2 className="font-size-36 weight-700">달려온 결과</h2>
-                <p className="font-size-20 weight-400">저희가 만든 프로젝트, 궁금하신가요?</p>
+                <p className="font-size-20 weight-400">저희가 함께 이루어낸 것들이 궁금하신가요?</p>
             </div>
             <Slider {...settings}>
                 { projects.map((project, index) => (
