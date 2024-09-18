@@ -26,8 +26,8 @@ function Page2() {
             </div>
 
             {/* 두 번째 섹션: 이미지와 텍스트를 좌우 반전하여 배치 */}
-            <div className="section" style={{marginRight: "30px", flexDirection: "row-reverse"}}>
-            <img src={img2} alt="발표 이미지" className="image" />
+            <div className="section reverse" style={{marginRight: "30px"}}>
+                <img src={img2} alt="발표 이미지" className="image" />
                 <div className="text" style={{marginLeft: "20px"}}>
                     <p>팀원들과 함께 원하는 개발 프로젝트를 진행하고,</p>
                     <p>발표를 통해 다른 팀들과 피드백을 하며 성장하세요.</p>
