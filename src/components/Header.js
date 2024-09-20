@@ -1,6 +1,7 @@
 import React from "react";
 import '../css/style.css'
 import vectorRight from '../images/icon/vector_right_white.png'
+import { Link } from "react-scroll";
 
 const Header = ({style}) => {
     return (
@@ -13,7 +14,14 @@ const Header = ({style}) => {
 
                   <div className="display-flex gap-1r">
                       <li>
-                          <a className="color-white weight-400 hover-color-blue60" href="/">About</a>
+                          <Link
+                              to="About"
+                              smooth={true}
+                              duration={500}
+                              className="color-white weight-400 hover-color-blue60"
+                          >
+                              About
+                          </Link>
                       </li>
                       <li>
                           <a className="color-white weight-400 hover-color-blue60" href="/member">Member</a>
