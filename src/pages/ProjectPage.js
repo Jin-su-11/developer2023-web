@@ -1,10 +1,11 @@
 import React from "react";
+import MainContainer from "../components/MainContainer";
 
 const ProjectPage = () => {
     return (
-        <div>
-            <h1>Project Page</h1>
-        </div>
+        <MainContainer>
+            <h1>Project Page Project Page Project Page Project Page Project Page Project Page Project Page Project Page Project Page</h1>
+        </MainContainer>
     );
 };
 
