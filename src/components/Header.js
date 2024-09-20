@@ -2,9 +2,9 @@ import React from "react";
 import '../css/style.css'
 import vectorRight from '../images/icon/vector_right_white.png'
 
-const Header = () => {
+const Header = ({style}) => {
     return (
-      <header className="padding-20" style={{background: "rgb(0 0 0 / 8%)"}}>
+      <header className="padding-20" style={{...style}}>
           <nav>
               <ul className="display-flex justify-between margin-0">
                   <li>
@@ -16,10 +16,10 @@ const Header = () => {
                           <a className="color-white weight-400 hover-color-blue60" href="/">About</a>
                       </li>
                       <li>
-                          <a className="color-white weight-400 hover-color-blue60" href="/">Member</a>
+                          <a className="color-white weight-400 hover-color-blue60" href="/member">Member</a>
                       </li>
                       <li>
-                          <a className="color-white weight-400 hover-color-blue60" href="/">Project</a>
+                          <a className="color-white weight-400 hover-color-blue60" href="/project">Project</a>
                       </li>
                       <li>
                           <a className="color-white weight-400 hover-color-blue60" href="/">Contact</a>
@@ -33,6 +33,11 @@ const Header = () => {
           </nav>
       </header>
     );
+}
+
+// 기본 프롭스 설정
+Header.defaultProps = {
+    style: {background: "rgb(0 0 0 / 8%)"}
 }
 
 export default Header;
