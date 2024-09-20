@@ -4,7 +4,7 @@ import '../css/practice.css';
 import img from '../images/practice/img.png';
 import img2 from '../images/practice/img2.png';
 
-function Page2() {
+function About() {
     return (
         <div className="page2">
             {/* 제목 */}
@@ -39,4 +39,4 @@ function Page2() {
     );
 }
 
-export default Page2;
+export default About;
