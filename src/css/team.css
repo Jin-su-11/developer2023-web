@@ -1,0 +1,115 @@
+
+
+/* SEASON title style */
+.season-title-container {
+    margin-bottom: 40px;
+}
+
+.season-title {
+    color: blue;
+    font-weight: bold;
+}
+
+/* SEASON container settings */
+.season-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+}
+
+
+.season {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 자식 요소들을 왼쪽으로 정렬 */
+}
+
+
+/* SEASON1의 스타일 */
+.season {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+/* SEASON2의 스타일 */
+.season:nth-of-type(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* 왼쪽 정렬 */
+}
+
+
+/* SEASON2에서 카드 3개 배치 시 스타일 */
+.season:nth-of-type(2) .team-card-row:nth-of-type(2) .team-card {
+    flex: 1 1 calc(33.33% - 1rem); /* 카드 너비 조정 */
+}
+
+/* team-section의 중앙 정렬 */
+.team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* 중앙에 위치하는 일반 팀 카드들 */
+.team-card-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Study Team이 있는 행만 따로 왼쪽 정렬 */
+.team-card-row.study-team-row {
+    justify-content: flex-start; /* Study Team이 왼쪽에 위치하게 함 */
+    width: 100%; /* 부모 요소의 너비를 가득 채움 */
+    padding-left: 23rem; /* Study Team을 왼쪽에 약간 띄워서 배치 */
+}
+
+/* team-card 스타일 */
+.team-card {
+    background-color: #f0f4ff !important;;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    min-width: 150px;
+}
+
+/* Study Team을 왼쪽에 정렬 */
+.study-team {
+    align-self: flex-start;
+    margin-top: 2rem; /* Study Team을 더 밑으로 내리기 위한 간격 추가 */
+}
+
+
+/* 팀 이름에만 굵기 적용 */
+.team-name {
+    font-weight: 700; /* 글자를 굵게 */
+}
+
+/* 팀원 숫자에는 기본 굵기 유지 */
+.team-members {
+    font-weight: normal; /* 기본 폰트 굵기 유지 */
+}
+
+
+.total-members-section {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.total-members-section h2 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.total-members-section a {
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1rem;
+    text-decoration: underline;
+    color: #000;
+}
