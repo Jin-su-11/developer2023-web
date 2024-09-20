@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import MainBanner from "../components/MainBanner";
 import MainContainer from "../components/MainContainer";
 import Project from "../components/Project";
+import About from "../components/About";
 
 const MainPage = () => {
     return (
@@ -10,6 +11,7 @@ const MainPage = () => {
             <Header />
             <MainBanner />
             <MainContainer>
+                <About />
                 <Project />
             </MainContainer>
         </div>

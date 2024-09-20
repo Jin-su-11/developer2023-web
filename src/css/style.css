@@ -97,11 +97,27 @@ body {
     margin: 0;
 }
 
+/* 공통 - 화면 너비 고정 */
+/* 화면 가로길이 1360PX 이상 - 화면 가로 길이가 1360px 이상이 되면 요소는 변하지않고 마진만 추가 */
+@media (min-width: 1360px) {
+    body {
+        min-height: 100vh;
+    }
+}
+
+/* 화면 가로길이 1360PX 이하 - 최소 가로, 세로길이 지정 */
+@media (max-width: 1360px) {
+    body {
+        min-height: calc(100vh + 400px);
+        min-width: 1360px;
+    }
+}
+
 /* main container */
 .main-container {
-    max-width: 1380px;
+    max-width: 1360px;
     margin: 0 auto;
-    padding: 0 200px;
+    padding: 0 165px;
     box-sizing: border-box;
 }
 
@@ -165,6 +181,10 @@ li {
 }
 
 /* padding */
+.padding-0 {
+    padding: 0;
+}
+
 .padding-5 {
     padding: 5px;
 }
@@ -251,6 +271,10 @@ li {
     gap: 1rem;
 }
 
+.gap1d5r {
+    gap:1.5rem;
+}
+
 .gap-3r {
     gap: 3rem;
 }
@@ -278,6 +302,10 @@ li {
     flex-direction: column;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .justify-between {
     justify-content: space-between;
 }
@@ -289,6 +317,10 @@ li {
 /* position */
 .position-absolute {
     position: absolute;
+}
+
+.position-relative {
+    position: relative;
 }
 
 .z-index--100 {
@@ -411,6 +443,10 @@ li {
 }
 
 /* overflow */
+.overflow-hidden {
+    overflow: hidden;
+}
+
 .overflow-x-auto-white-nowrap {
     overflow-x: auto;
     white-space: nowrap;

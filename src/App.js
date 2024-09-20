@@ -1,18 +1,39 @@
 import React from "react";
-import Header from "./components/Header"
-import MainBanner from "./components/MainBanner";
-import Project from "./components/Project";
-import MainContainer from "./components/MainContainer";
+import MainPage from "./pages/MainPage";
+import {BrowserRouter as Router, useRoutes} from "react-router-dom";
+import MainHeaderLayout from "./layout/MainHeaderLayout";
+import ProjectPage from "./pages/ProjectPage";
+import MemberPage from "./pages/MemberPage";
+import NotFound from "./components/NotFound";
+
+const AppRoutes = () => {
+    const routes = [
+        { path: '/', element: <MainPage /> },
+        {
+            path: '/member',
+            element: <MainHeaderLayout />,
+            children: [
+                {path: '', element: <MemberPage />}
+            ]
+        },
+        {
+            path: '/project',
+            element: <MainHeaderLayout />,
+            children: [
+                { path: '', element: <ProjectPage />}
+            ]
+        },
+        { path: '*', element: <NotFound />}
+    ];
+
+    return useRoutes(routes);
+};
 
 function App() {
   return (
-    <div>
-      <Header />
-      <MainBanner />
-        <MainContainer>
-            <Project />
-        </MainContainer>
-    </div>
+    <Router>
+      <AppRoutes />
+    </Router>
   );
 }
 
