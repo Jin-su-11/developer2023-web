@@ -27,12 +27,12 @@
     "imageUrl": "/images/projectThumb/ex.png"
   },
   {
-    "title": "쇼핑몰",
-    "team": "WEB TEAM",
-    "members": "박찬엽 외 4명",
+    "title": "예시타이틀",
+    "team": "팀명",
+    "members": "팀원이름 외 4명",
     "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
-    "like": 12,
-    "view": 311,
+    "like": 15,
+    "view": 3,
     "imageUrl": "/images/projectThumb/ex.png"
   }
 ]
