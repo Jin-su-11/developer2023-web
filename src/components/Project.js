@@ -53,12 +53,14 @@ const Project = () => {
 
     return (
         <div className="text-align-center padding85-0">
+            <div className="width100 position-absolute z-index--100"
+                 style={{background: "rgb(241 241 241)", height: "830px", top: "1920px", left: 0}}></div>
             <div className="display-flex flex-direction-column gap-05r margin-bottom-60">
                 <h2 className="font-size-36 weight-700">달려온 결과</h2>
                 <p className="font-size-20 weight-400">저희가 만든 프로젝트, 궁금하신가요?</p>
             </div>
 
-            <div className="overflow-hidden position-relative" style={{ width: "1030px"}}>
+            <div className="overflow-hidden position-relative" style={{width: "1030px"}}>
                 <div
                     ref={slideRef}
                     className="display-flex"
@@ -67,6 +69,7 @@ const Project = () => {
                         transition: "transform 0.8s ease-in-out",
                         width: `${(totalSlides + 2) * (slideWidth + gap * 16)}px`,
                         gap: `${gap}rem`,
+                        height: "480px"
                     }}
                 >
                     <div
@@ -77,12 +80,12 @@ const Project = () => {
                             opacity: "0.5",
                         }}
                     >
-                        <ProjectCardBox project={projects[totalSlides - 1]} />
+                        <ProjectCardBox project={projects[totalSlides - 1]}/>
                     </div>
 
                     {projects.map((project, index) => {
                         // 중앙 슬라이드를 크게 보이도록 설정
-                        const scale = index === currentSlide ? 1 : 0.8;
+                        const scale = index === currentSlide ? 1.1 : 0.8;
                         const opacity = index === currentSlide ? 1 : 0.5;
 
                         return (
@@ -96,7 +99,7 @@ const Project = () => {
                                     opacity: `${opacity}`,
                                 }}
                             >
-                                <ProjectCardBox project={project} />
+                                <ProjectCardBox project={project}/>
                             </div>
                         );
                     })}
@@ -109,7 +112,7 @@ const Project = () => {
                             opacity: "0.5",
                         }}
                     >
-                        <ProjectCardBox project={projects[0]} />
+                        <ProjectCardBox project={projects[0]}/>
                     </div>
                 </div>
             </div>
