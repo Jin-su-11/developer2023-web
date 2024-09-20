@@ -48,7 +48,7 @@
 }
 
 /* 미디어 쿼리 추가: 화면이 768px 이하일 때 이미지가 위로, 텍스트가 아래로 이동 */
-@media (max-width: 768px) {
+@media (max-width: 1360px) {
     .section {
         flex-direction: column; /* 모든 섹션에 대해 세로로 배치 */
         text-align: center; /* 텍스트를 가운데 정렬 (선택 사항) */
