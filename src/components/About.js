@@ -6,7 +6,7 @@ import img2 from '../images/practice/img2.png';
 
 function About() {
     return (
-        <div className="page2">
+        <div className="About">
             {/* 제목 */}
             <header className="header">
                 <h1>끊임없이 만들어지는 우리의 이야기</h1>
