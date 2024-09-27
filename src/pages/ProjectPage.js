@@ -1,5 +1,5 @@
 /**
- * About 컴포넌트
+ * ProjectPage 컴포넌트
  * @author 김진수
  * @since 2024.09.22
  * @lastmodified 2024.09.20
@@ -10,6 +10,7 @@ import ProjectCardBox from "../components/ProjectCardBox";
 import projectData from "../data/project.json"; // project.json 파일에서 데이터 가져오기
 import '../css/style.css';  // CSS 파일을 불러옴
 import '../css/practice.css'; // 프로젝트 전용 CSS
+import '../css/team.css';
 
 const ProjectPage = () => {
     const [projects, setProjects] = useState([]); // 모든 프로젝트 데이터를 저장
@@ -38,7 +39,7 @@ const ProjectPage = () => {
         setFilteredProjects(filtered);
     }, [selectedTeam, selectedCategory, projects]);
 
-    return (
+    return(
         <div className="project-page">
             {/* 페이지 제목 */}
             <h1 className="title">PROJECT</h1>
@@ -70,8 +71,8 @@ const ProjectPage = () => {
             {/* 프로젝트 카드 목록 */}
             <div className="project-list">
                 {filteredProjects.map((project, index) => (
-                    <ProjectCardBox key={index} project={project} />
-                ))}
+                    <ProjectCardBox key={index} project={project} type="ProjectPage"/>
+                    ))}
             </div>
         </div>
     );
