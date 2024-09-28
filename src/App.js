@@ -5,6 +5,9 @@ import MainHeaderLayout from "./layout/MainHeaderLayout";
 import ProjectPage from "./pages/ProjectPage";
 import MemberPage from "./pages/MemberPage";
 import NotFound from "./components/NotFound";
+import ProjectDetailPage from "./pages/ProjectDetailPage";
+import { ScrollToTop } from "./components/CommonUtil";
+import Footer from "./components/Footer";
 
 const AppRoutes = () => {
     const routes = [
@@ -20,7 +23,8 @@ const AppRoutes = () => {
             path: '/project',
             element: <MainHeaderLayout />,
             children: [
-                { path: '', element: <ProjectPage />}
+                { path: '', element: <ProjectPage />},
+                { path: 'detail/:projectId', element: <ProjectDetailPage /> }
             ]
         },
         { path: '*', element: <NotFound />}
@@ -32,7 +36,9 @@ const AppRoutes = () => {
 function App() {
   return (
     <Router>
-      <AppRoutes />
+        <ScrollToTop />
+        <AppRoutes />
+        <Footer />
     </Router>
   );
 }

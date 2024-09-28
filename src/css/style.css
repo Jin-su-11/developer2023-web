@@ -100,14 +100,14 @@ body {
 /* 공통 - 화면 너비 고정 */
 /* 화면 가로길이 1360PX 이상 - 화면 가로 길이가 1360px 이상이 되면 요소는 변하지않고 마진만 추가 */
 @media (min-width: 1360px) {
-    body {
+    body, #root {
         min-height: 100vh;
     }
 }
 
 /* 화면 가로길이 1360PX 이하 - 최소 가로, 세로길이 지정 */
 @media (max-width: 1360px) {
-    body {
+    body, #root {
         min-height: calc(100vh + 400px);
         min-width: 1360px;
     }
@@ -127,6 +127,7 @@ a {
 }
 
 p {
+    font-family: Pretendard-Regular, sans-serif;
     margin: 0;
 }
 
@@ -171,9 +172,16 @@ li {
     margin-bottom: 30px;
 }
 
+.margin-bottom-50 {
+    margin-bottom: 50px;
+}
 
 .margin-bottom-60 {
     margin-bottom: 60px;
+}
+
+.margin-bottom-70 {
+    margin-bottom: 70px;
 }
 
 .margin-right-10 {
@@ -199,6 +207,14 @@ li {
 
 .padding-20 {
     padding: 20px;
+}
+
+.padding-40 {
+    padding: 40px;
+}
+
+.padding-70 {
+    padding: 70px;
 }
 
 .padding8-16 {
@@ -233,6 +249,10 @@ li {
     padding: 85px 0;
 }
 
+.padding100-0 {
+    padding: 100px 0;
+}
+
 /* width, height */
 .width-10 {
     width: 10px;
@@ -263,7 +283,15 @@ li {
     gap: 10px;
 }
 
+.gap-02r {
+    gap: 0.2rem;
+}
+
 .gap-05r {
+    gap: 0.5rem;
+}
+
+.gap-07r {
     gap: 0.5rem;
 }
 
@@ -271,8 +299,16 @@ li {
     gap: 1rem;
 }
 
-.gap1d5r {
+.gap-1d5r {
     gap:1.5rem;
+}
+
+.gap-2r {
+    gap: 2rem;
+}
+
+.gap-2d5r {
+    gap: 2.5rem;
 }
 
 .gap-3r {
@@ -294,12 +330,25 @@ li {
     align-items: flex-end;
 }
 
+.display-flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
 .display-block {
     display: block;
 }
 
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
 .flex-direction-column {
     flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
 }
 
 .justify-center {
@@ -334,6 +383,10 @@ li {
 
 .color-white {
     color: #f4f4f4;
+}
+
+.color-blue {
+    color: #3375fa;
 }
 
 .color-gray {
@@ -371,6 +424,10 @@ li {
 
 .font-size-20 {
     font-size: 20px;
+}
+
+.font-size-24 {
+    font-size: 24px;
 }
 
 .font-size-32 {
@@ -411,6 +468,14 @@ li {
 
 .custom-btn-primary:hover {
     background: #2e6ce0;
+}
+
+.custom-btn-outline-black {
+    border: 1px solid black;
+}
+
+.custom-btn-outline-black:hover {
+    background: #f6f6f6;
 }
 
 /* hover */
