@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
     return (
         <footer>
-            <div className="display-flex-column gap-1r justify-center padding-70 width100"
+            <div className="display-flex-column gap-1r justify-center padding-70"
                  style={{background: "rgb(34 47 63)"}}>
                 <li>
                     <p className="color-white frank-800 font-size-24 text-align-center">DEVELOPER</p>
