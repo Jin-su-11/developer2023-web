@@ -14,11 +14,13 @@ const MainPage = () => {
             <MainBanner />
             <MainContainer>
                 <About />
-                <Project />
                 <Team />
+                <Project />
             </MainContainer>
+            <Footer />
         </div>
     );
 };
+
 
 export default MainPage;
