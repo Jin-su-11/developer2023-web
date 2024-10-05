@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from "react";
+import React, { useEffect, useState, useRef } from "react";
 import ProjectCardBox from "./ProjectCardBox";
 import projectsData from '../data/project.json';
 
@@ -8,13 +8,14 @@ import projectsData from '../data/project.json';
  * @since 2024.09.09
  * @lastmodified 2024.09.20
  */
+
 const Project = () => {
-    const projects = [...projectsData];
+    const projects = [...projectsData.season1]; // 시즌 데이터를 가져옵니다.
     const [currentSlide, setCurrentSlide] = useState(0);
     const totalSlides = projects.length;
-    const visibleSlides = 3;
-    const slideWidth = 1030 / visibleSlides;  // 개별 슬라이드 너비
-    const gap = 1.4;
+    const visibleSlides = 3; // 한 번에 보이는 슬라이드 개수
+    const slideWidth = 300; // 슬라이드 너비 고정
+    const gap = 20; // 슬라이드 사이 간격
 
     const slideRef = useRef(null);
     const isTransitioning = useRef(false);
@@ -29,63 +30,55 @@ const Project = () => {
             }
         }, 5000);
 
-        // 컴포넌트 언마운트 시 인터벌 정리
         return () => clearInterval(interval);
     }, []);
 
-    /**
-     * 다음 슬라이드로 넘어가는 함수
-     */
     const goToNextSlide = () => {
         isTransitioning.current = true;
         setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
     };
 
-    /**
-     * 슬라이드 전환 시 transitioning 상태를 false로 변경
-     */
     useEffect(() => {
         isTransitioning.current = false;
     }, [currentSlide]);
 
-    // 슬라이드가 움직이는 거리
-    const translateValue = (currentSlide % totalSlides) * (slideWidth + gap * 16);
+    // 중앙 배치를 위한 슬라이드 이동 거리 계산 (중앙에 강조된 슬라이드가 위치하도록 조정)
+    const translateValue = (currentSlide - Math.floor(visibleSlides / 2)) * (slideWidth + gap);
 
     return (
-        <div className="text-align-center padding85-0">
+        <div className="project-section text-align-center padding85-0">
+            {/* 배경 색상 조정 */}
             <div className="width100 position-absolute z-index--100"
-                 style={{background: "rgb(241 241 241)", height: "830px", top: "1920px", left: 0}}></div>
+                 style={{ background: "rgb(241 241 241)", height: "830px", top: "1920px", left: 0 }}>
+            </div>
+
+            {/* 제목과 설명 */}
             <div className="display-flex flex-direction-column gap-05r margin-bottom-60">
                 <h2 className="font-size-36 weight-700">달려온 결과</h2>
                 <p className="font-size-20 weight-400">저희가 만든 프로젝트, 궁금하신가요?</p>
             </div>
 
-            <div className="overflow-hidden position-relative" style={{width: "1030px"}}>
+            {/* 슬라이더 */}
+            <div className="overflow-hidden position-relative project-slider-container" style={{ width: `${visibleSlides * (slideWidth + gap)}px`, margin: '0 auto' }}>
                 <div
                     ref={slideRef}
-                    className="display-flex"
+                    className="display-flex project-slider"
                     style={{
                         transform: `translateX(-${translateValue}px)`,
                         transition: "transform 0.8s ease-in-out",
-                        width: `${(totalSlides + 2) * (slideWidth + gap * 16)}px`,
-                        gap: `${gap}rem`,
+                        width: `${(totalSlides + 2) * (slideWidth + gap)}px`,
+                        gap: `${gap}px`,
                         height: "480px"
-                    }}
-                >
-                    <div
-                        style={{
-                            flexShrink: 0,
-                            width: `${slideWidth}px`,
-                            transform: `scale(0.8)`,
-                            opacity: "0.5",
-                        }}
-                    >
-                        <ProjectCardBox project={projects[totalSlides - 1]}/>
+                    }}>
+
+                    {/* 첫 번째 슬라이드 - 마지막 카드 복제 */}
+                    <div style={{ flexShrink: 0, width: `${slideWidth}px`, transform: "scale(0.8)", opacity: "0.5" }}>
+                        <ProjectCardBox project={projects[totalSlides - 1]} />
                     </div>
 
+                    {/* 실제 슬라이드들 */}
                     {projects.map((project, index) => {
-                        // 중앙 슬라이드를 크게 보이도록 설정
-                        const scale = index === currentSlide ? 1.1 : 0.8;
+                        const scale = index === currentSlide ? 1 : 0.8; // 중앙 슬라이드를 크게 보이도록
                         const opacity = index === currentSlide ? 1 : 0.5;
 
                         return (
@@ -96,42 +89,30 @@ const Project = () => {
                                     width: `${slideWidth}px`,
                                     transition: "transform 0.8s ease-in-out",
                                     transform: `scale(${scale})`,
-                                    opacity: `${opacity}`,
-                                }}
-                            >
-                                <ProjectCardBox project={project}/>
+                                    opacity: `${opacity}`
+                                }}>
+                                <ProjectCardBox project={project} />
                             </div>
                         );
                     })}
 
-                    <div
-                        style={{
-                            flexShrink: 0,
-                            width: `${slideWidth}px`,
-                            transform: `scale(0.8)`,
-                            opacity: "0.5",
-                        }}
-                    >
-                        <ProjectCardBox project={projects[0]}/>
+                    {/* 마지막 슬라이드 - 첫 번째 카드 복제 */}
+                    <div style={{ flexShrink: 0, width: `${slideWidth}px`, transform: "scale(0.8)", opacity: "0.5" }}>
+                        <ProjectCardBox project={projects[0]} />
                     </div>
                 </div>
             </div>
 
-            <ul
-                className="display-flex justify-center position-relative gap-10p margin-0 padding-0"
-                style={{
-                    bottom: "-20px",
-                    left: "50%",
-                    transform: "translateX(-50%)",
-                    listStyleType: "none"
-                }}
-            >
+            {/* 슬라이드 이동 버튼 */}
+            <ul className="display-flex justify-center position-relative gap-10p margin-0 padding-0"
+                style={{ listStyleType: "none", marginTop: "20px" }}>
                 {projects.map((_, index) => (
-                    <li key={index}
+                    <li
+                        key={index}
                         className="hover-pointer"
                         style={{
-                            width: "5px",
-                            height: "5px",
+                            width: "10px",
+                            height: "10px",
                             borderRadius: "50%",
                             backgroundColor: currentSlide === index ? "black" : "gray"
                         }}
@@ -140,10 +121,9 @@ const Project = () => {
                 ))}
             </ul>
 
-            <div className="margin-top-30 display-flex"
-                 style={{marginRight: "25px", flexDirection: "row-reverse"}}>
-                <p className="color-gray hover-pointer hover-underline"
-                   onClick={() => window.location.href = "/project"}>
+            {/* 더 보기 버튼 */}
+            <div className="margin-top-30 display-flex" style={{ marginTop: "30px", justifyContent: "center" }}>
+                <p className="color-gray hover-pointer hover-underline" onClick={() => window.location.href = "/project"}>
                     더 보러가기 &gt;
                 </p>
             </div>
