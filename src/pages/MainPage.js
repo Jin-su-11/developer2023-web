@@ -5,7 +5,7 @@ import MainContainer from "../components/MainContainer";
 import Project from "../components/Project";
 import About from "../components/About";
 import Team from "../components/Team";
-import Footer from "../components/Footer";
+import StackUpPage from "../components/StackUpPage";
 
 const MainPage = () => {
     return (
@@ -16,8 +16,9 @@ const MainPage = () => {
                 <About />
                 <Team />
                 <Project />
+                <StackUpPage/>
             </MainContainer>
-            <Footer />
+
         </div>
     );
 };

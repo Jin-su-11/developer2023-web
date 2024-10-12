@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import memberData from '../data/member.json'; // JSON 데이터 가져오기
 import '../css/style.css';
 import '../css/practice.css';
-import '../css/Team.css';
+import '../css/team.css';
 
 const MemberPage = () => {
     const [season, setSeason] = useState('season2'); // 기본 시즌은 'season2'
@@ -50,14 +50,16 @@ const MemberPage = () => {
             </div>
 
             {/* 팀 카드 섹션 */}
-            <div className="team-section">
+            <div className="team-section3">
                 {teams.map((team, index) => (
-                    <div key={index} className={`team-card ${season === 'season1' ? 'blue-background' : ''}`}>
-                        <span className="team-name">{team.teamName}</span><br/>
+                    <div key={index} className="team-card">
+                        <span className="team-name">{team.teamName}</span><br />
                         <span className="team-members">{team.members.length}명</span>
                     </div>
                 ))}
             </div>
+
+
 
             {/* 누적 활동 인원 */}
             <div className="total-members-section text-align-center margin-top-40">

@@ -5,19 +5,30 @@ import '../css/practice.css';
 import '../css/memberpage.css'; // 필요에 따라 CSS 파일 추가
 import { FaGithub, FaLink } from 'react-icons/fa'; // react-icons에서 GitHub와 링크 아이콘 임포트
 
+/**
+ * ContactWidget
+ * @since 2024.9.12
+ * @author 임석진
+ */
+
+
 const MemberPage = () => {
-    const [season, setSeason] = useState('all'); // 기본 시즌은 'all'
+    const [season, setSeason] = useState('all   '); // 기본 시즌은 'all'
     const [teams, setTeams] = useState([]);
+    const [selectedSeason, setSelectedSeason] = useState('SEASON ▾'); // 드롭다운 버튼의 초기 텍스트
 
     useEffect(() => {
         // 시즌에 따라 팀 데이터 설정
         if (season === 'season1') {
             setTeams(memberData['season1']);
+            setSelectedSeason('SEASON 1'); // 선택된 시즌 텍스트 설정
         } else if (season === 'season2') {
             setTeams(memberData['season2']);
+            setSelectedSeason('SEASON 2'); // 선택된 시즌 텍스트 설정
         } else {
             // all일 때는 season2를 먼저, season1을 나중에 합쳐서 설정
             setTeams([...memberData['season2'], ...memberData['season1']]);
+            setSelectedSeason('SEASON'); // 선택된 시즌 텍스트 설정
         }
     }, [season]);
 
@@ -43,7 +54,9 @@ const MemberPage = () => {
                     ALL
                 </button>
                 <div className="dropdown">
-                    <button className="dropbtn">SEASON ▾</button>
+                    <button className={`dropbtn ${season === 'season1' ? 'active' : season === 'season2' ? 'active' : ''}`}>
+                        {selectedSeason}
+                    </button>
                     <div className="dropdown-content">
                         <button
                             className={season === 'season1' ? 'selected' : ''}

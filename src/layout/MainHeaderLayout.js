@@ -2,6 +2,7 @@ import React from 'react';
 import Header from "../components/Header";
 import {Outlet} from "react-router";
 
+
 const MainHeaderLayout = () => {
     return (
         <div>
@@ -9,6 +10,9 @@ const MainHeaderLayout = () => {
             <main>
                 <Outlet />
             </main>
+
+
+
         </div>
     )
 }

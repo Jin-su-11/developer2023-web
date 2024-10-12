@@ -27,7 +27,7 @@
     cursor: pointer;
     font-weight: bold;
     color: black;
-    border-radius: 15px; /* 둥근 모서리 */
+    border-radius: 16px; /* 둥근 모서리 */
     width: 130px;
     height: 50px;
     margin-right: 40px;
@@ -38,7 +38,7 @@
     color: white;
     width: 130px;
     height: 50px;
-    border-radius: 15px; /* 둥근 모서리 */
+    border-radius: 16px; /* 둥근 모서리 */
 }
 
 .dropdown {
@@ -47,7 +47,7 @@
 }
 
 .dropbtn {
-    border-radius: 15px; /* 둥근 모서리 */
+    border-radius: 16px; /* 둥근 모서리 */
     background-color: #f0f0f0;
     border: none;
     padding: 10px 20px;
@@ -56,12 +56,12 @@
     width: 130px;
     height: 50px;
 }
-
-/* 선택된 드롭다운 버튼에 적용할 스타일 */
-.dropdown-content button.selected {
-    background-color: #e0c3fc; /* 연보라색 배경 */
-    color: white;
+.dropbtn.active {
+    background-color: #6200ea; /* 파란색 배경 */
+    color: white; /* 글자색 흰색 */
 }
+
+
 
 /* 드롭다운 컨텐츠 */
 .dropdown-content {
@@ -110,11 +110,7 @@
     background: none;
 }
 
-/* 마우스 오버 시 파란색 강조 */
-.dropdown-content button:hover, .dropdown-content button.selected {
-    background-color: #007bff;
-    color: white;
-}
+
 
 /* 팀 섹션2 */
 .team-section2 {
@@ -128,7 +124,7 @@
 /* 팀 박스 동적 높이 설정 */
 .team-box {
     padding: 90px 250px; /* 상하좌우 패딩 설정 */
-    border-radius: 10px;
+    border-radius: 16px;
     min-height: 400px; /* 최소 높이 설정 */
     max-width: 1320px;
     margin-bottom: 40px;
@@ -159,7 +155,7 @@
     background-color: white; /* 배경을 흰색으로 변경 */
     border: 1px solid black; /* 검정 테두리 추가 */
     padding: 5px 10px;
-    border-radius: 15px; /* 둥근 모서리 */
+    border-radius: 16px; /* 둥근 모서리 */
     width: 60px;
     text-align: center;
 }
@@ -175,7 +171,7 @@
 .team-member-card {
     background-color: #fefefe;
     padding: 15px;
-    border-radius: 8px;
+    border-radius: 15px;
     width: 240px; /* 고정 너비 */
     height: 280px; /* 고정 높이 */
     box-sizing: border-box;
@@ -221,7 +217,7 @@
     border: 1px solid #007bff;
     color: #007bff;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 10px;
     font-size: 12px;
 }
 
