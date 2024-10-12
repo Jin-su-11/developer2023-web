@@ -2,10 +2,16 @@ import React from "react";
 import '../css/style.css'
 import vectorRight from '../images/icon/vector_right_white.png'
 import { Link } from "react-scroll";
-import {useLocation} from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Header = ({ style = {background: "rgb(0 0 0 / 8%)"} }) => {
     const location = useLocation();
+    const navigate = useNavigate();
+
+    // 가입 페이지로 이동
+    const handleJoinClick = () => {
+        navigate('/join');
+    };
 
     return (
         <header className="padding-20" style={{...style}}>
@@ -28,18 +34,21 @@ const Header = ({ style = {background: "rgb(0 0 0 / 8%)"} }) => {
                         </li>
                         <li>
                             <a className={`hover-color-blue60 
-                          ${location.pathname.startsWith('/member') ? 'color-blue weight-500' : 'color-white weight-400'}`}
+                                ${location.pathname.startsWith('/member') ? 'color-blue weight-500' : 'color-white weight-400'}`}
                                href="/member">Member</a>
                         </li>
                         <li>
                             <a className={`hover-color-blue60 
-                          ${location.pathname.startsWith('/project') ? 'color-blue weight-500' : 'color-white weight-400'}`}
+                                ${location.pathname.startsWith('/project') ? 'color-blue weight-500' : 'color-white weight-400'}`}
                                href="/project">Project</a>
                         </li>
                         <li>
                             <a className="color-white weight-400 hover-color-blue60" href="/">Contact</a>
                         </li>
-                        <button className="custom-btn-primary color-white padding10-16 radius-8 weight-500 display-flex gap-5p hover-pointer hover-color-black10">
+                        <button
+                            className="custom-btn-primary color-white padding10-16 radius-8 weight-500 display-flex gap-5p hover-pointer hover-color-black10"
+                            onClick={handleJoinClick}
+                        >
                             <p>가입하러 가기</p>
                             <img src={vectorRight} className="width-12" />
                         </button>
@@ -49,7 +58,5 @@ const Header = ({ style = {background: "rgb(0 0 0 / 8%)"} }) => {
         </header>
     );
 }
-
-
 
 export default Header;
