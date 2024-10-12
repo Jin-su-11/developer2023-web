@@ -9,7 +9,8 @@
       "like": 10,
       "view": 300,
       "imageUrl": "/images/projectThumb/ex.png",
-      "field" : "웹"
+      "field" : "웹",
+      "aword" : "2023 우수작"
     },
     {
       "projectId": 2,
@@ -20,7 +21,8 @@
       "like": 11,
       "view": 301,
       "imageUrl": "/images/projectThumb/ex.png",
-      "field" : "앱"
+      "field" : "앱",
+      "aword" : "2023 우수작"
     },
     {
       "projectId": 3,
@@ -74,7 +76,8 @@
       "like": 12,
       "view": 311,
       "imageUrl": "/images/projectThumb/ex.png",
-      "field" : "웹"
+      "field" : "웹",
+      "aword" : "2024 우수작"
     },
     {
       "title": "예시타이틀2",
@@ -84,7 +87,8 @@
       "like": 15,
       "view": 3,
       "imageUrl": "/images/projectThumb/ex.png",
-      "field" : "앱"
+      "field" : "앱",
+      "aword" : "2024 우수작"
     }
   ],
   "season3" : [
@@ -106,7 +110,8 @@
       "like": 11,
       "view": 301,
       "imageUrl": "/images/projectThumb/ex.png",
-      "field" : "앱"
+      "field" : "앱",
+      "aword" : "2025 우수작"
     },
     {
       "title": "쇼핑몰3",
@@ -126,7 +131,8 @@
       "like": 15,
       "view": 3,
       "imageUrl": "/images/projectThumb/ex.png",
-      "field" : "앱"
+      "field" : "앱",
+      "aword" : "2025 우수작"
     }
   ]
 }
