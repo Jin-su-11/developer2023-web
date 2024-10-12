@@ -18,12 +18,18 @@ const ProjectPage = () => {
 
     // 컴포넌트가 마운트될 때 project.json 데이터를 가져옴
     useEffect(() => {
-        // 시즌별 데이터를 배열로 합쳐서 큰 시즌부터 정렬
-        const allProjects = Object.keys(projectData)
-            .sort((a, b) => parseInt(b.replace('season', '')) - parseInt(a.replace('season', ''))) // 시즌 이름에서 숫자만 추출하여 정렬
-            .reduce((acc, season) => acc.concat(projectData[season]), []); // 시즌 순서대로 배열 병합
-        setProjects(allProjects); // 정렬된 프로젝트 데이터를 state에 저장
-        setFilteredProjects(allProjects); // 초기 상태에서는 모든 시즌을 보여줌
+        let allProjects = [];
+        Object.keys(projectData)
+            .sort((a, b) => parseInt(b.replace('season', '')) - parseInt(a.replace('season', ''))) // 시즌 이름을 기준으로 정렬 (숫자로 변환)
+            .forEach(seasonKey => {
+                projectData[seasonKey].forEach(project => {
+                    // 시즌 정보를 프로젝트에 추가
+                    allProjects.push({ ...project, season: seasonKey });
+                });
+            });
+
+        setProjects(allProjects); // 모든 프로젝트 데이터를 저장
+        setFilteredProjects(allProjects); // 초기 상태에서는 모든 프로젝트를 보여줌
     }, []);
 
     // 선택된 팀과 분야에 따라 프로젝트 필터링
@@ -32,10 +38,7 @@ const ProjectPage = () => {
 
         // 기수 선택에 따른 필터링
         if (selectedTeam !== "") {
-            filtered = Object.keys(projectData)
-                .filter(season => selectedTeam === "전체" || season === `season${selectedTeam.replace('기', '')}`) // "1기" -> "season1"으로 매칭
-                .sort((a, b) => parseInt(b.replace('season', '')) - parseInt(a.replace('season', ''))) // 시즌 정렬
-                .reduce((acc, season) => acc.concat(projectData[season]), []); // 시즌별 데이터 합치기
+            filtered = filtered.filter(project => selectedTeam === "전체" || project.season === `season${selectedTeam.replace('기', '')}`);
         }
 
         // 분야 선택에 따른 필터링
@@ -61,10 +64,12 @@ const ProjectPage = () => {
     };
 
     return (
-        <div className="main-container">
+        <div className="project-container">
             {/* 페이지 제목 */}
-            <h1 className="title">PROJECT</h1>
-            <p className="subtitle">함께이기에 완성할 수 있었던 우리의 결과물들</p>
+            <div className="text-align-center padding85-0">
+                <h1 className="font-size-36 weight-700">PROJECT</h1>
+                <p className="font-size-20 title-description-spacing">함께이기에 완성할 수 있었던 우리의 결과물들</p>
+            </div>
 
             {/* 필터링 드롭다운 */}
             <div className="filter-dropdowns" style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px' }}>
@@ -74,7 +79,7 @@ const ProjectPage = () => {
                         value={selectedTeam}
                         onChange={handleTeamChange}
                         onClick={() => setIsTeamDropdownOpen(prev => !prev)}
-                        style={{ paddingRight: '25px'}} // Add padding for the icon
+                        style={{ paddingRight: '25px' }} // Add padding for the icon
                     >
                         <option value="" disabled hidden>기수</option>
                         <option value="전체">전체</option>
@@ -104,7 +109,7 @@ const ProjectPage = () => {
                     </select>
                     <img
                         src={isCategoryDropdownOpen ? top : bottom}
-                        alt="dropfown icon"
+                        alt="dropdown icon"
                         style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
                     />
                 </label>

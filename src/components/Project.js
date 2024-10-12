@@ -1,129 +1,128 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import ProjectCardBox from "./ProjectCardBox";
-import projectsData from '../data/project.json';
-
-/**
- * 프로젝트 슬라이더 리스트 컴포넌트
- * @author 권민지
- * @since 2024.09.09
- * @lastmodified 2024.09.20
- */
+import projectsData from '../data/project.json'; // 프로젝트 데이터를 가져옴
 
 const Project = () => {
-    const projects = [...projectsData.season1]; // 시즌 데이터를 가져옵니다.
-    const [currentSlide, setCurrentSlide] = useState(0);
-    const totalSlides = projects.length;
-    const visibleSlides = 3; // 한 번에 보이는 슬라이드 개수
-    const slideWidth = 300; // 슬라이드 너비 고정
-    const gap = 20; // 슬라이드 사이 간격
+    const [projects, setProjects] = useState([]); // 모든 프로젝트 데이터를 저장
 
-    const slideRef = useRef(null);
-    const isTransitioning = useRef(false);
-
-    /**
-     * 5초마다 슬라이드를 넘기는 자동 슬라이드
-     */
     useEffect(() => {
-        const interval = setInterval(() => {
-            if (!isTransitioning.current) {
-                goToNextSlide();
-            }
-        }, 5000);
-
-        return () => clearInterval(interval);
+        let filteredProjects = [];
+        Object.keys(projectsData).forEach(seasonKey => {
+            projectsData[seasonKey].forEach(project => {
+                if (project.aword) {
+                    filteredProjects.push({ ...project, season: seasonKey });
+                }
+            });
+        });
+        filteredProjects.reverse();
+        setProjects(filteredProjects); // aword 속성이 있는 프로젝트만 저장
     }, []);
 
+    const [currentIndex, setCurrentIndex] = useState(0); // 현재 슬라이드 인덱스
+    const visibleSlides = 3; // 한 번에 보이는 카드 개수
+
     const goToNextSlide = () => {
-        isTransitioning.current = true;
-        setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+        if (currentIndex < projects.length - 1) {
+            setCurrentIndex(currentIndex + 1);
+        }
     };
 
-    useEffect(() => {
-        isTransitioning.current = false;
-    }, [currentSlide]);
+    const goToPrevSlide = () => {
+        if (currentIndex > 0) {
+            setCurrentIndex(currentIndex - 1);
+        }
+    };
 
-    // 중앙 배치를 위한 슬라이드 이동 거리 계산 (중앙에 강조된 슬라이드가 위치하도록 조정)
-    const translateValue = (currentSlide - Math.floor(visibleSlides / 2)) * (slideWidth + gap);
+    const goToProjectPage = () => {
+        window.location.href = "http://localhost:3000/project"; // URL을 직접 변경하여 이동
+    };
 
     return (
-        <div className="project-section text-align-center padding85-0">
-            {/* 배경 색상 조정 */}
-            <div className="width100 position-absolute z-index--100"
-                 style={{ background: "rgb(241 241 241)", height: "830px", top: "1920px", left: 0 }}>
-            </div>
-
+        <div className="text-align-center padding85-0">
             {/* 제목과 설명 */}
-            <div className="display-flex flex-direction-column gap-05r margin-bottom-60">
+            <div className="display-flex flex-direction-column gap-1r margin-bottom-60">
                 <h2 className="font-size-36 weight-700">달려온 결과</h2>
                 <p className="font-size-20 weight-400">저희가 만든 프로젝트, 궁금하신가요?</p>
             </div>
 
             {/* 슬라이더 */}
-            <div className="overflow-hidden position-relative project-slider-container" style={{ width: `${visibleSlides * (slideWidth + gap)}px`, margin: '0 auto' }}>
+            <div className="overflow-hidden position-relative" style={{ width: '100%', maxWidth: '960px', margin: '0 auto' }}>
                 <div
-                    ref={slideRef}
-                    className="display-flex project-slider"
+                    className="display-flex"
                     style={{
-                        transform: `translateX(-${translateValue}px)`,
-                        transition: "transform 0.8s ease-in-out",
-                        width: `${(totalSlides + 2) * (slideWidth + gap)}px`,
-                        gap: `${gap}px`,
-                        height: "480px"
-                    }}>
-
-                    {/* 첫 번째 슬라이드 - 마지막 카드 복제 */}
-                    <div style={{ flexShrink: 0, width: `${slideWidth}px`, transform: "scale(0.8)", opacity: "0.5" }}>
-                        <ProjectCardBox project={projects[totalSlides - 1]} />
-                    </div>
-
-                    {/* 실제 슬라이드들 */}
+                        display: 'flex',
+                        justifyContent: 'start',  // 슬라이드를 왼쪽 정렬
+                        gap: '20px',
+                        transform: `translateX(-${currentIndex * (300 + 20)}px)`, // 슬라이드를 이동시킴 (카드 크기 300px 기준)
+                        transition: "transform 0.8s ease", // 부드러운 슬라이드 애니메이션
+                    }}
+                >
+                    {/* 슬라이드에서 전체 프로젝트를 렌더링 */}
                     {projects.map((project, index) => {
-                        const scale = index === currentSlide ? 1 : 0.8; // 중앙 슬라이드를 크게 보이도록
-                        const opacity = index === currentSlide ? 1 : 0.5;
+                        const isCenter = index === currentIndex + 1;
+                        const scale = isCenter ? 1 : 0.8; // 중앙에 있는 카드만 크게, 나머지는 작게
+                        const opacity = isCenter ? 1 : 0.7; // 중앙 카드만 불투명하게
 
                         return (
                             <div
                                 key={index}
                                 style={{
                                     flexShrink: 0,
-                                    width: `${slideWidth}px`,
-                                    transition: "transform 0.8s ease-in-out",
+                                    width: '300px',
+                                    height: '420px',
                                     transform: `scale(${scale})`,
-                                    opacity: `${opacity}`
-                                }}>
+                                    opacity: `${opacity}`,
+                                    transition: 'transform 0.5s ease, opacity 0.5s ease'
+                                }}
+                            >
                                 <ProjectCardBox project={project} />
                             </div>
                         );
                     })}
-
-                    {/* 마지막 슬라이드 - 첫 번째 카드 복제 */}
-                    <div style={{ flexShrink: 0, width: `${slideWidth}px`, transform: "scale(0.8)", opacity: "0.5" }}>
-                        <ProjectCardBox project={projects[0]} />
-                    </div>
                 </div>
             </div>
 
-            {/* 슬라이드 이동 버튼 */}
-            <ul className="display-flex justify-center position-relative gap-10p margin-0 padding-0"
-                style={{ listStyleType: "none", marginTop: "20px" }}>
-                {projects.map((_, index) => (
-                    <li
-                        key={index}
-                        className="hover-pointer"
-                        style={{
-                            width: "10px",
-                            height: "10px",
-                            borderRadius: "50%",
-                            backgroundColor: currentSlide === index ? "black" : "gray"
-                        }}
-                        onClick={() => setCurrentSlide(index)}
-                    />
-                ))}
-            </ul>
+            {/* 좌우 클릭 점과 중앙 강조 점 */}
+            <div className="display-flex justify-center" style={{ position: 'relative', gap: '10px', marginTop: '20px' }}>
+                {/* 왼쪽 클릭 점 */}
+                <div
+                    onClick={goToPrevSlide}
+                    style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: currentIndex > 0 ? '#ccc' : '#eee',
+                        cursor: currentIndex > 0 ? 'pointer' : 'default',
+                    }}
+                />
 
-            {/* 더 보기 버튼 */}
-            <div className="margin-top-30 display-flex" style={{ marginTop: "30px", justifyContent: "center" }}>
-                <p className="color-gray hover-pointer hover-underline" onClick={() => window.location.href = "/project"}>
+                {/* 중앙 강조 점 */}
+                <div
+                    style={{
+                        width: '10px',
+                        height: '10px',
+                        borderRadius: '50%',
+                        backgroundColor: '#000', // 중앙 점은 항상 검정색으로 강조
+                        cursor: 'default',
+                    }}
+                />
+
+                {/* 오른쪽 클릭 점 */}
+                <div
+                    onClick={goToNextSlide}
+                    style={{
+                        width: '8px',
+                        height: '8px',
+                        borderRadius: '50%',
+                        backgroundColor: currentIndex < projects.length - visibleSlides ? '#ccc' : '#eee',
+                        cursor: currentIndex < projects.length - visibleSlides ? 'pointer' : 'default',
+                    }}
+                />
+            </div>
+
+            {/* 더 보러가기 버튼 */}
+            <div style={{ marginTop: '20px', cursor: 'pointer' }}>
+                <p className="font-size-16 weight-400 color-gray" onClick={goToProjectPage}>
                     더 보러가기 &gt;
                 </p>
             </div>

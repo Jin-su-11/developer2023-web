@@ -8,13 +8,10 @@ const ProjectCardBox = ({ project, type }) => {
         navigate(`/project/detail/${project.projectId}`);
     };
 
-    // Assume project has a `season` property directly
-    const season = project.season; // You can adjust this based on how you retrieve season info.
-
-    // Set card box size when type is 'ProjectPage'
+    // Set card box size based on type or default size
     const cardStyle = {
         width: type === "ProjectPage" ? "320px" : "300px", // Larger size when 'ProjectPage'
-        height: type === "ProjectPage" ? "430px" : "400px",
+        height: type === "ProjectPage" ? "430px" : "400px", // 기본 크기: 300px * 400px
         border: "1px solid #d1d1d1",
         borderRadius: "8px",
     };
@@ -34,12 +31,7 @@ const ProjectCardBox = ({ project, type }) => {
             <div className="padding-15 flex-direction-column gap-5p">
                 <div className="display-flex justify-between">
                     <h3 className="text-align-start">{project.title}</h3>
-                    {/* Display the season if available in the project data */}
-                    {season && (
-                        <span className="season-label" style={{ padding: '5px', border: '1px solid #000', borderRadius: '5px', fontSize: '12px' }}>
-                            {season}
-                        </span>
-                    )}
+                    <span className="season-label">{project.season}</span>
                 </div>
 
                 <div className="display-flex-end gap-5p">
@@ -56,6 +48,6 @@ const ProjectCardBox = ({ project, type }) => {
             </div>
         </div>
     );
-}
+};
 
 export default ProjectCardBox;

@@ -46,6 +46,20 @@
 .reverse {
     flex-direction: row-reverse;
 }
+/* 시즌 정보를 위한 스타일 */
+/* 시즌 정보를 위한 스타일 */
+.season-label {
+    padding: 5px 10px;
+    border: 1px solid #9933ff; /* 연보라색 테두리 */
+    border-radius: 12px;
+    background-color: #ffffff; /* 흰색 배경 */
+    color: #9933ff; /* 보라색 텍스트 */
+    font-family: 'Pretendard-SemiBold', sans-serif;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10px;
+    display: inline-block;
+}
 
 /*!* 미디어 쿼리 추가: 화면이 768px 이하일 때 이미지가 위로, 텍스트가 아래로 이동 *!*/
 /*@media (max-width: 768px) {*/
@@ -67,6 +81,13 @@
 /*}*/
 
 /* ProjectPage 사용 */
+.project-container{
+    max-width: 1360px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 20px 165px;
+
+}
 .subtitle {
     font-size: 18px;
     color: #555;
