@@ -4,7 +4,7 @@ import '../css/style.css';
 import '../css/practice.css';
 import '../css/team.css';
 
-const MemberPage = () => {
+const Team = () => {
     const [season, setSeason] = useState('season2'); // 기본 시즌은 'season2'
     const [teams, setTeams] = useState([]);
 
@@ -72,4 +72,4 @@ const MemberPage = () => {
     );
 };
 
-export default MemberPage;
+export default Team;

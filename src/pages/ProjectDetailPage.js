@@ -11,6 +11,7 @@ import downloadIcon from "../images/icon/download_icon.png";
  * @since 2024.09.22
  * @lastmodified 2024.09.27
  */
+
 const ProjectDetailPage = () => {
     const { projectId } = useParams();
     const project = projectData.find((project) => project.projectId === parseInt(projectId));
