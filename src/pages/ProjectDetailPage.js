@@ -7,9 +7,9 @@ import downloadIcon from "../images/icon/download_icon.png";
 
 /**
  * 프로젝트 상세 페이지
- * @author 권민지
+ * @author 권민지, 김진수
  * @since 2024.09.22
- * @lastmodified 2024.09.27
+ * @lastmodified 2024.10.28
  */
 
 const ProjectDetailPage = () => {

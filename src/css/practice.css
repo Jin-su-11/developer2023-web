@@ -2,9 +2,6 @@
     color : #B751F2;
 }
 /* About.js 사용 */
-.seukjin{
-    color : #B751F2;
-}
 .header {
     font-size: 36px;
     font-weight: 700;
@@ -83,7 +80,7 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 20px 165px;
-
+    background: #000000;
 }
 .subtitle {
     font-size: 18px;

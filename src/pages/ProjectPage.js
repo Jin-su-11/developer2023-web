@@ -7,6 +7,13 @@ import '../css/team.css';  // 팀 관련 CSS
 import top from "../images/icon/vector_top_black.png";
 import bottom from "../images/icon/vector_bottom_black.png";
 
+/**
+ * 프로젝트 상세 페이지
+ * @author 김진수
+ * @since 2024.09.22
+ * @lastmodified 2024.10.28
+ */
+
 const ProjectPage = () => {
     const [projects, setProjects] = useState([]); // 모든 프로젝트 데이터를 저장
     const [filteredProjects, setFilteredProjects] = useState([]); // 필터링된 프로젝트 데이터를 저장
@@ -73,12 +80,12 @@ const ProjectPage = () => {
         <div className="project-container">
             {/* 페이지 제목 */}
             <div className="text-align-center padding85-0">
-                <h1 className="font-size-36 weight-700">PROJECT</h1>
-                <p className="font-size-20 title-description-spacing">함께이기에 완성할 수 있었던 우리의 결과물들</p>
+                <h1 className="font-size-36 weight-700" style={{color : '#FFFFFF'}}>PROJECT</h1>
+                <p className="font-size-20 title-description-spacing" style={{color : '#FFFFFF'}}>함께이기에 완성할 수 있었던 우리의 결과물들</p>
             </div>
 
             {/* 필터링 드롭다운 */}
-            <div className="filter-dropdowns" style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px' }}>
+            <div className="filter-dropdowns" style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '20px'}}>
                 {/* 기수 선택 드롭다운 */}
                 <label className="dropdown-label" style={{ marginRight: '10px', position: 'relative' }}>
                     <select
@@ -97,7 +104,7 @@ const ProjectPage = () => {
                     <img
                         src={isTeamDropdownOpen ? top : bottom}
                         alt="dropdown icon"
-                        style={{ position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
+                        style={{ top: '50%', transform: 'translateY(-50%)', pointerEvents: 'none' }}
                     />
                 </label>
 
@@ -109,7 +116,7 @@ const ProjectPage = () => {
                         onClick={() => setIsCategoryDropdownOpen(prev => !prev)}
                         style={{ paddingRight: '25px' }} // Add padding for the icon
                     >
-                        <option value="" disabled hidden>분야</option>
+                        <option value="" disabled hidden style={{color : '#FFFFFF'}}>분야</option>
                         <option value="전체">전체</option>
                         <option value="웹">웹</option>
                         <option value="앱">앱</option>

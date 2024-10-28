@@ -6,12 +6,14 @@ import Project from "../components/Project";
 import About from "../components/About";
 import Team from "../components/Team";
 import StackUpPage from "../components/StackUpPage";
+import ProjectPage from "./ProjectPage";
+import MainBackground from "../components/MainBackground";
 
 const MainPage = () => {
     return (
         <div>
             <Header />
-            <MainBanner />
+            <MainBackground />
             <MainContainer>
                 <About />
                 <Team />
