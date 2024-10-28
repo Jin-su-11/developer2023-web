@@ -102,7 +102,9 @@ body {
 @media (min-width: 1360px) {
     body, #root {
         min-height: 100vh;
+        background-color: black;
     }
+
 }
 
 /* 화면 가로길이 1360PX 이하 - 최소 가로, 세로길이 지정 */

@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import '../css/main_background.css'; // 메인 백그라운드 스타일 추가
 
@@ -42,7 +43,17 @@ else:
 
             <div className="right-container">
                 <div className="code-output fade-in">
-                    <pre>
+                    <pre
+                        style={{
+                            color: "rgba(88, 237, 36, 0.52)",
+                            fontFamily: "'Frank Ruhl Libre', serif",
+                            fontSize: "56px",
+                            fontStyle: "normal",
+                            fontWeight: 900,
+                            lineHeight: "normal",
+
+                        }}
+                    >
                         {displayedText}
                     </pre>
                 </div>
@@ -52,3 +63,4 @@ else:
 }
 
 export default MainBackground;
+

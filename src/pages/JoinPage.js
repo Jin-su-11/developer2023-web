@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react';
 import '../css/style.css'; // 기본 스타일 추가
 import '../css/join.css'; // 기본 스타일 추가
@@ -111,3 +112,4 @@ const styles = {
 };
 
 export default JoinPage;
+
