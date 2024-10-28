@@ -1,5 +1,5 @@
 /* 폰트 */
-/* Pretendard */
+/* Pretendard 기본 글꼴 */
 @font-face {
     font-family: 'Pretendard-Regular';
     src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
@@ -55,7 +55,7 @@
     font-family: Pretendard-ExtraBold, sans-serif;
 }
 
-/* frant ruhl libre */
+/* frant ruhl libre  developer 글꼴 */
 .frank-400 {
     font-family: "Frank Ruhl Libre", serif;
     font-optical-sizing: auto;
@@ -102,7 +102,6 @@ body {
 @media (min-width: 1360px) {
     body, #root {
         min-height: 100vh;
-        background-color: #000000;
     }
 }
 
@@ -113,6 +112,8 @@ body {
         min-width: 1360px;
     }
 }
+
+
 
 /* main container */
 .main-container-outside{
@@ -331,7 +332,6 @@ li {
 /* display */
 .display-flex {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -394,6 +394,7 @@ li {
 .color-white {
     color: #f4f4f4;
 }
+
 
 .color-blue {
     color: #3375fa;
@@ -507,6 +508,10 @@ li {
 
 .hover-color-blue60:hover {
     color: #3375fa;
+}
+
+.hover-color-purple:hover {
+    color: #b751f2; /* 보라색으로 변경 */
 }
 
 .hover-weight-600:hover {
