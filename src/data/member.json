@@ -58,8 +58,10 @@
   "season2": [
     {
       "teamName": "Study Hero",
+      "projectId" : 4,
       "members": [
-        { "id": 27, "memberName": "김진수", "memberRole": "Club Leader", "githubUrl": "https://github.com/kimjs991229@dongguk.ac.kr", "thumbnail": "profile26.jpg" },
+        { "id": 27, "memberName": "김진수", "memberRole": "Club Leader", "githubUrl": "https://github.com/kimjs991229@dongguk.ac.kr", "thumbnail": "profile26.jpg",
+          "review" :  "한식 양식 중식 일식 매운 거 안 매운 거 밥이나 빵이나 쌀이나 떡 뜨거운 거 차가운 거~"},
         { "id": 28, "memberName": "김이현", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile27.jpg" },
         { "id": 29, "memberName": "김은채", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile28.jpg" },
         { "id": 30, "memberName": "이호준", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile29.jpg" },
@@ -110,8 +112,9 @@
     },
     {
       "teamName": "Web Site",
+      "projectId" : 5,
       "members": [
-        { "id": 57, "memberName": "김주찬", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile38.jpg" },
+        { "id": 57, "memberName": "김주찬", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile38.jpg", "review" : ""},
         { "id": 58, "memberName": "이한샘", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile39.jpg" },
         { "id": 59, "memberName": "이김", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile40.jpg" },
         { "id": 60, "memberName": "이채준", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile41.jpg" }

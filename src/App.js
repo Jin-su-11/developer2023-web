@@ -5,11 +5,13 @@ import MainHeaderLayout from "./layout/MainHeaderLayout";
 import ProjectPage from "./pages/ProjectPage";
 import MemberPage from "./pages/MemberPage";
 import NotFound from "./components/NotFound";
-import ProjectDetailPage from "./pages/ProjectDetailPage";
+import ProjectDetailPage from "./detailpages/ProjectDetailPage";
 import { ScrollToTop } from "./components/CommonUtil";
 import Footer from "./components/Footer";
 import ContactWidget from "./components/ContactWidget";  // ContactWidget 추가
-import JoinPage from "./pages/JoinPage";  // JoinPage 추가
+import JoinPage from "./pages/JoinPage";
+import DetailPage from "./detailpages/DetailPage";
+import DetailContainer from "./detailpages/DetailContainer";  // JoinPage 추가
 
 const AppRoutes = () => {
     const routes = [
@@ -26,7 +28,7 @@ const AppRoutes = () => {
             element: <MainHeaderLayout />,
             children: [
                 { path: '', element: <ProjectPage /> },
-                { path: 'detail/:projectId', element: <ProjectDetailPage /> }
+                { path: 'detail/:projectId', element: <DetailPage /> }
             ]
         },
 
@@ -39,7 +41,8 @@ const AppRoutes = () => {
             ]
         },
 
-        { path: '*', element: <NotFound /> }
+        { path: '*', element: <NotFound /> },
+
     ];
 
     return useRoutes(routes);

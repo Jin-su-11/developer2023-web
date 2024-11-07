@@ -2,6 +2,13 @@ import React, { useEffect, useState } from "react";
 import ProjectCardBox from "./ProjectCardBox";
 import projectsData from '../data/project.json';
 
+/**
+ * ProjectPage 컴포넌트
+ * @author 김진수
+ * @since 2024.09.17
+ * @lastmodified 2024.11.01
+ */
+
 const Project = () => {
     const [projects, setProjects] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(1);
