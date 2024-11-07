@@ -80,7 +80,21 @@
     box-sizing: border-box;
     margin: 0 auto;
     padding: 20px 165px;
-    background: #000000;
+}
+
+.detail-container{
+    max-width: 1360px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 165px;
+}
+.detail-container-outside {
+    max-width: 100%;
+}
+
+.review-img {
+    width: 100%;
+    height: 100%;
 }
 .subtitle {
     font-size: 18px;
@@ -96,33 +110,96 @@
     width: 100%; /* 드롭다운을 전체 너비에 맞추기 */
 }
 
+
+/* 리뷰 카드 스타일 */
+.review-card {
+    display: flex;
+    align-items: center;
+    background-color: #FFFFFF;
+    padding: 20px;
+    border-radius: 20px;
+    border: 2px solid;
+    width: 100%;
+}
+/* 리뷰어 아바타 스타일 */
+.reviewer-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #C4C4C4; /* 회색 배경 */
+    margin-right: 20px;
+}
+
+/* 리뷰 내용 */
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 리뷰어 이름 및 역할 */
+.reviewer-name {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 리뷰 텍스트 */
+.review-text {
+    font-size: 16px;
+    color: #333333;
+}
 .dropdown-label {
     display: flex;
     align-items: center; /* Align text and image vertically */
     position: relative; /* To ensure the image stays within the label */
-    font-size: 25px;
-    padding: 8px;
-    border: 1px solid #ddd;
     border-radius: 5px;
-    width: 70px; /* Set a width if needed */
+    border: 1px solid #FFFFFF;
+    color: #ffffff;
+    width: 80px; /* Set a width if needed */
+    height: 20px;
+    padding: 10px;
+    cursor: pointer;
 }
 
 .dropdown-label select {
     appearance: none; /* Remove default dropdown arrow */
     text-align: center;
     width: 100%; /* Ensure the text takes up the full space */
-    padding-right: 25px; /* Add padding to avoid overlapping with the image */
+    height: 100%;
+    border-radius: 7px;
     border: none; /* Remove border to allow styling */
     cursor: pointer;
+    outline: none;
 }
 
 .dropdown-label img {
     position: absolute;
     right: 10px; /* Position the arrow image on the right */
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     pointer-events: none; /* Prevent the image from interfering with select functionality */
 }
+
+.dropdown-toggle {
+    background-color: #000000;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 7px;
+    text-align: center;
+}
+.dropdown-button {
+    list-style: none;
+    margin-top: 7px;
+    border: 1px solid #FFFFFF;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    z-index: 10;
+    margin-left: -11px;
+    border-radius: 5px;
+}
+
+
 
 
 /* 프로젝트 카드 리스트 */

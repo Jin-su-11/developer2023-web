@@ -16,7 +16,6 @@ const MainContainer = ({ children }) => {
                 } else if (child.type && child.type.name === "StackUpPage") {
                     backgroundColor = "#000000";
                 }
-
                 // 개별 child를 배경색을 가진 div로 감싸고, .main-container 스타일 유지
                 return (
                     <div style={{ backgroundColor }}>

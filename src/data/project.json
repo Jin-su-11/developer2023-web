@@ -9,7 +9,7 @@
       "imageUrl": "/images/projectThumb/ex.png",
       "field": "웹",
       "aword": "2023 우수작",
-      "gitUrl": ""
+      "gitUrl": "https://github.com/Dongguk-Developer"
     },
     {
       "projectId": 2,
@@ -19,60 +19,73 @@
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
       "field": "웹",
-      "aword": "2023 우수작"
+      "aword": "2023 우수작",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     },
     {
+      "projectId": 3,
       "title": "쇼핑몰",
       "team": "WEB TEAM",
       "members": "박찬엽 외 4명",
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
-      "field": "웹"
+      "field": "웹",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     }
   ],
   "season2": [
     {
+      "projectId": 4,
       "title": "1등은 나야",
       "team": "스터디히어로",
       "members": "김이현 외 5명",
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
-      "field": "웹"
+      "field": "앱",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     },
     {
+      "projectId": 5,
       "title": "기숙사생은 여기로!",
       "team": "금장 어때",
       "members": "김주찬 외 3명",
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
-      "field": "웹"
+      "field": "웹",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     },
     {
+      "projectId": 6,
       "title": "분석한다",
       "team": "AI",
       "members": "박근태 외 7명",
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
       "field": "웹",
-      "aword": "2024 우수작"
+      "aword": "2024 우수작",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     },
     {
+      "projectId": 7,
       "title": "무엇이든 예측해주지",
       "team": "파이썬 알고리즘",
       "members": "이태영 외 3명",
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
       "field": "웹",
-      "aword": "2024 우수작"
+      "aword": "2024 우수작",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     },
     {
+      "projectId": 8,
       "title": "불편한게 있다고?",
       "team": "동국 청원",
       "members": "권민지 외 6명",
       "description": " 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, 제작 툴, 게임설명, ",
       "imageUrl": "/images/projectThumb/ex.png",
       "field": "웹",
-      "aword": "2024 우수작"
+      "aword": "2024 우수작",
+      "gitUrl": "https://github.com/Dongguk-Developer"
     }
   ]
 }
