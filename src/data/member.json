@@ -13,6 +13,7 @@
     },
     {
       "teamName": "Memo APP",
+      "projectId": 2,
       "members": [
         { "id": 6, "memberName": "김원",   "memberRole": "PM", "githubUrl": "https://github.com/kim2", "otherLink": "https://other.link2", "thumbnail": "profile7.jpg" },
         { "id": 7, "memberName": "권민지", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/hong1", "otherLink": "https://other.link1", "thumbnail": "profile6.jpg" },
@@ -23,6 +24,7 @@
     },
     {
       "teamName": "ShoppingMall",
+      "projectId": 3,
       "members": [
         { "id": 11, "memberName": "박찬엽", "memberRole": "PM", "githubUrl": "https://github.com/hong1", "otherLink": "https://other.link1", "thumbnail": "profile14.jpg" },
         { "id": 12, "memberName": "김진수", "memberRole": "Club Leader", "githubUrl": "https://github.com/hong1", "otherLink": "https://other.link1", "thumbnail": "profile10.jpg" },
@@ -35,6 +37,7 @@
     },
     {
       "teamName": "Game & AI",
+      "projectId": 1,
       "members": [
         { "id": 18, "memberName": "박근태", "memberRole": ["PM","FrontEnd","BackEnd"], "githubUrl": "https://github.com/kang5", "otherLink": "https://other.link5", "thumbnail": "profile23.jpg" },
         { "id": 19, "memberName": "홍승민", "memberRole": ["BackEnd","Design"], "githubUrl": "https://github.com/kang5", "otherLink": "https://other.link5", "thumbnail": "profile24.jpg" },
@@ -99,6 +102,7 @@
 
     {
       "teamName": "AI",
+      "projectId": 6,
       "members": [
         { "id": 49, "memberName": "전형주", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile34.jpg" },
         { "id": 50, "memberName": "임찬빈", "memberRole": "Developer", "githubUrl": "https://github.com/lee4", "otherLink": "https://other.link4", "thumbnail": "profile35.jpg" },
