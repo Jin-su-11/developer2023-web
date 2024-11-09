@@ -4,6 +4,7 @@
  * @since 2024.09.17
  * @lastmodified 2024.09.20
  */
+
 import React from "react";
 import '../css/style.css';  // CSS 파일을 불러옴
 import '../css/practice.css';

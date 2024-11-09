@@ -8,10 +8,10 @@ import top from "../images/icon/vector_top_black.png";
 import bottom from "../images/icon/vector_bottom_black.png";
 
 /**
- * ProjectPage 컴포넌트
+ * DetailPage 컴포넌트
  * @author 김진수
- * @since 2024.09.17
- * @lastmodified 2024.11.02
+ * @since 2024.9.26
+ * @lastmodified 2024.11.09
  */
 
 const ProjectPage = () => {
@@ -54,15 +54,16 @@ const ProjectPage = () => {
         setIsCategoryDropdownOpen((prev) => !prev);
     };
 
+    // 옵션 클릭 시 드롭다운을 닫는 함수
     const handleOptionClick = (type, value) => {
         if (type === "team") {
             setSelectedTeam(value === "전체" ? "기수" : value);
             setFilteredProjects(value === "전체" ? projects : projects.filter((project) => project.season === `season${value.replace("기", "")}`));
-            setIsTeamDropdownOpen(false);
+            setIsTeamDropdownOpen(true); // 옵션 클릭 시 팀 드롭다운 닫기
         } else if (type === "category") {
             setSelectedCategory(value === "전체" ? "분야" : value);
             setFilteredProjects(value === "전체" ? projects : projects.filter((project) => project.field === value));
-            setIsCategoryDropdownOpen(false);
+            setIsCategoryDropdownOpen(true); // 옵션 클릭 시 카테고리 드롭다운 닫기
         }
     };
 
@@ -81,6 +82,23 @@ const ProjectPage = () => {
             setHoveredCategoryOption(null);
         }
     };
+
+    // 외부 클릭 시 드롭다운 닫기
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (teamDropdownRef.current && !teamDropdownRef.current.contains(event.target)) {
+                setIsTeamDropdownOpen(false);
+            }
+            if (categoryDropdownRef.current && !categoryDropdownRef.current.contains(event.target)) {
+                setIsCategoryDropdownOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => {
+            document.removeEventListener("mousedown", handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="project-container">

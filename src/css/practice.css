@@ -236,6 +236,16 @@
     padding: 20px 0;
 }
 
+/* CSS 파일에 추가 */
+.project-card {
+    transition: transform 0.3s ease; /* 확대 효과가 부드럽게 진행되도록 설정 */
+}
+
+.project-card:hover {
+    transform: scale(1.05); /* 마우스 오버 시 5% 확대 */
+    cursor: pointer; /* 클릭 가능함을 보여줌 */
+}
+
 
 
 
