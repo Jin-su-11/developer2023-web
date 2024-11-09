@@ -1,5 +1,4 @@
-
-    /* 전체 페이지 스타일 */
+ /* 전체 페이지 스타일 */
 .main-background {
     background-color: black; /* 배경색 */
     color: white; /* 기본 텍스트 색상 */
@@ -70,4 +69,5 @@
         opacity: 1;
     }
 }
+
 

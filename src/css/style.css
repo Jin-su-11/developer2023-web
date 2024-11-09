@@ -451,6 +451,10 @@ li {
     font-size: 36px;
 }
 
+.font-size-46 {
+    font-size: 46px;
+}
+
 .font-size-60 {
     font-size: 60px;
 }
@@ -468,6 +472,8 @@ li {
 .radius-12 {
     border-radius: 12px;
 }
+
+
 
 .radius-22 {
     border-radius: 22px;

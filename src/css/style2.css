@@ -1,5 +1,5 @@
 
-    /* 배경 및 기본 텍스트 스타일 */
+/* 배경 및 기본 텍스트 스타일 */
 header {
     background-color: #000; /* 검정 배경 */
 }
@@ -62,5 +62,15 @@ header {
 }
 
 .header-layout{
-    padding: 27px;
+    position: relative;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 27px;
+    padding-bottom: 15px;
+    z-index: 1000;
+
+}
+
+.color-purple{
+    color: #b751f2;
 }
