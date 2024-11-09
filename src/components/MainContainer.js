@@ -1,5 +1,12 @@
 import React from "react";
 
+/**
+ * About 컴포넌트
+ * @author 김진수
+ * @since 2024.09.17
+ * @lastmodified 2024.10.26
+ */
+
 const MainContainer = ({ children }) => {
     return (
         <div className="main-container-outside">

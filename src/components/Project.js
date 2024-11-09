@@ -77,8 +77,8 @@ const Project = () => {
                 >
                     {projects.map((project, index) => {
                         const isCenter = index === currentIndex;
-                        const scale = isCenter ? 1 : 0.8;
-                        const opacity = isCenter ? 1 : 0.7;
+                        const scale = isCenter ? 0.95 : 0.8;
+                        const opacity = isCenter ? 0.95 : 0.7;
 
                         return (
                             <div
