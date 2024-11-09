@@ -53,7 +53,7 @@ const Team = () => {
             <div className="team-section3">
                 {teams.map((team, index) => (
                     <div key={index} className="member-card">
-                        <span className="team-name">{team.teamName}</span><br />
+                        <span className="team-name1">{team.teamName}</span><br />
                         <span className="team-members">{team.members.length}명</span>
                     </div>
                 ))}
