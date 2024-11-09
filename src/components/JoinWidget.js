@@ -1,23 +1,20 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import kakaoLogo from '../images/backgroundAndPicture/kakao_logo.png';
+import React, { useRef, useEffect } from 'react';
+import kakaoLogo from '../../../../developer2023-web/src/images/backgroundAndPicture/kakao_logo.png';
+import paperPlaneImage from '../../../../developer2023-web/src/images/backgroundAndPicture/paper_plane.png';
+import chatIconImage from '../../../../developer2023-web/src/images/backgroundAndPicture/chat_icon.png';
 
-const ContactWidget = () => {
-    const [isCardVisible, setIsCardVisible] = useState(false);
+const JoinWidget = ({ onClose }) => {
     const cardRef = useRef(null);
 
-    // 위젯 클릭 시 연락처 카드 표시/숨김
-    const toggleCardVisibility = () => {
-        setIsCardVisible(!isCardVisible);
-    };
+    // 현재 날짜를 기준으로 11월 또는 12월이면 모집 기간으로 설정
+    const currentMonth = new Date().getMonth() + 1; // 0부터 시작하므로 +1
+    const isJoinPeriod = currentMonth === 11 || currentMonth === 12;
 
     // 카드 외부 클릭 시 카드 닫기
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (cardRef.current && !cardRef.current.contains(event.target)) {
-                setIsCardVisible(false);
+                onClose();
             }
         };
 
@@ -25,21 +22,19 @@ const ContactWidget = () => {
         return () => {
             document.removeEventListener('mousedown', handleClickOutside);
         };
-    }, []);
+    }, [onClose]);
 
     return (
-        <>
-            <div style={styles.widgetButton} onClick={toggleCardVisibility}>
-                <FontAwesomeIcon icon={faEnvelope} style={styles.mailIcon} />
-            </div>
-
-            {isCardVisible && (
-                <div ref={cardRef} style={styles.cardContainer}>
-                    <h2 style={styles.header}>문의하기</h2>
-                    <p style={styles.description}>문의사항이 있으실 경우 아래로 연락 주세요!</p>
+        <div ref={cardRef} style={styles.cardContainer}>
+            {isJoinPeriod ? (
+                <>
+                    <img src={chatIconImage} alt="Chat Icon" style={styles.iconImage} />
+                    <h2 style={styles.header}>부원 모집 중 이에요!</h2>
+                    <p style={styles.description}>
+                        저희는 언제나 여러분을 기다리고 있습니다. 함께 즐거운 개발 여정에 참여하고 싶으시다면, 주저하지 말고 아래 연락처나 카카오 오픈 채팅으로 연락 주세요!
+                    </p>
                     <div style={styles.contactBox}>
-                        <FontAwesomeIcon icon={faPhoneAlt} style={styles.contactIcon} />
-                        <span style={styles.contactText}>010-1234-5678</span>
+                        <span style={styles.contactText}>010-0000-0000</span>
                     </div>
                     <a
                         href="https://open.kakao.com/o/g9e5BCWg"
@@ -50,54 +45,48 @@ const ContactWidget = () => {
                         <img src={kakaoLogo} alt="KakaoTalk" style={styles.kakaoIcon} />
                         카카오톡으로 문의하기
                     </a>
-                    <button style={styles.closeButton} onClick={toggleCardVisibility}>X</button>
-                </div>
+                </>
+            ) : (
+                <>
+                    <img src={paperPlaneImage} alt="Paper Plane" style={styles.iconImage} />
+                    <h2 style={styles.header}>지금은 모집 기간이 아니에요!</h2>
+                    <p style={styles.description}>
+                        모집 기간이 궁금하시다면 문의를 해 주세요.
+                    </p>
+                </>
             )}
-        </>
+            <button style={styles.closeButton} onClick={onClose}>X</button>
+        </div>
     );
 };
 
 // 스타일 정의
 const styles = {
-    widgetButton: {
-        position: 'fixed',
-        bottom: '20px',
-        right: '20px',
-        width: '60px',
-        height: '60px',
-        backgroundColor: '#6200ea',
-        borderRadius: '50%',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        cursor: 'pointer',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-    },
-    mailIcon: {
-        color: 'white',
-        fontSize: '26px',
-    },
     cardContainer: {
-        position: 'fixed',
-        bottom: '100px',
-        right: '20px',
-        width: '300px',
-        height: '190px',
+        width: '441px',
+        height: '441px',
         padding: '20px',
         background: '#fff',
         borderRadius: '15px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
         fontFamily: 'Arial, sans-serif',
         textAlign: 'center',
+        position: 'relative',
+    },
+    iconImage: {
+        width: '100px', // 원하는 크기로 설정
+        height: '100px',
+        marginBottom: '15px',
     },
     header: {
-        fontSize: '22px',
+        fontSize: '20px',
         fontWeight: 'bold',
         marginBottom: '10px',
+        color: '#333',
     },
     description: {
         fontSize: '14px',
-        color: '#3B3B3B',
+        color: '#666',
         marginBottom: '20px',
     },
     contactBox: {
@@ -109,14 +98,9 @@ const styles = {
         justifyContent: 'center',
         marginBottom: '20px',
     },
-    contactIcon: {
-        fontSize: '24px',
-        marginRight: '10px',
-        color: '#333',
-    },
     contactText: {
-        fontSize: '18px',
-        color: '#191919',
+        fontSize: '16px',
+        color: '#333',
     },
     kakaoButton: {
         backgroundColor: '#fee500',
@@ -130,7 +114,6 @@ const styles = {
         fontWeight: 'bold',
         fontSize: '16px',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-        marginBottom: '20px',
     },
     kakaoIcon: {
         width: '20px',
@@ -150,4 +133,4 @@ const styles = {
     },
 };
 
-export default ContactWidget;
+export default JoinWidget;

@@ -1,3 +1,4 @@
+
 /* 폰트 */
 /* Pretendard 기본 글꼴 */
 @font-face {
@@ -451,6 +452,10 @@ li {
     font-size: 36px;
 }
 
+.font-size-46 {
+    font-size: 46px;
+}
+
 .font-size-60 {
     font-size: 60px;
 }
@@ -468,6 +473,8 @@ li {
 .radius-12 {
     border-radius: 12px;
 }
+
+
 
 .radius-22 {
     border-radius: 22px;
@@ -562,3 +569,4 @@ li {
     justify-content: center; /* 세로 중앙 정렬 */
     position: relative; /* 자식 요소에 대해 기준 설정 */
 }
+
