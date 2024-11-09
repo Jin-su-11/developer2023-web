@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
-import kakaoLogo from '../../../../developer2023-web/src/images/backgroundAndPicture/kakao_logo.png';
-import paperPlaneImage from '../../../../developer2023-web/src/images/backgroundAndPicture/paper_plane.png';
-import chatIconImage from '../../../../developer2023-web/src/images/backgroundAndPicture/chat_icon.png';
+import kakaoLogo from '../images/backgroundAndPicture/kakao_logo.png';
+import paperPlaneImage from '../images/backgroundAndPicture/paper_plane.png';
+import chatIconImage from '../images/backgroundAndPicture/chat_icon.png';
 
 const JoinWidget = ({ onClose }) => {
     const cardRef = useRef(null);
@@ -134,3 +134,4 @@ const styles = {
 };
 
 export default JoinWidget;
+

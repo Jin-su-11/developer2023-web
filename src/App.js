@@ -5,7 +5,7 @@ import MainHeaderLayout from "./layout/MainHeaderLayout";
 import ProjectPage from "./pages/ProjectPage";
 import MemberPage from "./pages/MemberPage";
 import NotFound from "./components/NotFound";
-import ProjectDetailPage from "./pages/ProjectDetailPage";
+import ProjectDetailPage from "./detailpages/ProjectDetailPage";
 import { ScrollToTop } from "./components/CommonUtil";
 import Footer from "./components/Footer";
 import ContactWidget from "./components/ContactWidget";

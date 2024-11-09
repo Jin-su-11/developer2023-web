@@ -1,573 +1,76 @@
-style2.css
 
-/* 폰트 */
-/* Pretendard 기본 글꼴 */
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+/* 배경 및 기본 텍스트 스타일 */
+header {
+    background-color: #000; /* 검정 배경 */
+}
+
+.developer-logo {
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.nav-link {
+    font-family: 'Pretendard-Regular', sans-serif;
+    color: #fff;
     font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Pretendard-Medium';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Medium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Pretendard-SemiBold';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Pretendard-Bold';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Pretendard-ExtraBold';
-    src: url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre&display=swap');
-    font-weight: 800;
-    font-style: normal;
-}
-
-.weight-400 {
-    font-family: Pretendard-Regular, sans-serif;
-}
-
-.weight-500 {
-    font-family: Pretendard-Medium, sans-serif;
-}
-
-.weight-600 {
-    font-family: Pretendard-SemiBold, sans-serif;
-}
-
-.weight-700 {
-    font-family: Pretendard-Bold, sans-serif;
-}
-
-.weight-800 {
-    font-family: Pretendard-ExtraBold, sans-serif;
-}
-
-/* frant ruhl libre  developer 글꼴 */
-.frank-400 {
-    font-family: "Frank Ruhl Libre", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.frank-500 {
-    font-family: "Frank Ruhl Libre", serif;
-    font-optical-sizing: auto;
-    font-weight: 500;
-    font-style: normal;
-}
-
-.frank-600 {
-    font-family: "Frank Ruhl Libre", serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
-
-.frank-700 {
-    font-family: "Frank Ruhl Libre", serif;
-    font-optical-sizing: auto;
-    font-weight: 700;
-    font-style: normal;
-}
-
-.frank-800 {
-    font-family: "Frank Ruhl Libre", serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-}
-
-/* body */
-
-body {
-    margin: 0;
-}
-
-/* 공통 - 화면 너비 고정 */
-/* 화면 가로길이 1360PX 이상 - 화면 가로 길이가 1360px 이상이 되면 요소는 변하지않고 마진만 추가 */
-@media (min-width: 1360px) {
-    body, #root {
-        min-height: 100vh;
-        background-color: black;
-    }
-
-}
-
-/* 화면 가로길이 1360PX 이하 - 최소 가로, 세로길이 지정 */
-@media (max-width: 1360px) {
-    body, #root {
-        min-height: calc(100vh + 400px);
-        min-width: 1360px;
-    }
-}
-
-
-
-/* main container */
-.main-container-outside{
-    max-width: 100%;
-}
-.main-container {
-    max-width: 1360px;
-    margin: 0 auto;
-    padding: 0 165px;
-    box-sizing: border-box;
-}
-
-/* a, p, u, ul, li */
-a {
     text-decoration: none;
-}
-
-p {
-    color: black;
-    font-family: Pretendard-Regular, sans-serif;
-    margin: 0;
-}
-
-h1 {
-    margin: 0;
-}
-
-h2 {
-    margin: 0;
-}
-
-h3 {
-    margin: 0;
-}
-
-ul {
-    padding: 0;
-}
-
-li {
-    display: block;
-}
-
-/* margin */
-.margin-0 {
-    margin: 0;
-}
-
-.margin-top-10 {
-    margin-top: 10px;
-}
-
-.margin-top-30 {
-    margin-top: 30px;
-}
-
-.margin-bottom-10 {
-    margin-bottom: 10px;
-}
-
-.margin-bottom-30 {
-    margin-bottom: 30px;
-}
-
-.margin-bottom-50 {
-    margin-bottom: 50px;
-}
-
-.margin-bottom-60 {
-    margin-bottom: 60px;
-}
-
-.margin-bottom-70 {
-    margin-bottom: 70px;
-}
-
-.margin-right-10 {
-    margin-right: 10px;
-}
-
-/* padding */
-.padding-0 {
-    padding: 0;
-}
-
-.padding-5 {
-    padding: 5px;
-}
-
-.padding-10 {
     padding: 10px;
 }
 
-.padding-15 {
-    padding: 15px;
+.nav-link:hover {
+    color: #c299fc; /* 보라색으로 변경 */
 }
 
-.padding-20 {
-    padding: 20px;
+.active-link {
+    color: #c299fc; /* 클릭된 후 보라색 */
+    font-weight: 500;
 }
 
-.padding-40 {
-    padding: 40px;
-}
-
-.padding-70 {
-    padding: 70px;
-}
-
-.padding8-16 {
-    padding: 8px 16px;
-}
-
-.padding10-16 {
+/* 가입하러 가기 버튼 스타일 */
+.custom-btn-primary {
+    background: linear-gradient(180deg, #c299fc 0%, #4993fa 100%);
+    color: #fff;
+    border: none;
     padding: 10px 16px;
+    border-radius: 8px;
+    font-family: 'Pretendard-Regular', sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
 }
 
-.padding60-0 {
-    padding: 60px 0;
-}
-
-.padding60-100 {
-    padding: 60px 100px;
-}
-
-.padding60-200 {
-    padding: 60px 200px;
-}
-
-.padding85-50 {
-    padding: 85px 50px;
-}
-
-.padding85-200 {
-    padding: 85px 200px;
-}
-
-.padding0-10 {
-    padding: 0 10px;
-}
-
-.padding85-0 {
-    padding: 85px 0;
-}
-
-.padding100-0 {
-    padding: 100px 0;
-}
-
-/* width, height */
-.width-10 {
-    width: 10px;
+.custom-btn-primary:hover {
+    background: linear-gradient(180deg, #4993fa 0%, #c299fc 100%);
 }
 
 .width-12 {
     width: 12px;
 }
 
-.width-15 {
-    width: 15px;
-}
-
-.width100 {
-    width: 100%;
-}
-
-.height-15 {
-    height: 15px;
-}
-
-/* gap */
-.gap-5p {
-    gap: 5px;
-}
-
-.gap-10p {
-    gap: 10px;
-}
-
-.gap-02r {
-    gap: 0.2rem;
-}
-
-.gap-05r {
-    gap: 0.5rem;
-}
-
-.gap-07r {
-    gap: 0.5rem;
-}
-
-.gap-1r {
-    gap: 1rem;
-}
-
-.gap-1d5r {
-    gap:1.5rem;
-}
-
-.gap-2r {
-    gap: 2rem;
-}
-
-.gap-2d5r {
-    gap: 2.5rem;
-}
-
-.gap-3r {
-    gap: 3rem;
-}
-
-.gap-5r {
-    gap: 5rem;
-}
-
-/* display */
-.display-flex {
-    display: flex;
-    align-items: center;
-}
-
-.display-flex-end {
-    display: flex;
-    align-items: flex-end;
-}
-
-.display-flex-column {
-    display: flex;
-    flex-direction: column;
-}
-
-.display-block {
-    display: block;
-}
-
-.flex-wrap {
-    flex-wrap: wrap;
-}
-
-.flex-direction-column {
-    flex-direction: column;
-}
-
-.align-items-center {
-    align-items: center;
-}
-
-.justify-center {
-    justify-content: center;
-}
-
-.justify-between {
-    justify-content: space-between;
-}
-
-.justify-end {
-    justify-content: flex-end;
-}
-
-/* position */
-.position-absolute {
-    position: absolute;
-}
-
-.position-relative {
-    position: relative;
-}
-
-.z-index--100 {
-    z-index: -100;
-}
-
-/* color */
-.color-black {
-    color: black;
-}
-
-.color-white {
+.header-developer{
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-style: normal;
     color: #f4f4f4;
-}
-
-
-.color-blue {
-    color: #3375fa;
-}
-
-.color-gray {
-    color: gray;
-}
-
-/* text */
-.text-align-start {
-    text-align: start;
-}
-
-.text-align-center {
-    text-align: center;
-}
-
-.text-align-end {
-    text-align: end;
-}
-
-.deco-none {
-    text-decoration: none;
-}
-
-.font-size-14 {
-    font-size: 14px;
-}
-
-.font-size-16 {
-    font-size: 16px;
-}
-
-.font-size-18 {
     font-size: 18px;
+    margin-left: 9px;
+    margin-top: 5px;
+
 }
 
-.font-size-20 {
-    font-size: 20px;
+.header-layout{
+    position: relative;
+    padding-left: 27px;
+    padding-right: 27px;
+    padding-top: 27px;
+    padding-bottom: 15px;
+    z-index: 1000;
+
 }
 
-.font-size-24 {
-    font-size: 24px;
+.color-purple{
+    color: #b751f2;
 }
-
-.font-size-32 {
-    font-size: 32px;
-}
-
-.font-size-36 {
-    font-size: 36px;
-}
-
-.font-size-46 {
-    font-size: 46px;
-}
-
-.font-size-60 {
-    font-size: 60px;
-}
-
-/*  */
-.align-content-around {
-    align-content: space-around;
-}
-
-/* radius */
-.radius-8 {
-    border-radius: 8px;
-}
-
-.radius-12 {
-    border-radius: 12px;
-}
-
-
-
-.radius-22 {
-    border-radius: 22px;
-}
-
-/* custom-button */
-.custom-btn-primary {
-    background: #3375fa;
-    border: none;
-}
-
-.custom-btn-primary:hover {
-    background: #2e6ce0;
-}
-
-.custom-btn-outline-black {
-    border: 1px solid black;
-}
-
-.custom-btn-outline-black:hover {
-    background: #f6f6f6;
-}
-
-/* hover */
-.hover-pointer {
-    cursor: pointer;
-}
-
-.hover-underline:hover {
-    text-decoration: underline;
-}
-
-.hover-color-black90:hover {
-    color: rgb(35, 35, 35);
-}
-
-.hover-color-black10:hover {
-    color: #f1f1f1;
-}
-
-.hover-color-blue60:hover {
-    color: #3375fa;
-}
-
-.hover-color-purple:hover {
-    color: #b751f2; /* 보라색으로 변경 */
-}
-
-.hover-weight-600:hover {
-    font-family: Pretendard-SemiBold, sans-serif;
-}
-
-.hover-weight-700:hover {
-    font-family: Pretendard-Bold, sans-serif;
-}
-
-/* overflow */
-.overflow-hidden {
-    overflow: hidden;
-}
-
-.overflow-x-auto-white-nowrap {
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-/* main-banner(배너 커스텀) */
-.main-banner {
-    background-image: url('../images/backgroundAndPicture/main_back.png');
-    background-size: cover;
-    background-position: center;
-}
-
-
-/* 팀 섹션2 */
-.team-section2 {
-    display: flex-start;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 1320px;
-    margin: 0 auto;
-}
-
-.join-page {
-    background-color: black; /* 배경색 */
-    color: white; /* 기본 텍스트 색상 */
-    padding: 20px;
-    text-align: center;
-    height: 100vh; /* 화면 전체 높이 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* 세로 중앙 정렬 */
-    position: relative; /* 자식 요소에 대해 기준 설정 */
-}
-
