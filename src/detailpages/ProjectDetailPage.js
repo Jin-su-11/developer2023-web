@@ -2,15 +2,16 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import MainContainer from "../components/MainContainer";
 import projectData from "../data/project.json";
+import memberData from "../data/member.json"; // member.json 파일을 가져옵니다.
 import gitIcon from "../images/icon/git_icon.png";
 // import downloadIcon from "../images/icon/download_icon.png";
 import "../css/practice.css";
 
-
 /**
  * 프로젝트 상세 페이지
  * @since 2024.09.22
- * @lastmodified 2024.11.01
+ * @lastmodified 2024.11.09
+ * @author 김진수
  */
 
 const ProjectDetailPage = () => {
@@ -23,6 +24,16 @@ const ProjectDetailPage = () => {
         if (!project) {
             project = seasonProjects.find(p => p.projectId === projectIdNum);
         }
+    });
+
+    // member.json 파일에서 해당 projectId를 가진 멤버들을 가져옵니다.
+    const projectMembers = [];
+    Object.values(memberData).forEach(season => {
+        season.forEach(team => {
+            if (team.projectId === projectIdNum) {
+                projectMembers.push(...team.members);
+            }
+        });
     });
 
     const handleGitClick = () => {
@@ -72,7 +83,14 @@ const ProjectDetailPage = () => {
 
                         <div className="display-flex-end gap-05r">
                             <p className="font-size-24 weight-600 representative-color">{project.team} |</p>
-                            <p className="font-size-20 weight-500" style={{ color: "#FFFFFF" }}>{project.members}</p>
+                            <p className="font-size-20 weight-500" style={{ color: "#FFFFFF" }}>
+                                {projectMembers.map((member, index) => (
+                                    <span key={member.id}>
+                                        {member.memberName}
+                                        {index < projectMembers.length - 1 ? ", " : ""}
+                                    </span>
+                                ))}
+                            </p>
                         </div>
                     </div>
 
@@ -81,7 +99,6 @@ const ProjectDetailPage = () => {
                     </div>
                 </div>
             </div>
-
         </>
     );
 };

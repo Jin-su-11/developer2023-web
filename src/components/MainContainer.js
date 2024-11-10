@@ -20,7 +20,7 @@ const MainContainer = ({ children }) => {
                     backgroundColor = "#000000";
                 } else if (child.type && child.type.name === "Project") {
                     backgroundColor = "#191919";
-                } else if (child.type && child.type.name === "StackUpPage") {
+                } else if (child.type && child.type.name === "Progress") {
                     backgroundColor = "#000000";
                 }
                 // 개별 child를 배경색을 가진 div로 감싸고, .main-container 스타일 유지
