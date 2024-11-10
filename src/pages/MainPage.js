@@ -4,7 +4,8 @@ import MainContainer from "../components/MainContainer";
 import Project from "../components/Project";
 import About from "../components/About";
 import Team from "../components/Team";
-import StackUpPage from "../components/StackUpPage";
+import StackUpPage from "../components/Progress";
+import Progress from "../components/Progress";
 
 const MainPage = () => {
     return (
@@ -14,7 +15,7 @@ const MainPage = () => {
                 <About />
                 <Team />
                 <Project />
-                <StackUpPage />
+                <Progress />
             </MainContainer>
         </div>
     );
