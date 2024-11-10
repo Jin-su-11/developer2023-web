@@ -5,12 +5,11 @@ import Project from "../components/Project";
 import About from "../components/About";
 import Team from "../components/Team";
 import StackUpPage from "../components/StackUpPage";
-import MainBackground from "../components/MainBackground";
 
 const MainPage = () => {
     return (
         <div>
-            <MainBackground />
+            <MainBanner />
             <MainContainer>
                 <About />
                 <Team />

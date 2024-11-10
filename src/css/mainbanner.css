@@ -1,0 +1,70 @@
+.main-background {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.developer-text {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 5.5rem;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.white-text {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.7rem;
+    color: white;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.left-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 350px;
+    padding-left: 100px;
+}
+
+.right-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+}
+
+
+.code-output {
+    color: green;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px;
+    border-radius: 5px;
+    white-space: pre;
+    animation: fadeIn 10s;
+    font-size: 2.5rem;
+    margin-bottom: 300px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+

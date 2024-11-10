@@ -9,7 +9,7 @@ import DetailPage from "./detailpages/DetailPage";
 import { ScrollToTop } from "./components/CommonUtil";
 import Footer from "./components/Footer";
 import ContactWidget from "./components/ContactWidget";
-import JoinPage from "./pages/JoinPage";
+
 import JoinWidget from "./components/JoinWidget";
 import Header from "./components/Header";
 
@@ -32,14 +32,7 @@ const AppRoutes = () => {
             ]
         },
 
-        {
-            path: '/Join',
-            element: <MainHeaderLayout />,
-            children: [
-                { path: '', element: <JoinPage /> },
-                { path: 'detail/:JoinPage', element: <JoinPage /> }
-            ]
-        },
+
 
         { path: '*', element: <NotFound /> }
     ];
@@ -63,12 +56,12 @@ function App() {
     return (
         <Router>
             <ScrollToTop />
-            <Header onJoinClick={handleJoinClick} /> {/* onJoinClick 전달 */}
+            <Header onJoinClick={handleJoinClick} />
             <AppRoutes />
             <Footer />
-            <ContactWidget />  {/* ContactWidget 상시 표시 */}
+            <ContactWidget />
 
-            {/* JoinWidget은 필요할 때만 중앙에 표시 */}
+
             {isJoinPopupVisible && (
                 <div style={styles.overlay}>
                     <JoinWidget onClose={handleCloseJoinPopup} />
@@ -78,7 +71,6 @@ function App() {
     );
 }
 
-// 중앙에 JoinWidget을 표시하기 위한 오버레이 스타일
 const styles = {
     overlay: {
         position: 'fixed',
@@ -90,7 +82,7 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        zIndex: 1000, // 다른 요소 위에 표시
+        zIndex: 1000,
     },
 };
 
