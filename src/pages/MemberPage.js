@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from "react";
-import memberData from '../data/member.json'; // JSON 데이터 가져오기
+import React, { useState, useEffect, useRef } from 'react';
+import memberData from '../data/member.json';
 import '../css/style.css';
 import '../css/practice.css';
-import '../css/memberpage.css'; // 필요에 따라 CSS 파일 추가
-import { FaGithub, FaLink } from 'react-icons/fa'; // react-icons에서 GitHub와 링크 아이콘 임포트
+import '../css/memberpage.css';
+import { FaGithub, FaLink } from 'react-icons/fa';
 
 /**
- * MemberPage.js
+ * ContactWidget
  * @since 2024.9.12
- * Author 임석진
+ * @author 임석진
+ *
  */
 
-
 const MemberPage = () => {
-    const [season, setSeason] = useState('all'); // 기본 시즌은 'all'
+    const [season, setSeason] = useState('all');
     const [teams, setTeams] = useState([]);
-    const [selectedSeason, setSelectedSeason] = useState('SEASON ▾'); // 드롭다운 버튼의 초기 텍스트
-
+    const [selectedSeason, setSelectedSeason] = useState('SEASON ▾');
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+    const dropdownRef = useRef(null);
 
     const totalMembers = memberData.season1.reduce((count, team) => count + team.members.length, 0)
         + memberData.season2.reduce((count, team) => count + team.members.length, 0);
 
     useEffect(() => {
-
         if (season === 'season1') {
             setTeams(memberData['season1']);
             setSelectedSeason('SEASON 1');
@@ -30,7 +30,6 @@ const MemberPage = () => {
             setTeams(memberData['season2']);
             setSelectedSeason('SEASON 2');
         } else {
-
             setTeams([...memberData['season2'], ...memberData['season1']]);
             setSelectedSeason('SEASON');
         }
@@ -38,11 +37,28 @@ const MemberPage = () => {
 
     const handleSeasonChange = (newSeason) => {
         setSeason(newSeason);
+        setIsDropdownOpen(false);
     };
+
+    const handleDropdownToggle = () => {
+        setIsDropdownOpen(!isDropdownOpen);
+    };
+
+    const handleClickOutside = (e) => {
+        if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+            setIsDropdownOpen(false);
+        }
+    };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => {
+            document.removeEventListener('mousedown', handleClickOutside);
+        };
+    }, []);
 
     return (
         <div className="member-page">
-
             <div className="text-align-center padding85-0">
                 <h1 className="font-size-46 weight-700 color-white">MEMBER</h1>
                 <p className="font-size-24 title-description-spacing color-white">
@@ -57,28 +73,33 @@ const MemberPage = () => {
                 >
                     ALL
                 </button>
-                <div className="dropdown">
-                    <button className={`dropbtn ${season !== 'all' ? 'active' : ''}`}>
+                <div className="dropdown" ref={dropdownRef}>
+                    <button
+                        className={`dropbtn ${isDropdownOpen ? 'active' : ''}`}
+                        onClick={handleDropdownToggle}
+                    >
                         {selectedSeason}
                     </button>
-                    <div className="dropdown-content">
-                        <button
-                            className={season === 'season1' ? 'selected' : ''}
-                            onClick={() => handleSeasonChange('season1')}
-                        >
-                            SEASON 1
-                        </button>
-                        <button
-                            className={season === 'season2' ? 'selected' : ''}
-                            onClick={() => handleSeasonChange('season2')}
-                        >
-                            SEASON 2
-                        </button>
-                    </div>
+                    {isDropdownOpen && (
+                        <div className="dropdown-content is-visible">
+                            <button
+                                className={season === 'season2' ? 'selected' : ''}
+                                onClick={() => handleSeasonChange('season2')}
+                            >
+                                SEASON 2
+                            </button>
+                            <button
+                                className={season === 'season1' ? 'selected' : ''}
+                                onClick={() => handleSeasonChange('season1')}
+                            >
+                                SEASON 1
+                            </button>
+                        </div>
+                    )}
+
                 </div>
             </div>
 
-            {/* TEAM SECTION */}
             <div className="team-section2">
                 {teams.map((team, index) => (
                     <div key={index} className="team-box">
@@ -88,13 +109,10 @@ const MemberPage = () => {
                                 {memberData.season1.includes(team) ? 'season1' : 'season2'}
                             </span>
                         </div>
-
-
                         <div className="team-members-row">
                             {team.members.map((member, i) => (
                                 <div key={i} className="team-member-card">
                                     <div className="member-image"/>
-
                                     <div className="member-info">
                                         <span className="member-name">{member.memberName}</span>
                                     </div>
@@ -110,12 +128,12 @@ const MemberPage = () => {
                                     <div className="member-links">
                                         {member.githubUrl && (
                                             <a href={member.githubUrl} target="_blank" rel="noopener noreferrer">
-                                                <FaGithub size={24}/> {/* GitHub 아이콘 */}
+                                                <FaGithub size={24}/>
                                             </a>
                                         )}
                                         {member.otherLink && (
                                             <a href={member.otherLink} target="_blank" rel="noopener noreferrer">
-                                                <FaLink size={24}/> {/* Other 링크 아이콘 */}
+                                                <FaLink size={24}/>
                                             </a>
                                         )}
                                     </div>
@@ -130,4 +148,3 @@ const MemberPage = () => {
 };
 
 export default MemberPage;
-

@@ -5,22 +5,23 @@
 }
 
 .text-align-center {
+
     text-align: center;
 }
 
-/* 페이지 타이틀과 설명 사이의 간격 */
+
 .title-description-spacing {
-    margin-top: 20px; /* 간격 조정 */
-}/* 필터 버튼과 드롭다운 컨테이너 정렬 */
+    margin-top: 20px;
+}
 .filter-container {
     display: flex;
-    justify-content: center; /* 수평 가운데 정렬 */
-    align-items: center; /* 수직 가운데 정렬 */
-    gap: 20px; /* 버튼 간격 조정 */
-    margin: 20px 0; /* 컨테이너 상하 여백 */
-}/* 필터 버튼 기본 스타일 */
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 20px 0;
+}
 .filter-button {
-    background-color: #B751F2; /* 기본 보라색 */
+    background-color: #B751F2;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -39,7 +40,7 @@
 
 }
 
-/* ALL 버튼이 비활성화 상태일 때 회색 */
+
 .filter-button:not(.active) {
     background-color: #f9f9f9;
     color: #565B67;
@@ -50,36 +51,114 @@
 }
 
 
-.dropbtn {
-    background-color: white;
-    color: #565B67;
-    font-weight: 600;
-    font-style: normal;
-    line-height: normal;
-    font-family: Pretendard, serif;
-    border: none;
-    padding-top: 10px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    .dropbtn {
+        background-color: white;
+        color: #565B67;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        font-family: Pretendard, serif;
+        border: none;
+        cursor: pointer;
+        font-size: 24px;
+        border-radius: 12px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 180px;
+    }
 
-    cursor: pointer;
-    font-size: 24px;
-    border-radius: 12px;
-    width: 180px;
-    height: 66px;
-    text-align: center;
-    position: relative;
+    .dropbtn {
+        padding: 10px 20px;
+        width: 180px;
+        height: 66px;
+        position: relative;
+    }
+
+    .dropbtn::after {
+        content: "▾";
+        font-size: 24px;
+        color: #565B67;
+        position: absolute;
+        right: 15px;
+        transform: translateY(-50%);
+
+    }
+
+    .dropbtn.active {
+        background-color: white;
+        color: #565B67;
+        width: 180px;
+    }
+    .dropdown-content button:hover{
+        background-color: #B751F2;
+        color: white;
+        width: 180px;
+    }
+
+    .dropbtn.active::after {
+        color: white;
+    }
+
+    .dropdown {
+        position: relative;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        border-radius: 12px;
+        text-align: center;
+        margin-top: 8px; /* 기존 dropbtn과의 간격 */
+    }
+
+    .dropdown-content button {
+        color: #565B67;
+        padding: 20px 16px;
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        border: none; /* 테두리 제거 */
+        background: none;
+        cursor: pointer;
+        font-size: 21px;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        font-family: Pretendard, serif;
+    }
 
 
-}
+    .dropdown-content button:first-child {
+        margin-top: 0; /* 첫 번째 버튼 상단 간격 제거 */
+    }
+
+    .dropdown-content button {
+        padding: 20px 16px;
+        font-size: 21px;
+    }
+
+    .dropdown-content button:hover {
+        border-radius: 12px;
+    }
+
+    .dropdown .dropdown-content.is-visible {
+        display: block;
+    }
+
 
 .dropbtn::after {
-    content: "▾"; /* 역삼각형 기호 */
-    font-size: 24px; /* 크기 */
-    color: #565B67; /* 색상 */
+    content: "▾";
+    font-size: 24px;
+    color: #565B67;
     position: absolute;
-    right: 15px; /* 오른쪽 정렬 */
+    right: 15px;
     top: 50%;
     font-weight: 600;
     font-style: normal;
@@ -88,74 +167,22 @@
 
     transform: translateY(-50%); /* 세로 중앙 정렬 */
 }
-.dropbtn.active::after {
-    color: white; /* 활성화 상태에서 역삼각형 색상 변경 */
-}
 
 
-.dropbtn.active {
-    background-color: #B751F2;
-    color: white;
-    width: 180px;
-    height: 66px;
-    text-align: center;
-    font-size: 21px;
+    .dropbtn.active::after {
+        content: "▴"; /* 위 방향 삼각형으로 변경 */
+        font-size: 14px; /* 크기 */
+        color: #565B67; /* 색상 */
+        position: absolute;
+        right: 15px; /* 오른쪽 정렬 */
+        top: 50%;
+        font-weight: 600;
+        font-style: normal;
+        line-height: normal;
+        font-family: Pretendard, serif;
 
-}
-
-/* 드롭다운 콘텐츠 스타일 */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 180px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    text-align: center;
-    padding: 0;
-
-
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-    width: 180px;
-    height: 128px;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 12px;
-    text-align: center;
-
-
-
-}
-
-.dropdown-content button {
-    color: #565B67;
-    padding: 20px 16px;
-    text-decoration: none;
-    display: block;
-    width: 100%;
-    text-align: center;
-    border: none;
-    background: none;
-    cursor: pointer;
-    font-size: 21px;
-    font-weight: 600;
-    font-style: normal;
-    line-height: normal;
-    font-family: Pretendard, serif;
-}
-
-/* 드롭다운 버튼 마우스 오버 스타일 */
-.dropdown-content button:hover {
-    background-color: #B751F2;
-    color: white;
-    border-radius: 12px;
-}
-
+        transform: translateY(-50%); /* 세로 중앙 정렬 */
+    }
 
 
 /* 팀 섹션2 */
