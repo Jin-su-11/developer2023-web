@@ -1,6 +1,8 @@
 
 # Developer2023 Web 🌐
 
+[![Contributors](https://img.shields.io/badge/contributors-4-brightgreen)](#-기여자-contributors)  
+
 IT 개발 동아리 **디벨로퍼(Developer)** 웹사이트 제작을 위한 프로젝트입니다. 웹사이트는 동아리의 활동을 소개하고, 다양한 프로젝트와 팀원 소개 등을 공유하는 플랫폼입니다. 프로젝트는 **React**를 기반으로 구성되어 있으며, **JavaScript**, **CSS**, **HTML**을 사용합니다.
 
 ---
