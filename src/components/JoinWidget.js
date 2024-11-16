@@ -3,6 +3,12 @@ import kakaoLogo from '../images/backgroundAndPicture/kakao_logo.png';
 import paperPlaneImage from '../images/backgroundAndPicture/paper_plane.png';
 import chatIconImage from '../images/backgroundAndPicture/chat_icon.png';
 
+/**
+ * ContactWidget
+ * @since 2024.10.10
+ * @author 임석진
+ */
+
 const JoinWidget = ({ onClose }) => {
     const cardRef = useRef(null);
 
