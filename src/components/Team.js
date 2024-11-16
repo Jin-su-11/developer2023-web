@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from "react";
-import memberData from '../data/member.json'; // JSON 데이터 가져오기
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import memberData from '../data/member.json';
 import '../css/style.css';
 import '../css/practice.css';
 import '../css/team.css';
 
-const Team = () => {
-    const [season, setSeason] = useState('season2'); // 기본 시즌은 'season2'
-    const [teams, setTeams] = useState([]);
+/**
+ * ContactWidget
+ * @since 2024.9.12
+ * @author 임석진
+ */
 
+const Team = () => {
+    const [season, setSeason] = useState('season2');
+    const [teams, setTeams] = useState([]);
 
     const totalMembers = memberData['season1'].reduce((acc, team) => acc + team.members.length, 0) +
         memberData['season2'].reduce((acc, team) => acc + team.members.length, 0);
@@ -25,15 +31,12 @@ const Team = () => {
     };
 
     return (
-
         <div className="text-align-center padding85-0">
-            {/* 페이지 타이틀 */}
             <div className="display-flex flex-direction-column gap-1r margin-bottom-60">
                 <h2 className="team-text">함께 할수록 즐거운 성장</h2>
                 <p className="team-text2">즐거운 개발 여정을 디벨로퍼와 함께 해 보세요!</p>
             </div>
 
-            {/* 시즌 선택 버튼 */}
             <div className="season-selector">
                 <h2
                     className={`season ${season === 'season2' ? 'active' : ''}`}
@@ -49,28 +52,22 @@ const Team = () => {
                 </h2>
             </div>
 
-            {/* 팀 카드 섹션 */}
             <div className="team-section3">
                 {teams.map((team, index) => (
-                    <div key={index} className="member-card">
+                    <Link to="/member" key={index} className="member-card"> {/* Wrap in Link */}
                         <span className="team-name1">{team.teamName}</span><br />
                         <span className="team-members">{team.members.length}명</span>
-                    </div>
+                    </Link>
                 ))}
             </div>
 
-            {/* 누적 활동 인원 */}
             <div className="total-members-section text-align-center">
                 <p className="team-text3">누적 활동 인원</p>
-                {/* member.json에서 계산한 총 멤버 수 표시 */}
                 <h2 className="font-size-48 weight-600">총 {totalMembers}명</h2>
                 <a href="/member" className="font-size-16 weight-500">더 보러가기 ></a>
             </div>
         </div>
-
     );
 };
 
 export default Team;
-
-
