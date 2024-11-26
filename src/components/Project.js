@@ -4,9 +4,9 @@ import projectsData from '../data/project.json';
 
 /**
  * ProjectPage 컴포넌트
+ * @since 2024.9.26
+ * @lastmodified 2024.11.13
  * @author 김진수
- * @since 2024.09.17
- * @lastmodified 2024.11.01
  */
 
 const Project = () => {
@@ -35,7 +35,7 @@ const Project = () => {
         const interval = setInterval(() => {
             setIsTransitioning(true);
             setCurrentIndex((prevIndex) => prevIndex + 1);
-        }, 3000); // 3초마다 자동 슬라이드
+        }, 8000);
 
         return () => clearInterval(interval);
     }, []);
@@ -43,9 +43,11 @@ const Project = () => {
     const handleTransitionEnd = () => {
         setIsTransitioning(false);
         if (currentIndex >= projects.length - 1) {
-            setCurrentIndex(1); // 마지막 복제 카드에서 실제 첫 번째 카드로 이동
+            // 마지막 카드에서 첫 번째 카드로 이동
+            setCurrentIndex(1);
         } else if (currentIndex <= 0) {
-            setCurrentIndex(projects.length - 2); // 첫 번째 복제 카드에서 실제 마지막 카드로 이동
+            // 첫 번째 카드에서 마지막 카드로 이동
+            setCurrentIndex(projects.length - 2);
         }
     };
 
