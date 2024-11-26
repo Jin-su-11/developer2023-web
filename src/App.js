@@ -11,10 +11,20 @@ import Footer from "./components/Footer";
 import ContactWidget from "./components/ContactWidget";
 import JoinWidget from "./components/JoinWidget";
 import Header from "./components/Header";
+import About from "./components/About";
+import AboutContainer from "./aboutpage/AboutContainer";
+import AboutPage from "./aboutpage/AboutPage";
 
 const AppRoutes = () => {
     const routes = [
         { path: '/', element: <MainPage /> },
+        {
+            path: '/about',
+            element: <AboutPage />,
+            children: [
+                { path: '/about', element: <AboutPage /> },
+            ]
+        },
         {
             path: '/member',
             element: <MainHeaderLayout />,
