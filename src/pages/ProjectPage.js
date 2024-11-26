@@ -8,7 +8,7 @@ import top from "../images/icon/vector_top_black.png";
 import bottom from "../images/icon/vector_bottom_black.png";
 
 /**
- * DetailPage 컴포넌트
+ * ProjectPage 컴포넌트
  * @author 김진수
  * @since 2024.9.26
  * @lastmodified 2024.11.09

@@ -37,8 +37,7 @@
 
 /* 텍스트 섹션 */
 .progress-text-section {
-    margin-top: 30px;
-    width: 45%;
+    justify-items: center;
 }
 
 .hashtags {
@@ -52,24 +51,32 @@
     background-color: white;
     border-radius: 20px;
     margin-top: 30px;
-    padding: 10px;
-    align-items: center;
-    justify-content: center;
-    width: 70%;
-    margin-left: 20px;
+    display: flex; /* 버튼 컨테이너에 flex 적용 */
+    align-items: center; /* 수직 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* 커서를 포인터로 변경 */
+}
+
+.progress-logo-button:hover {
+    transform: scale(1.05); /* 버튼 살짝 커짐 */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* 버튼 그림자 추가 */
 }
 
 .progress-button-content {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 10px;
 }
 
-.progress-logo-image {
-    width: 60px;
-    height: 60px;
-    padding-right: 10px;
-
+.stack-up-logo-image {
+    width: 20%;
+    height: 20%;
+}
+.soft-cat-logo-image {
+    width: 40%;
+    height: 40%;
 }
 
 /* 텍스트 컨테이너 스타일 */
@@ -77,15 +84,23 @@
     color: white;
     font-size: 2rem; /* 기존 글자 크기에 맞춰 조정 */
     line-height: 2rem; /* 텍스트 간 위아래 간격 설정 */
+}
+.progress-text-align-right{
     text-align: right;
+}
+.progress-text-align-left{
+    text-align: left;
 }
 
 /* 기본 텍스트 스타일 */
 .progress-text {
     margin-bottom: 15px; /* 텍스트 간 여백 추가 */
     color: white;
-    text-align: right;
     padding-right: 30px;
+}
+
+.softcat-color {
+    color: #2447FF;
 }
 
 

@@ -9,7 +9,6 @@ import DetailPage from "./detailpages/DetailPage";
 import { ScrollToTop } from "./components/CommonUtil";
 import Footer from "./components/Footer";
 import ContactWidget from "./components/ContactWidget";
-
 import JoinWidget from "./components/JoinWidget";
 import Header from "./components/Header";
 
