@@ -1,14 +1,22 @@
-import React from 'react';
-import { Typewriter } from 'react-simple-typewriter';
-import '../css/mainbanner.css';
-
 /**
- * ContactWidget
+ * MainBanner
  * @since 2024.10.10
+ * @lastmodified 2024.12.05
  * @author 임석진
  */
+import React, { useEffect, useRef } from 'react';
+import { Typewriter } from 'react-simple-typewriter';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import '../css/mainbanner.css';
 
-const MainBackground = () => {
+// ScrollTrigger 플러그인 등록
+gsap.registerPlugin(ScrollTrigger);
+
+const MainBanner = () => {
+    const text1Ref = useRef(null);
+    const text2Ref = useRef(null);
+
     const text = `if user == "developer":\n` +
         `    input("Keep coding,\n` +
         `           keep learning,\n` +
@@ -17,11 +25,49 @@ const MainBackground = () => {
         `else:\n` +
         `    print("Curiosity is the first step.")`;
 
+    useEffect(() => {
+        // 첫 번째 텍스트 애니메이션
+        gsap.fromTo(
+            text1Ref.current,
+            { opacity: 0, x: -100 },
+            {
+                opacity: 1,
+                x: 0,
+                duration: 1.5,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: text1Ref.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+
+        // 두 번째 텍스트 애니메이션
+        gsap.fromTo(
+            text2Ref.current,
+            { opacity: 0, y: 50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.5,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: text2Ref.current,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    toggleActions: "play none none reverse",
+                },
+            }
+        );
+    }, []);
+
     return (
         <div className="main-background">
             <div className="left-container">
-                <p className="white-text">개발을 통해 성장하는 우리들의 이야기</p>
-                <div className="developer-text">DEVELOPER</div>
+                <p ref={text1Ref} className="white-text">개발을 통해 성장하는 우리들의 이야기</p>
+                <div ref={text2Ref} className="developer-text">DEVELOPER</div>
             </div>
 
             <div className="right-container">
@@ -54,4 +100,4 @@ const MainBackground = () => {
     );
 };
 
-export default MainBackground;
+export default MainBanner;

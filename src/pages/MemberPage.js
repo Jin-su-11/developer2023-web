@@ -1,15 +1,19 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import memberData from '../data/member.json';
 import '../css/style.css';
 import '../css/practice.css';
 import '../css/memberpage.css';
 import { FaGithub, FaLink } from 'react-icons/fa';
 
+gsap.registerPlugin(ScrollTrigger);
+
 /**
  * ContactWidget
  * @since 2024.9.12
+ * @modified 2024.12.05
  * @author 임석진
- *
  */
 
 const MemberPage = () => {
@@ -18,6 +22,9 @@ const MemberPage = () => {
     const [selectedSeason, setSelectedSeason] = useState('SEASON ▾');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
+    const pageRef = useRef(null);
+    const teamBoxRefs = useRef([]);
+    const headerRef = useRef(null);
 
     const totalMembers = memberData.season1.reduce((count, team) => count + team.members.length, 0)
         + memberData.season2.reduce((count, team) => count + team.members.length, 0);
@@ -57,9 +64,51 @@ const MemberPage = () => {
         };
     }, []);
 
+    // GSAP 애니메이션 설정
+    useEffect(() => {
+        if (!pageRef.current) return;
+
+        // 헤더 애니메이션
+        gsap.fromTo(
+            headerRef.current,
+            { opacity: 0, y: -50 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 1.5,
+                ease: 'power3.out',
+                scrollTrigger: {
+                    trigger: headerRef.current,
+                    start: 'top 80%',
+                    toggleActions: 'play none none reverse',
+                },
+            }
+        );
+
+        // 팀 박스 애니메이션
+        teamBoxRefs.current.forEach((box, index) => {
+            gsap.fromTo(
+                box,
+                { opacity: 0, y: 50 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 1,
+                    delay: index * 0.2,
+                    ease: 'power3.out',
+                    scrollTrigger: {
+                        trigger: box,
+                        start: 'top 85%',
+                        toggleActions: 'play none none reverse',
+                    },
+                }
+            );
+        });
+    }, [teams]);
+
     return (
-        <div className="member-page">
-            <div className="text-align-center padding85-0">
+        <div className="member-page" ref={pageRef}>
+            <div className="text-align-center padding85-0" ref={headerRef}>
                 <h1 className="font-size-46 weight-700 color-white">MEMBER</h1>
                 <p className="font-size-24 title-description-spacing color-white">
                     <span className="highlight-total">총 {totalMembers}명</span>의 팀원들이 디벨로퍼와 함께했어요!
@@ -96,13 +145,16 @@ const MemberPage = () => {
                             </button>
                         </div>
                     )}
-
                 </div>
             </div>
 
             <div className="team-section2">
                 {teams.map((team, index) => (
-                    <div key={index} className="team-box">
+                    <div
+                        key={index}
+                        className="team-box"
+                        ref={(el) => (teamBoxRefs.current[index] = el)}
+                    >
                         <div className="team-header">
                             <h3 className="team-name">{team.teamName} <span>{team.members.length}명</span></h3>
                             <span className="season-badge">
@@ -112,7 +164,7 @@ const MemberPage = () => {
                         <div className="team-members-row">
                             {team.members.map((member, i) => (
                                 <div key={i} className="team-member-card">
-                                    <div className="member-image"/>
+                                    <div className="member-image" />
                                     <div className="member-info">
                                         <span className="member-name">{member.memberName}</span>
                                     </div>
@@ -128,12 +180,12 @@ const MemberPage = () => {
                                     <div className="member-links">
                                         {member.githubUrl && (
                                             <a href={member.githubUrl} target="_blank" rel="noopener noreferrer">
-                                                <FaGithub size={24}/>
+                                                <FaGithub size={24} />
                                             </a>
                                         )}
                                         {member.otherLink && (
                                             <a href={member.otherLink} target="_blank" rel="noopener noreferrer">
-                                                <FaLink size={24}/>
+                                                <FaLink size={24} />
                                             </a>
                                         )}
                                     </div>

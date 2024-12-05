@@ -72,6 +72,7 @@ const styles = {
         alignItems: 'center',
         cursor: 'pointer',
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
+        zIndex: 9999,
     },
     mailIcon: {
         color: 'white',
@@ -89,6 +90,7 @@ const styles = {
         boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
         fontFamily: 'Arial, sans-serif',
         textAlign: 'center',
+        zIndex: 9999,
     },
     header: {
         fontSize: '22px',
