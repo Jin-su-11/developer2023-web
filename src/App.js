@@ -52,12 +52,11 @@ const AppRoutes = () => {
 function App() {
     const [isJoinPopupVisible, setIsJoinPopupVisible] = useState(false);
 
-    // "가입하러 가기" 버튼을 클릭하면 JoinWidget을 열기
     const handleJoinClick = () => {
         setIsJoinPopupVisible(true);
     };
 
-    // JoinWidget을 닫기 위한 함수
+
     const handleCloseJoinPopup = () => {
         setIsJoinPopupVisible(false);
     };

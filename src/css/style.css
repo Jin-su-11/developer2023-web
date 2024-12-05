@@ -568,3 +568,9 @@ li {
     justify-content: center; /* 세로 중앙 정렬 */
     position: relative; /* 자식 요소에 대해 기준 설정 */
 }
+
+.project-text {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}

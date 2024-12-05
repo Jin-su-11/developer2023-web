@@ -115,14 +115,13 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    margin-새ㅔ: 30px;
+    margin-top: 30px;
 }
 
 .total-members-section a:hover {
     text-decoration: underline;
 }
 
-/* 시즌 선택 버튼 스타일 */
 .season-selector {
     display: flex;
     justify-content: center;
@@ -143,13 +142,26 @@
     font-weight: 600;
     line-height: normal;
 
+    transition: transform 0.2s ease;
+}
+
+.season:hover {
+    transform: scale(1.1);
+}
+
+.season.active:hover {
+    transform: scale(1.1);
 }
 
 .season.active {
+    font-family: Pretendard;
     color: #9427D7;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
 }
 
-/* 반응형 처리 */
+
 @media (max-width: 768px) {
     .team-card {
         width: 100%;

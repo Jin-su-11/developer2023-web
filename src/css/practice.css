@@ -39,6 +39,13 @@
     font-weight: 700;
 }
 
+.project-link:hover {
+    text-decoration: underline; 
+    text-decoration-color: gray;
+    text-decoration-thickness: 1px;
+    cursor: pointer;
+}
+
 /* 두 번째 섹션만 좌우 반전 */
 .reverse {
     flex-direction: row-reverse;
