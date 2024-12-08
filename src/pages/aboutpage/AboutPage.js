@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';  // useParams를 가져옵니다.
 import AboutContainer from "./AboutContainer";
-import About from "../components/About";
-import Progress from "../components/Progress";
+import About from "../../components/About";
+import Progress from "../../components/Progress";
 import AboutAchievement from "./AboutAchievement";
 
 /**
