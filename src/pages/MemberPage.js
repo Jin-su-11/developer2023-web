@@ -124,14 +124,15 @@ const MemberPage = () => {
                 </button>
                 <div className="dropdown" ref={dropdownRef}>
                     <button
-                        className={`dropbtn ${isDropdownOpen ? 'active' : ''}`}
+                        className={`dropbtn ${season !== 'all' ? 'active' : ''}`}
                         onClick={handleDropdownToggle}
                     >
                         {selectedSeason}
                     </button>
+
                     {isDropdownOpen && (
                         <div className="dropdown-content is-visible">
-                            <button
+                        <button
                                 className={season === 'season2' ? 'selected' : ''}
                                 onClick={() => handleSeasonChange('season2')}
                             >
