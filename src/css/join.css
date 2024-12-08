@@ -20,7 +20,9 @@
 }
 
 .white-text {
-    font-size: 1.7rem;
+    font-family: Pretendard, serif;
+    font-weigh: 600px;
+    font-size: 24px;
     color: white;
     text-align: left;
     margin-left: 20px; /* 왼쪽 정렬 */
