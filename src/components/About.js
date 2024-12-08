@@ -94,7 +94,7 @@ function About() {
     }, []);
 
     return (
-        <div className="padding85-0">
+        <div className="padding100-0">
             {/* 제목 */}
             <div className="display-flex flex-direction-column gap-05r">
                 <h2
@@ -191,7 +191,7 @@ function About() {
                         style={{ color: "#FFFFFF" }}
                     >
                         <span className="weight-600 representative-color">협업 활동</span>을 통해{" "}
-                        <span className="weight representative-color">실력 상승</span>을 경험해 보세요!
+                        <span className="weight-600 representative-color">실력 상승</span>을 경험해 보세요!
                     </p>
                 </div>
             </div>
