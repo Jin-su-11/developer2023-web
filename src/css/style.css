@@ -439,6 +439,10 @@ li {
     text-align: end;
 }
 
+.align-center {
+    text-align: center;
+}
+
 .deco-none {
     text-decoration: none;
 }

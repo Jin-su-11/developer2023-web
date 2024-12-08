@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/style.css';
 
 const Footer = () => {
     return (
@@ -6,7 +7,7 @@ const Footer = () => {
             <div className="display-flex-column gap-1r justify-center padding-70"
                  style={{background: "rgb(34 47 63)"}}>
                 <li>
-                    <p className="color-white frank-800 font-size-24 text-align-center">DEVELOPER</p>
+                    <p className="color-white frank-800 font-size-24 align-center">DEVELOPER</p>
                 </li>
                 <p className="text-align-center weight-400 font-size-14 color-white"
                    style={{color: "#bdbdbd"}}>
