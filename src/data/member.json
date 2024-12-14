@@ -60,7 +60,7 @@
   ],
   "season2": [
     {
-      "teamName": "Study Hero",
+      "teamName": "Study  Hero",
       "projectId" : 4,
       "members": [
         { "id": 27, "memberName": "김진수", "memberRole": "Club Leader", "githubUrl": "https://github.com/kimjs991229@dongguk.ac.kr", "thumbnail": "profile26.jpg",
