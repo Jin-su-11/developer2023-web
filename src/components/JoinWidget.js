@@ -43,10 +43,10 @@ const JoinWidget = ({ onClose }) => {
                     </p>
 
                     <div className="contact-box">
-                        <span className="contact-text">010-0000-0000</span>
+                        <span className="contact-text">010-5109-0625</span>
                     </div>
                     <a
-                        href="https://open.kakao.com/o/g9e5BCWg"
+                        href="https://open.kakao.com/o/s2BRO63g"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="kakao-button"
