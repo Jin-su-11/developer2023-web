@@ -63,21 +63,25 @@
       "teamName": "Study  Hero",
       "projectId" : 4,
       "members": [
-        { "id": 27, "memberName": "김진수", "memberRole": "Club Leader", "githubUrl": "https://github.com/Jin-su-11", "thumbnail": "profile26.jpg",
-          "review" :  "한식 양식 중식 일식 매운 거 안 매운 거 밥이나 빵이나 쌀이나 떡 뜨거운 거 차가운 거~"},
-        { "id": 28, "memberName": "김이현", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/lh7721004",  "thumbnail": "profile27.jpg" },
-        { "id": 29, "memberName": "김은채", "memberRole": "Developer", "githubUrl": "https://github.com/KimEunChae0725",  "thumbnail": "profile28.jpg" },
+        { "id": 28, "memberName": "김이현", "memberRole": ["PM","Full Stack", "Server"], "githubUrl": "https://github.com/lh7721004",  "thumbnail": "profile27.jpg",
+          "review" :  "정말 많은 것을 얻어가고 배울 수 있는 프로젝트였습니다. PM으로써 첫 프로젝트였기 때문에 부족한 점을 많이 느꼈지만 팀원분들이 잘 따라와주신 덕분에 성공적으로 프로젝트를 마무리 할 수 있었습니다\n     기획 단계에서  Git/Git Action, Cloud 패널, 퍼블리싱, API 동작, 소켓통신, DB에 대해서 조금 더 깊게 배울 수 있었습니다.\n     특히, 원래는 사용한 경험이 없던 Git Action, Cloud 패널, 소켓통신에 대해서 조금 더 배워볼 수 있었습니다.\u2028     좋은 아이디어를 통해 시작했기 때문에 구현해야하는 기능 대비 주어진 시간이 부족했지만 정해진 기간동안 열심히 해주신 팀원분들 덕분에\u2028     성공적으로 프로젝트를 마무리 할 수 있었던 것 같습니다."},
+        { "id": 27, "memberName": "김진수", "memberRole": "DB", "githubUrl": "https://github.com/Jin-su-11", "thumbnail": "profile26.jpg",
+          "review" :  "기획부터 구현까지 팀원들과 함께 프로젝트를 진행하며 프론트,백, 보안, 서버 등 여러분야를 한 명이 다 해내기에는 어려운 부분이 있었지만 제게 부족한 부분은 팀에게 도움을 받고 팀에 부족한 부분을 제가 채워주며 함께 협업을 통해 프로젝트를 성공적으로 완수하게 해준 팀원들에게 고맙고, 지속적인 소통을 통해 저의 분야가 아닌 다른 분야에 대해서도 공부해 보면서 다른 분야에 대한 견해를 넓힐 수 있는 기회를 만들 수 있었고, 이 프로젝트를 통한 저의 성장도 느낄 수 있어 뿌듯한 프로젝트였던 것 같습니다."},
+
+        { "id": 29, "memberName": "김은채", "memberRole": ["Front", "Design"], "githubUrl": "https://github.com/KimEunChae0725",  "thumbnail": "profile28.jpg",
+          "review" :  "저는 이 프로젝트에서 제가 제시한 아이디어를 기반으로 와이어프레임을 제작하고 이를 바탕으로 주요 기능을 구현하였습니다.\n     로그인 페이지는 사용자가 가장 먼저 마주하는 화면으로, 카카오 로그인 버튼을 포함하여 구성하였으며습니다.\n     사용자 초기 정보 설정 페이지에서는 프로필 사진 설정과 텍스트박스를 통해 기본 정보를 입력할 수 있도록 설계하였습니다.\n     Calendar 페이지는 react-calendar 컴포넌트를 활용하여 일정을 추가하거나 확인할 수 있도록 구현하였고,\n     일정이 있는 날짜를 클릭하면 주간 캘린더 페이지로 이동할 수 있도록 설정하였습니다. \n     react-week-calendar 패키지를 사용해 주간 캘린더 페이지를 구성하고, 모달을 통해 일정 추가 기능을 제공하였습니다.\n     DaisyUI, react-calendar, npm datepicker 등의 패키지를 활용하여 깔끔하고 일관된 디자인을 구현하려 노력하였으며,\n       초기에는 웹 디자인 경험이 부족해 어려움을 겪었지만, 함수와 컴포넌트 사용법을 익히면서 많은 부분을 학습할 수 있었습니다.\n     다만, 충분한 시간을 확보하지 못해 완성도가 다소 아쉬운 점이 있었으며,\n     시간이 더 주어졌더라면 더욱 고민하고 완성도 높은 결과물을 만들 수 있었을 것이라는 아쉬움이 남습니다."},
         { "id": 30, "memberName": "이호준", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile29.jpg" },
         { "id": 31, "memberName": "안병찬", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile29.jpg" },
         { "id": 32, "memberName": "권성현", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile29.jpg" },
         { "id": 33, "memberName": "임채은", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile29.jpg" },
-        { "id": 34, "memberName": "김현나", "memberRole": ["FrontEnd","Design"], "githubUrl": "https://github.com/nanaring1",  "thumbnail": "profile29.jpg" }
+        { "id": 34, "memberName": "김현나", "memberRole": ["FrontEnd","Design"], "githubUrl": "https://github.com/nanaring1",  "thumbnail": "profile29.jpg",
+        "review" :  "처음 협업을 해 보면서 어떤 방식으로 협업을 하는지 배웠고 소통을 하는 방법을 알 수 있었습니다. 이번 프로젝트를 수행하면서 api가 어떤 방식으로 작동하는지 알 수 있고 디자인과 프론트 제작을 더 깊이 있게 배우고 응용 해 볼 수 있었습니다. 프론트 역할을 맡으면서 웹 개발에는 불가능한게 없다는걸 알게 되었습니다. 그리고 프론트 뿐만 아니라 백엔드 작동에도 흥미가 갔습니다. 생각보다 시간이 빨리 지났지만 이 소중한 시간을 통해서 앞으로 계속 해서 겪을 협업의 중요성을 알게 되었습니다. 그리고 협업을 위해 지켜야 할 것들도 확실하게 깨닫게 되었습니다."}
       ]
     },
     {
       "teamName": "Dongguk Petitons",
       "members": [
-        { "id": 35, "memberName": "김진수", "memberRole": "Developer", "githubUrl": "https://github.com/Jin-su-11", "thumbnail": "profile30.jpg" },
+        { "id": 35, "memberName": "김진수", "memberRole": "Developer", "githubUrl": "https://github.com/Jin-su-11", "thumbnail": "profile30.jpg"},
         { "id": 36, "memberName": "김주찬", "memberRole": "Developer", "githubUrl": "https://github.com/jc0818",  "thumbnail": "profile31.jpg" },
         { "id": 37, "memberName": "김이현", "memberRole": "Developer", "githubUrl": "https://github.com/lh7721004",  "thumbnail": "profile32.jpg" },
         { "id": 38, "memberName": "이태영", "memberRole": "Developer", "githubUrl": "https://github.com/leetae04kr",  "thumbnail": "profile33.jpg" },
@@ -114,13 +118,17 @@
       ]
     },
     {
-      "teamName": "Web Site",
+      "teamName": "금장어때",
       "projectId" : 5,
       "members": [
-        { "id": 56, "memberName": "김주찬", "memberRole": "Developer", "githubUrl": "https://github.com/jc0818",  "thumbnail": "profile38.jpg", "review" : ""},
-        { "id": 57, "memberName": "이한샘", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile39.jpg" },
-        { "id": 58, "memberName": "이김", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile40.jpg" },
-        { "id": 59, "memberName": "이채준", "memberRole": "Developer", "githubUrl": "https://github.com/",  "thumbnail": "profile41.jpg" }
+        { "id": 56, "memberName": "김주찬", "memberRole": ["PM","Front","Back"], "githubUrl": "https://github.com/jc0818",  "thumbnail": "profile38.jpg",
+          "review" : "처음으로 PM 역할을 맡아 진행한 프로젝트입니다. PM으로서 부족한 점도 많았지만, \n많은 것을 배울 수 있었습니다. 이번 디벨로퍼 활동을 통해 웹 개발 지식이 많이 향상되었고, \n특히 Python의 Flask와 SQLite에 대해 깊이 공부할 수 있었습니다. \n부족한 PM을 믿고 따라와 준 팀원들에게 진심으로 감사드립니다. \n또한, 1년 동안 좋은 활동 경험을 제공해 주신 디벨로퍼 회장님께도 깊은 감사를 드립니다."},
+        { "id": 57, "memberName": "이한샘", "memberRole": "Front", "githubUrl": "https://github.com/",  "thumbnail": "profile39.jpg",
+          "review" :  "다양한 배경과 전문성을 가진 사람들과 협업하면서 프로젝트를 진행하거나, \n다른 팀의 프로젝트를 관찰하면서 많은 인사이트와 경험을 얻을 수 있었습니다. \n이를 통해 개발에 대해 정말 많은 것을 알아가는 소중한 학습의 기회였습니다."},
+        { "id": 58, "memberName": "이김", "memberRole": "Front", "githubUrl": "https://github.com/",  "thumbnail": "profile40.jpg",
+          "review" :  "처음이고 별 도움이 안되었던 것 같아서 스스로 부끄럽고, \n기회가 다시 온다면 최선을 다해보겠습니다. 유익한 경험 감사합니다."},
+        { "id": 59, "memberName": "이채준", "memberRole": "Front", "githubUrl": "https://github.com/",  "thumbnail": "profile41.jpg",
+          "review" :  " PM님의 훌륭한 리더십 덕분에 프로젝트가 성공적으로 마무리되었습니다. \n많은 것을 배우고 성장할 수 있어서 기쁩니다. 디벨로퍼 화이팅!"}
       ]
     }
   ]
