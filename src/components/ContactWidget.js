@@ -8,12 +8,10 @@ const ContactWidget = () => {
     const [isCardVisible, setIsCardVisible] = useState(false);
     const cardRef = useRef(null);
 
-    // 위젯 클릭 시 연락처 카드 표시/숨김
     const toggleCardVisibility = () => {
         setIsCardVisible(!isCardVisible);
     };
 
-    // 카드 외부 클릭 시 카드 닫기
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (cardRef.current && !cardRef.current.contains(event.target)) {
@@ -57,7 +55,6 @@ const ContactWidget = () => {
     );
 };
 
-// 스타일 정의
 const styles = {
     widgetButton: {
         position: 'fixed',
