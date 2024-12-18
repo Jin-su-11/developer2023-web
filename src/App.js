@@ -11,8 +11,6 @@ import Footer from "./components/Footer";
 import ContactWidget from "./components/ContactWidget";
 import JoinWidget from "./components/JoinWidget";
 import Header from "./components/Header";
-import About from "./components/About";
-import AboutContainer from "./pages/aboutpage/AboutContainer";
 import AboutPage from "./pages/aboutpage/AboutPage";
 
 const AppRoutes = () => {
