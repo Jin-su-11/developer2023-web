@@ -94,102 +94,49 @@ function About() {
     }, []);
 
     return (
-        <div className="padding100-0">
-            {/* 제목 */}
+        <div className="display-flex-column align-items-center padding100-0">
             <div className="display-flex flex-direction-column gap-05r">
-                <h2
-                    className="font-size-36 weight-700"
-                    style={{ color: "#FFFFFF" }}
-                    ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                >
+                <h2 className="font-size-36 weight-700 color-white"
+                    ref={(el) => textRefs.current.push(el)}>
                     끊임없이 만들어지는 우리의 이야기
                 </h2>
             </div>
 
-            {/* 첫 번째 섹션: 이미지와 텍스트를 가로로 배치 */}
-            <div className="section padding85-0">
-                <img
-                    ref={imgRef1}
-                    src={img}
-                    alt="팀 활동 이미지"
-                    className="about-image"
-                    style={{ marginRight: "60px" }}
-                />
+            <div className="display-flex align-items-center justify-center padding-top-90"
+                 style={{width: "950px"}}>
+                <img ref={imgRef1} src={img} alt="팀 활동 이미지"
+                     className="about-image margin-right-50" />
                 <div className="about-text">
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
-                        <span className="weight-600 representative-color">DEVELOPER</span>는
-                    </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
-                        개발자의 꿈을 가진, 성장하고 싶은 대학생을 위한
-                    </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
+                    <p className="weight-500 font-size-20 line-height-1d5 color-white padding-bottom-40"
+                       ref={(el) => textRefs.current.push(el)}>
+                        <span className="weight-600 representative-color">DEVELOPER</span>는<br/>
+                        개발자의 꿈을 가진, 성장하고 싶은 대학생을 위한<br/>
                         <span className="weight-600 representative-color">IT 학술 동아리</span>입니다.
                     </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
-                        <br />
-                        틀에 박힌 딱딱한 공부가 아닌,
-                    </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
+                    <p className="weight-500 font-size-20 line-height-1d5 color-white"
+                       ref={(el) => textRefs.current.push(el)}>
+                        틀에 박힌 딱딱한 공부가 아닌,<br/>
                         직접 창작하고 개발하는{" "}
                         <span className="weight-600 representative-color">프로젝트형 활동방식</span>
-                        을 추구하여
-                    </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
+                        을 추구하여<br/>
                         스스로의 역량을 계속해서 발전시킬 기회를 제공합니다.
                     </p>
                 </div>
             </div>
 
-            {/* 두 번째 섹션: 이미지와 텍스트를 좌우 반전하여 배치 */}
-            <div className="section reverse">
-                <img
-                    ref={imgRef2}
-                    src={img2}
-                    alt="발표 이미지"
-                    className="about-image"
-                />
+            <div className="reverse display-flex align-items-center justify-center padding85-0"
+                 style={{width: "950px"}}>
+                <img ref={imgRef2} src={img2} alt="발표 이미지" className="about-image"/>
                 <div className="about-text">
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
-                        팀원들과 함께 원하는 개발 프로젝트를 진행하고,
-                    </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
+                    <p className="weight-500 font-size-21 line-height-1d5 color-white padding-bottom-40"
+                        ref={(el) => textRefs.current.push(el)}>
+                        팀원들과 함께 원하는 개발 프로젝트를 진행하고,<br/>
                         발표를 통해 다른 팀들과 피드백을 하며 성장하세요.
+
                     </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
-                        <br />
-                        자유롭게 열려있는 분위기 속에서 팀원들과
-                    </p>
-                    <p
-                        ref={(el) => textRefs.current.push(el)} // 텍스트 ref 추가
-                        style={{ color: "#FFFFFF" }}
-                    >
+                    <p className="weight-500 font-size-21 line-height-1d5 color-white"
+                       ref={(el) => textRefs.current.push(el)}>
+                        자유롭게 열려있는 분위기 속에서 팀원들과<br/>
                         <span className="weight-600 representative-color">협업 활동</span>을 통해{" "}
                         <span className="weight-600 representative-color">실력 상승</span>을 경험해 보세요!
                     </p>
