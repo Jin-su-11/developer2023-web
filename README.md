@@ -1,19 +1,20 @@
 
 # Developer2023 Web 🌐
-
-[![Contributors](https://img.shields.io/badge/contributors-4-brightgreen)](#-기여자-contributors)  
+<img width="1000" alt="스크린샷 2024-12-19 05 44 24" src="https://github.com/user-attachments/assets/987172f9-9f61-4f9b-bbcc-428059a7c38d" />
 
 IT 개발 동아리 **디벨로퍼(Developer)** 웹사이트 제작을 위한 프로젝트입니다. 웹사이트는 동아리의 활동을 소개하고, 다양한 프로젝트와 팀원 소개 등을 공유하는 플랫폼입니다. 프로젝트는 **React**를 기반으로 구성되어 있으며, **JavaScript**, **CSS**, **HTML**을 사용합니다.
 
 ---
 
 ## 🧑‍💻기여자
+[![Contributors](https://img.shields.io/badge/contributors-5-brightgreen)](#-기여자-contributors)  
 
 | 이름         | Github 프로필            | 역할                                  | 언어 및 사용 툴  |
 |--------------|--------------------------|---------------------------------------|-------------------|
 | 권민지     | [mjgwon24](https://github.com/mjgwon24) | PM & frontend    | React, JS, HTML, CSS |
 | 김진수    | [Jin-su-11](https://github.com/Jin-su-11) | frontend        | React, JS, HTML, CSS |
 | 임석진   | [seokjin925](https://github.com/seokjin925) | frontend       | React, JS, HTML, CSS |
+| 김이현   | [lh7721004](https://github.com/lh7721004) | frontend       | React, JS, HTML, CSS |
 | 김현나        | [nanaring1](https://github.com/nanaring1)  | UI design        | Figma |
 
 ---
