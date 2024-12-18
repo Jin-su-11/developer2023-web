@@ -82,7 +82,7 @@
 /* 텍스트 컨테이너 스타일 */
 .progress-text-container {
     color: white;
-    font-size: 2rem; /* 기존 글자 크기에 맞춰 조정 */
+    font-size: 1.7rem; /* 기존 글자 크기에 맞춰 조정 */
     line-height: 2rem; /* 텍스트 간 위아래 간격 설정 */
 }
 .progress-text-align-right{
