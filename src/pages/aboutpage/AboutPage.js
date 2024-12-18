@@ -14,7 +14,7 @@ import AboutAchievement from "./AboutAchievement";
 
 const DetailPage = () => {
     const { projectId } = useParams(); // 현재 URL에서 projectId를 가져옵니다.
-    const projectIdNum = parseInt(projectId);
+    // const projectIdNum = parseInt(projectId);
 
     return (
         <div>
