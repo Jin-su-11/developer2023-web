@@ -84,31 +84,27 @@ const Progress = () => {
     }, []);
 
     return (
-        <div className="text-align-center padding85-0">
-            <div
-                className="font-size-36 weight-700"
-                style={{ color: "#FFFFFF" }}
-                ref={textRef}
-            >
+        <div className="display-flex-column align-items-center padding85-0">
+            <div ref={textRef} className="font-size-36 weight-700 color-white">
                 저희는 계속해서 발전하는 중이에요!
             </div>
 
-            <div className="content" ref={stackUpRef}>
+            <div className="content" ref={stackUpRef} style={{width: "850px"}}>
                 <div className="progress-image-container">
                     <div className="image-placeholder">
                         <img src={stack_up} alt="Stack Up" className="imac-image" />
                     </div>
                 </div>
 
-                <div style={{marginRight: "20px"}}>
+                <div>
                     <div className="progress-text-container progress-text-align-right">
-                        <p className="progress-text weight-700"># 열정으로 빚어진 크루</p>
-                        <p className="progress-text representative-color weight-700">
+                        <p className="weight-600 color-white margin-bottom-10"># 열정으로 빚어진 크루</p>
+                        <p className="representative-color weight-600 color-white margin-bottom-10">
                             # 스택-업
                         </p>
-                        <p className="progress-text weight-700"># 너의 실력도 업</p>
-                        <p className="progress-text weight-700"># 멘토 & 멘티 활동</p>
-                        <p className="progress-text weight-700"># 알고리즘 스터디</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 너의 실력도 업</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 멘토 & 멘티 활동</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 알고리즘 스터디</p>
                     </div>
 
                     <div
@@ -118,7 +114,8 @@ const Progress = () => {
                     >
                         <div className="progress-button-content" style={{marginRight: "5px"}}>
                             <img src={stack_up_mark} alt="StackUp Logo" className="stack-up-logo-image"/>
-                            <p className="weight-700">더 알고 싶다면 <span className="representative-color">CLICK!</span></p>
+                            <p className="weight-700 font-size-18">더 알고 싶다면 <span className="representative-color">CLICK!</span>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -133,11 +130,11 @@ const Progress = () => {
 
                 <div style={{marginLeft: "50px"}}>
                     <div className="progress-text-container progress-text-align-left">
-                        <p className="progress-text weight-700"># 창업 동아리</p>
-                        <p className="progress-text weight-700"># 열정과 끈기</p>
-                        <p className="progress-text softcat-color weight-700"># 소프트 캣</p>
-                        <p className="progress-text weight-700"># 꿈을 현실로!</p>
-                        <p className="progress-text weight-700"># 실전 경험치 한가득</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 창업 동아리</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 열정과 끈기</p>
+                        <p className="softcat-color weight-600 margin-bottom-10"># 소프트 캣</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 꿈을 현실로!</p>
+                        <p className="weight-600 color-white margin-bottom-10"># 실전 경험치 한가득</p>
                     </div>
 
                     <div
@@ -145,9 +142,9 @@ const Progress = () => {
                         style={{width: "300px", height: "63px"}}
                         onClick={handleSoftCatClick}
                     >
-                        <div className="progress-button-content" style={{marginRight: "10px"}}>
+                        <div className="display-flex align-items-center justify-center padding-right-5" style={{marginRight: "5px"}}>
                             <img src={soft_cat_mark} alt="SoftCat Logo" className="soft-cat-logo-image"/>
-                            <p className="weight-700">더 알고 싶다면 <span className="softcat-color">CLICK!</span></p>
+                            <p className="weight-700 font-size-18">더 알고 싶다면 <span className="softcat-color">CLICK!</span></p>
                         </div>
                     </div>
                 </div>
