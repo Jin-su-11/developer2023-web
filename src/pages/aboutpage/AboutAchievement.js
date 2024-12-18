@@ -74,9 +74,11 @@ function AboutAchievement() {
             <div className="display-flex-column align-items-center padding-bottom-60">
                 <div className="display-flex padding-20">
                     <img src={hackertonImg2_2} style={{width: "500px"}}
+                         alt="2024 경주 지역문제해결 해커톤 최우수상"
                          className="radius-12 padding-20"
                          ref={(el) => textRefs.current.push(el)}/>
                     <img src={hackertonImg2_2} style={{width: "500px"}}
+                            alt="2024 경주 지역문제해결 해커톤 최우수상"
                          className="radius-12 padding-20"
                          ref={(el) => textRefs.current.push(el)}/>
                 </div>
@@ -96,9 +98,11 @@ function AboutAchievement() {
             <div className="display-flex-column align-items-center">
                 <div className="display-flex padding-20">
                     <img src={hackertonImg1_1} style={{width: "500px"}}
+                         alt="2024 Hackers Ground 해커톤 최우수상"
                          className="radius-12 padding-20"
                          ref={(el) => textRefs.current.push(el)}/>
                     <img src={hackertonImg1_2} style={{width: "500px"}}
+                         alt="2024 Hackers Ground 해커톤 최우수상"
                          className="radius-12 padding-20"
                          ref={(el) => textRefs.current.push(el)}/>
                 </div>
