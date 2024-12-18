@@ -65,9 +65,11 @@ const MainBanner = () => {
 
     return (
         <div className="main-background">
-            <div className="left-container">
-                <p ref={text1Ref} className="white-text">개발을 통해 성장하는 우리들의 이야기</p>
-                <div ref={text2Ref} className="developer-text">DEVELOPER</div>
+            <div className="left-container" ref={text2Ref}>
+                <p className="weight-500 color-white font-size-24 margin-left-20">
+                    개발을 통해 성장하는 우리들의 이야기
+                </p>
+                <div className="developer-text">DEVELOPER</div>
             </div>
 
             <div className="right-container">
@@ -75,11 +77,11 @@ const MainBanner = () => {
                     <pre
                         style={{
                             position: "relative",
-                            color: "rgba(88, 237, 36, 0.52)",
+                            color: "rgba(74,182,37,0.52)",
                             fontFamily: "'Frank Ruhl Libre', serif",
-                            fontSize: "56px",
+                            fontSize: "46px",
                             fontStyle: "normal",
-                            fontWeight: 900,
+                            fontWeight: 800,
                             lineHeight: "normal",
                             zIndex: 10
                         }}
