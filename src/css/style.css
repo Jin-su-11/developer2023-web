@@ -277,6 +277,16 @@ li {
     padding: 100px 0;
 }
 
+.padding-top-20 {
+    padding-top: 20px;
+}
+
+
+.padding-top-30 {
+    padding-top: 30px;
+}
+
+
 .padding-top-80 {
     padding-top: 80px;
 }
@@ -446,8 +456,24 @@ li {
     color: #3375fa;
 }
 
+.color-light-gray {
+    color: #f1f1f1;
+}
+
+.color-light-gray-second {
+    color: #cdcdcd;
+}
+
+.color-light-gray-third {
+    color: #a59c9c;
+}
+
 .color-gray {
     color: gray;
+}
+
+.color-deep-gray {
+    color: #333;
 }
 
 /* text */
@@ -509,6 +535,18 @@ li {
 
 .font-size-36 {
     font-size: 36px;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-42 {
+    font-size: 42px;
+}
+
+.font-size-44 {
+    font-size: 44px;
 }
 
 .font-size-46 {

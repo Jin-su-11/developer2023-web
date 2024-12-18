@@ -107,13 +107,13 @@ function About() {
                 <img ref={imgRef1} src={img} alt="팀 활동 이미지"
                      className="about-image margin-right-50" />
                 <div className="about-text">
-                    <p className="weight-500 font-size-20 line-height-1d5 color-white padding-bottom-40"
+                    <p className="weight-500 font-size-21 line-height-1d5 color-white padding-bottom-40"
                        ref={(el) => textRefs.current.push(el)}>
                         <span className="weight-600 representative-color">DEVELOPER</span>는<br/>
                         개발자의 꿈을 가진, 성장하고 싶은 대학생을 위한<br/>
                         <span className="weight-600 representative-color">IT 학술 동아리</span>입니다.
                     </p>
-                    <p className="weight-500 font-size-20 line-height-1d5 color-white"
+                    <p className="weight-500 font-size-21 line-height-1d5 color-white"
                        ref={(el) => textRefs.current.push(el)}>
                         틀에 박힌 딱딱한 공부가 아닌,<br/>
                         직접 창작하고 개발하는{" "}
@@ -128,13 +128,13 @@ function About() {
                  style={{width: "950px"}}>
                 <img ref={imgRef2} src={img2} alt="발표 이미지" className="about-image"/>
                 <div className="about-text">
-                    <p className="weight-500 font-size-21 line-height-1d5 color-white padding-bottom-40"
+                    <p className="weight-500 font-size-22 line-height-1d5 color-white padding-bottom-40"
                         ref={(el) => textRefs.current.push(el)}>
                         팀원들과 함께 원하는 개발 프로젝트를 진행하고,<br/>
                         발표를 통해 다른 팀들과 피드백을 하며 성장하세요.
 
                     </p>
-                    <p className="weight-500 font-size-21 line-height-1d5 color-white"
+                    <p className="weight-500 font-size-22 line-height-1d5 color-white"
                        ref={(el) => textRefs.current.push(el)}>
                         자유롭게 열려있는 분위기 속에서 팀원들과<br/>
                         <span className="weight-600 representative-color">협업 활동</span>을 통해{" "}
