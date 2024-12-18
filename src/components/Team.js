@@ -92,13 +92,15 @@
      };
 
      return (
-         <div className="text-align-center padding85-0" ref={sectionRef}>
-             <div
-                 className="display-flex flex-direction-column gap-1r margin-bottom-60"
-                 ref={headerRef}
-             >
-                 <h2 className="team-text">함께 할수록 즐거운 성장</h2>
-                 <p className="team-text2">즐거운 개발 여정을 디벨로퍼와 함께 해 보세요!</p>
+         <div className="text-align-center padding100-0" ref={sectionRef}>
+             <div className="display-flex flex-direction-column align-items-center gap-1r margin-bottom-60"
+                 ref={headerRef}>
+                 <h2 className="font-size-36 weight-700 color-white">
+                     함께 할수록 즐거운 성장
+                 </h2>
+                 <p className="weight-500 color-white font-size-22">
+                     즐거운 개발 여정을 디벨로퍼와 함께 해 보세요!
+                 </p>
              </div>
 
              <div className="season-selector">
@@ -125,19 +127,18 @@
                          ref={(el) => (linkRefs.current[index] = el)}
                      >
                          <span className="team-name1">{team.teamName}</span>
-                         <br />
                          <span className="team-members">{team.members.length}명</span>
                      </Link>
                  ))}
              </div>
 
              <div
-                 className="total-members-section text-align-center"
+                 className="margin-top-30 text-align-center"
                  ref={totalMembersRef}
              >
-                 <p className="team-text3">누적 활동 인원</p>
-                 <h2 className="font-size-48 weight-600">총 {totalMembers}명</h2>
-                 <a href="/member" className="font-size-16 weight-500">
+                 <p className="font-size-24 weight-700 color-light-gray-third">누적 활동 인원</p>
+                 <h2 className="font-size-42 weight-700 color-white padding-bottom-20">총 {totalMembers}명</h2>
+                 <a href="/member" className="font-size-16 weight-500 color-gray">
                      더 보러가기 >
                  </a>
              </div>
