@@ -189,7 +189,7 @@
 
                 {/* 더 보기 링크 */}
                 <div className="project-text" style={{ marginTop: '20px', cursor: 'pointer', color: "#FFFFFF" }}>
-                    <p className="font-size-16 weight-400 color-gray project-link" onClick={() => window.location.href = "http://localhost:3000/project"}>
+                    <p className="font-size-16 weight-400 color-gray project-link" onClick={() => window.location.href = "/project"}>
                         더 보러가기 &gt;
                     </p>
                 </div>
