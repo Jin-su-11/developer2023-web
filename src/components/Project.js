@@ -127,10 +127,13 @@
 
         return (
             <div className="text-align-center padding85-0" ref={containerRef}>
-                {/* 제목 및 설명 */}
                 <div className="display-flex flex-direction-column gap-1r margin-bottom-60">
-                    <h2 className="font-size-36 weight-700 project-text" style={{ color: "#FFFFFF" }}>달려온 결과</h2>
-                    <p className="font-size-20 weight-400 project-text" style={{ color: "#FFFFFF" }}>저희가 만든 프로젝트, 궁금하신가요?</p>
+                    <h2 className="font-size-36 weight-700 project-text color-white">
+                        달려온 결과
+                    </h2>
+                    <p className="font-size-22 weight-400 project-text color-white">
+                        저희가 만든 프로젝트, 궁금하신가요?
+                    </p>
                 </div>
 
                 {/* 캐러셀 영역 */}
