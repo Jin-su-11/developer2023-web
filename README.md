@@ -1,6 +1,7 @@
 
 # Developer2023 Web 🌐
-<img width="1000" alt="스크린샷 2024-12-19 05 44 24" src="https://github.com/user-attachments/assets/987172f9-9f61-4f9b-bbcc-428059a7c38d" />
+
+<img width="1000" alt="스크린샷 2024-12-19 07 20 54" src="https://github.com/user-attachments/assets/6030f857-6d33-4795-858f-57de7d81315f" />
 
 IT 개발 동아리 **디벨로퍼(Developer)** 웹사이트 제작을 위한 프로젝트입니다. 웹사이트는 동아리의 활동을 소개하고, 다양한 프로젝트와 팀원 소개 등을 공유하는 플랫폼입니다. 프로젝트는 **React**를 기반으로 구성되어 있으며, **JavaScript**, **CSS**, **HTML**을 사용합니다.
 
