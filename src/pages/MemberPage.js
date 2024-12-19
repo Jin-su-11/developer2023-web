@@ -19,7 +19,7 @@ gsap.registerPlugin(ScrollTrigger);
 const MemberPage = () => {
     const [season, setSeason] = useState('all');
     const [teams, setTeams] = useState([]);
-    const [selectedSeason, setSelectedSeason] = useState('SEASON ▾');
+    const [selectedSeason, setSelectedSeason] = useState('SEASON');
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const dropdownRef = useRef(null);
     const pageRef = useRef(null);
@@ -80,10 +80,19 @@ const MemberPage = () => {
                 scrollTrigger: {
                     trigger: headerRef.current,
                     start: 'top 80%',
+                    end: 'bottom 20%',
                     toggleActions: 'play none none reverse',
+                    onEnter: () => {
+                        headerRef.current.style.pointerEvents = "auto"; // 클릭 가능
+                    },
+                    onLeave: () => {
+                        headerRef.current.style.pointerEvents = "none"; // 클릭 방지
+                    },
                 },
             }
         );
+
+
 
         // 팀 박스 애니메이션
         teamBoxRefs.current.forEach((box, index) => {
@@ -94,11 +103,11 @@ const MemberPage = () => {
                     opacity: 1,
                     y: 0,
                     duration: 1,
-                    delay: index * 0.2,
                     ease: 'power3.out',
                     scrollTrigger: {
                         trigger: box,
                         start: 'top 85%',
+                        end: 'bottom 15%',
                         toggleActions: 'play none none reverse',
                     },
                 }
@@ -108,44 +117,46 @@ const MemberPage = () => {
 
     return (
         <div className="member-page" ref={pageRef}>
-            <div className="text-align-center padding85-0" ref={headerRef}>
-                <h1 className="font-size-46 weight-700 color-white">MEMBER</h1>
-                <p className="font-size-24 title-description-spacing color-white">
-                    <span className="highlight-total">총 {totalMembers}명</span>의 팀원들이 디벨로퍼와 함께했어요!
-                </p>
-            </div>
+            <div className="display-flex-column align-items-center position-relative z-index-100" ref={headerRef}>
+                <div className="text-align-center padding-top-85">
+                    <h1 className="font-size-36 weight-700 color-white">MEMBER</h1>
+                    <p className="font-size-20 weight-500 color-white padding-top-20">
+                        <span className="highlight-total">총 {totalMembers}명</span>의 팀원들이 디벨로퍼와 함께했어요!
+                    </p>
+                </div>
 
-            <div className="filter-container">
-                <button
-                    className={`filter-button ${season === 'all' ? 'active' : ''}`}
-                    onClick={() => handleSeasonChange('all')}
-                >
-                    ALL
-                </button>
-                <div className="dropdown" ref={dropdownRef}>
+                <div className="filter-container padding-top-50 padding-bottom-20">
                     <button
-                        className={`dropbtn ${season !== 'all' ? 'active' : ''}`}
-                        onClick={handleDropdownToggle}
+                        className={`filter-button ${season === 'all' ? 'active' : ''}`}
+                        onClick={() => handleSeasonChange('all')}
                     >
-                        {selectedSeason}
+                        ALL
                     </button>
-
-                    {isDropdownOpen && (
-                        <div className="dropdown-content is-visible">
+                    <div className="dropdown" ref={dropdownRef}>
                         <button
-                                className={season === 'season2' ? 'selected' : ''}
-                                onClick={() => handleSeasonChange('season2')}
-                            >
-                                SEASON 2
-                            </button>
-                            <button
-                                className={season === 'season1' ? 'selected' : ''}
-                                onClick={() => handleSeasonChange('season1')}
-                            >
-                                SEASON 1
-                            </button>
-                        </div>
-                    )}
+                            className={`dropbtn ${season !== 'all' ? 'active' : ''}`}
+                            onClick={handleDropdownToggle}
+                        >
+                            {selectedSeason}
+                        </button>
+
+                        {isDropdownOpen && (
+                            <div className="dropdown-content is-visible">
+                                <button
+                                    className={season === 'season2' ? 'selected' : ''}
+                                    onClick={() => handleSeasonChange('season2')}
+                                >
+                                    SEASON 2
+                                </button>
+                                <button
+                                    className={season === 'season1' ? 'selected' : ''}
+                                    onClick={() => handleSeasonChange('season1')}
+                                >
+                                    SEASON 1
+                                </button>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
 
@@ -157,15 +168,18 @@ const MemberPage = () => {
                         ref={(el) => (teamBoxRefs.current[index] = el)}
                     >
                         <div className="team-header">
-                            <h3 className="team-name">{team.teamName} <span>{team.members.length}명</span></h3>
-                            <span className="season-badge">
+                            <h3 className="weight-600 font-size-28 color-white">
+                                {team.teamName} <span
+                                className="weight-400 font-size-22 color-light-gray-second">{team.members.length}명</span>
+                            </h3>
+                            <div className="season-badge">
                                 {memberData.season1.includes(team) ? 'season1' : 'season2'}
-                            </span>
+                            </div>
                         </div>
                         <div className="team-members-row">
                             {team.members.map((member, i) => (
-                                <div key={i} className="team-member-card">
-                                    <div className="member-image" />
+                                <div key={i} className="team-member-card display-flex-column align-items-center justify-center">
+                                    <div className="member-image"/>
                                     <div className="member-info">
                                         <span className="member-name">{member.memberName}</span>
                                     </div>

@@ -103,8 +103,12 @@ const ProjectPage = () => {
     return (
         <div className="project-container">
             <div className="text-align-center padding85-0">
-                <h1 className="font-size-36 weight-700" style={{ color: "#FFFFFF" }}>PROJECT</h1>
-                <p className="font-size-20 title-description-spacing" style={{ color: "#FFFFFF" }}>함께이기에 완성할 수 있었던 우리의 결과물들</p>
+                <h1 className="font-size-36 weight-700 color-white">
+                    PROJECT
+                </h1>
+                <p className="font-size-20 weight-500 color-white padding-top-20">
+                    함께이기에 완성할 수 있었던 우리의 결과물들
+                </p>
             </div>
 
             <div className="filter-dropdowns">
