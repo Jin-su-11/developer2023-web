@@ -53,7 +53,7 @@
 /* 시즌 정보를 위한 스타일 */
 /* 시즌 정보를 위한 스타일 */
 .season-label {
-    padding: 5px 10px;
+    padding: 3px 8px;
     border: 1px solid #B751F2; /* 연보라색 테두리 */
     background-color: #ffffff; /* 흰색 배경 */
     color: #B751F2; /* 보라색 텍스트 */

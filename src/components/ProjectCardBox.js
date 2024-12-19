@@ -37,11 +37,12 @@ const ProjectCardBox = ({ project, type }) => {
 
     // 시즌 표시 스타일 설정
     const seasonBoxStyle = {
-        width: type === "ProjectPage" ? "60px" : "50px",
-        height: type === "ProjectPage" ? "16px" : "14px",
+        // width: type === "ProjectPage" ? "60px" : "50px",
+        // height: type === "ProjectPage" ? "16px" : "14px",
         borderRadius: type === "ProjectPage" ? "7px" : "5px",
-        paddingTop: type === "ProjectPage" ? "5px" : "3px",
-        fontSize: type === "ProjectPage" ? "15px" : "13px",
+        // paddingTop: type === "ProjectPage" ? "5px" : "3px",
+        fontSize: type === "ProjectPage" ? "14px" : "13px",
+        marginBottom: type === "ProjectPage" ? "5px" : "3px",
     };
 
     return (
@@ -55,8 +56,8 @@ const ProjectCardBox = ({ project, type }) => {
             <img className="width100" style={imgStyle} src={project.imageUrl} alt={project.title} />
 
             <div className="padding-15 flex-direction-column gap-5p">
-                <div className="display-flex justify-between">
-                    <h3 className="text-align-start">{project.title}</h3>
+                <div className="display-flex justify-between padding-bottom-2">
+                    <h3 className="text-align-start padding-top-5">{project.title}</h3>
                     <span className="season-label" style={seasonBoxStyle}>{project.season}</span>
                 </div>
 
