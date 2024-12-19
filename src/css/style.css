@@ -289,14 +289,24 @@ li {
     padding-top: 20px;
 }
 
-
 .padding-top-30 {
     padding-top: 30px;
 }
 
+.padding-top-40 {
+    padding-top: 40px;
+}
+
+.padding-top-50 {
+    padding-top: 50px;
+}
 
 .padding-top-80 {
     padding-top: 80px;
+}
+
+.padding-top-85 {
+    padding-top: 85px;
 }
 
 .padding-top-90 {
@@ -458,6 +468,10 @@ li {
 
 .position-relative {
     position: relative;
+}
+
+.z-index-100 {
+    z-index: 100;
 }
 
 .z-index--100 {
