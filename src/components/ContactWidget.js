@@ -37,10 +37,10 @@ const ContactWidget = () => {
                     <p style={styles.description}>문의사항이 있으실 경우 아래로 연락 주세요!</p>
                     <div style={styles.contactBox}>
                         <FontAwesomeIcon icon={faPhoneAlt} style={styles.contactIcon} />
-                        <span style={styles.contactText}>010-1234-5678</span>
+                        <span style={styles.contactText}>010-5109-0625</span>
                     </div>
                     <a
-                        href="https://open.kakao.com/o/g9e5BCWg"
+                        href="https://open.kakao.com/o/s2BRO63g"
                         target="_blank"
                         rel="noopener noreferrer"
                         style={styles.kakaoButton}
