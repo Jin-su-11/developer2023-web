@@ -728,3 +728,177 @@ li {
     transform: translateY(50px);
     transition: opacity 0.5s ease, transform 0.5s ease;
 }
+@keyframes mybox0{
+    from{ scale:0.0;width:0px;height: 0px;opacity: 0.0;}
+    to{ scale:0.75;width:285px;height: 380px;opacity: 0.7;}
+  }
+@keyframes mybox1{
+    from{ scale:0.75; width:285px;height: 380px;opacity: 0.7;}
+    to{  scale:1.0;width:285px;height: 380px;opacity: 1;}
+}
+@keyframes mybox2{
+    from{  scale:1.0;width:285px;height: 380px;opacity: 1;}
+    to{  scale:0.75;width:285px;height: 380px;opacity: 0.7;}
+}
+@keyframes mybox3{
+    from{  scale:0.75;width: 285px;height: 380px;}
+    to{  scale:0.0;width: 0px;height: 0px;}
+}
+
+@keyframes myboxReverse1{
+    from{ 
+        width: 285px;
+        height: 380px;
+        scale: 0.75;
+        opacity: 0.7;
+    }
+    to{ 
+        width: 0px;
+        height: 0px;
+        scale: 0.01;
+        opacity: 0.0;
+    }
+}
+@keyframes myboxReverse2{
+    from{ scale: 1.0;width:285px;height: 380px;opacity: 1.0;}
+    to{  scale: 0.75;width:285px;height: 380px;opacity: 0.7;}
+}
+@keyframes myboxReverse3{
+    from{ scale: 0.75;width:285px;height: 380px;opacity: 0.7;}
+    to{  scale: 1.0;width:285px;height: 380px;opacity: 1;}
+
+}
+@keyframes myboxReverse4{
+    from{ scale:0.0;width:0px;height: 0px;opacity: 0.0;}
+    to{ scale:0.75;width:285px;height: 370px;opacity: 0.7;}
+  }
+.box{
+    width: 240px;
+    height: 330px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.box0, .box4 {
+    scale: 0;
+    display: none;
+}
+.box2{
+    width: 285px;
+    height: 370px;
+}
+.box1, .box3 {
+    width: 285px;
+    height: 370px;
+    scale: 0.75;
+    opacity: 0.7;
+}
+
+.box0.effect0 {
+    display: block;
+    animation-name: mybox0;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+.box1.effect1 {
+    display: block;
+    animation-name: mybox1;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+.box2.effect2 {
+    display: block;
+    animation-name: mybox2;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+.box3.effect3 {
+    display: block;
+    animation-name: mybox3;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+
+
+.box1.effectReverse1 {
+    display: block;
+    animation-name: myboxReverse1;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+.box2.effectReverse2 {
+    display: block;
+    animation-name: myboxReverse2;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+.box3.effectReverse3 {
+    display: block;
+    animation-name: myboxReverse3;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+.box4.effectReverse4 {
+    display: block;
+    animation-name: myboxReverse4;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+    overflow: hidden;
+  }
+
+
+@keyframes leffect {
+    from{ padding-left:0px;}
+    to{ padding-left:100px;}
+}
+@keyframes reffect {
+    from{ padding-right:0px;}
+    to{ padding-right:100px;}
+}
+
+.l-effect{
+    animation-name: leffect;
+    animation-duration: 0.5s;
+    animation-direction: alternate; /*반대방향으로*/ 
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+.r-effect{
+    animation-name: reffect;
+    animation-duration: 0.5s;
+    animation-direction: alternate;
+    animation-iteration-count: 1; /*무한반복*/
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}

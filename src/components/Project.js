@@ -1,10 +1,10 @@
-    import React, { useEffect, useState, useRef } from "react";
-    import { gsap } from "gsap";
-    import { ScrollTrigger } from "gsap/ScrollTrigger";
-    import ProjectCardBox from "./ProjectCardBox";
-    import projectsData from "../data/project.json";
-    import "../css/style.css";
-
+import React, { useEffect, useState, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import ProjectCardBox from "./ProjectCardBox";
+import projectsData from "../data/project.json";
+import "../css/style.css";
+import { Button } from "react-scroll";
     /**
      * ProjectPage 컴포넌트
      * @since 2024.9.26
@@ -14,47 +14,84 @@
     gsap.registerPlugin(ScrollTrigger);
 
     const Project = () => {
+        //최신4개 고르기
+        //점은 오른쪽으로
         const [projects, setProjects] = useState([]); // 프로젝트 데이터
         const [currentIndex, setCurrentIndex] = useState(1); // 현재 활성화된 카드 인덱스
-        const [isTransitioning, setIsTransitioning] = useState(false); // 전환 애니메이션 상태
+        const [projectCount, setProjectCount] = useState(4); // 표시할 프로젝트 개수
+        const getMiddleSlice = (arr, count) => {
+            const mid = Math.floor(arr.length / 2);
+            const start = Math.max(0, mid - Math.floor(count / 2));
+            const end = start + count;
+            return arr.slice(start, end);
+        };
+        const [cards,setCards] = useState(getMiddleSlice(projects, 5));
+
+        
+
+        const [MoveEvent,setEvent] = useState(false);
+        const [MoveEventReverse,setEventReverse] = useState(false);
+        
+        const nextImage = () => {
+            setEvent(true)
+            setCurrentIndex((currentIndex-1)%(projectCount))
+            setTimeout(()=>{
+                setEvent(false);
+                setProjects((prevArray) => {
+                    const last = prevArray[prevArray.length - 1];
+                    const rest = prevArray.slice(0, -1);
+                    return [last, ...rest];
+                });
+                setCards(getMiddleSlice(projects, 5));
+            },450)
+        }
+        const prevImage = () => {
+            setEventReverse(true)
+            setCurrentIndex((currentIndex+1+projectCount)%(projectCount))
+            setTimeout(()=>{
+                setEventReverse(false);
+                setProjects((prevArray) => {
+                    const first = prevArray[0];
+                    const rest = prevArray.slice(1);
+                    return [...rest,first];
+                });
+                setCards(getMiddleSlice(projects, 5));
+            },450)
+        }
+        useEffect(() => {
+            const interval = setInterval(() => {
+                prevImage();
+            }, 3000);
+        
+            return () => {
+              clearInterval(interval);
+            };
+          }, [projects,currentIndex]);
 
         const containerRef = useRef(null);
         const cardsRef = useRef([]);
-
         // 프로젝트 데이터 설정
         useEffect(() => {
             let filteredProjects = [];
-            Object.keys(projectsData).forEach((seasonKey) => {
-                projectsData[seasonKey].forEach((project) => {
-                    if (project.aword) {
-                        filteredProjects.push({ ...project, season: seasonKey });
-                    }
-                });
-            });
+            filteredProjects = Object.entries(projectsData).flatMap(([season, projects]) =>
+                projects.map(project => ({
+                ...project,
+                season
+                }))
+            );
             filteredProjects.reverse(); // 최신 시즌이 먼저 나오도록 역순
-            setProjects([
-                filteredProjects[filteredProjects.length - 1], // 마지막 카드 복제
-                ...filteredProjects,
-                filteredProjects[0], // 첫 번째 카드 복제
-            ]);
-        }, []);
+            //카드가 5개이기 때문에 5의 배수를 맞춰줘야 함
+            // setProjects([...filteredProjects.slice(-1*projectCount),...filteredProjects.slice(-1*projectCount),...filteredProjects.slice(-1*projectCount),...filteredProjects.slice(-1*projectCount),...filteredProjects.slice(-1*projectCount)]);
+            setProjects(Array.from({ length: 5 }, () => filteredProjects.slice(-1*projectCount)).flat());
+            setCards(getMiddleSlice(projects, 5));
+            console.log(projects);
+        }, [projectsData]);
 
-        // 자동 슬라이드
         useEffect(() => {
-            const interval = setInterval(() => {
-                setIsTransitioning(true);
-                setCurrentIndex((prevIndex) => prevIndex + 1);
-            }, 8000);
-
-            return () => clearInterval(interval);
-        }, []);
-
-        // GSAP 애니메이션 설정 (초기 렌더링 시)
-        useEffect(() => {
-            if (!containerRef.current || projects.length === 0) return;
 
             const projectTextElements = containerRef.current.querySelectorAll(".project-text");
             const projectLink = containerRef.current.querySelector(".project-link");
+            const projectCards = containerRef.current.querySelector(".project-cards");
 
             // 제목과 설명 애니메이션
             if (projectTextElements.length > 0) {
@@ -75,6 +112,24 @@
                     }
                 );
             }
+            // 카드 애니메이션
+            if (projectCards) {
+                gsap.fromTo(
+                    projectCards,
+                    { opacity: 0, y: 20 },
+                    {
+                        opacity: 1,
+                        y: 0,
+                        duration: 1.5,
+                        scrollTrigger: {
+                            trigger: projectCards,
+                            start: "top 90%",
+                            end: "bottom 30%",
+                            toggleActions: "play none none reverse",
+                        },
+                    }
+                );
+            }
 
             // "더 보러가기" 링크 애니메이션
             if (projectLink) {
@@ -88,42 +143,30 @@
                         scrollTrigger: {
                             trigger: projectLink,
                             start: "top 90%",
-                            end: "bottom 10%",
+                            end: "bottom 35%",
                             toggleActions: "play none none reverse",
                         },
                     }
                 );
             }
-        }, [projects]);
-
-        // 전환 애니메이션 종료 처리
-        const handleTransitionEnd = () => {
-            setIsTransitioning(false);
-
-            // 마지막에서 첫 번째 카드로 자연스럽게 이동
-            if (currentIndex >= projects.length - 1) {
-                setTimeout(() => {
-                    setIsTransitioning(false);
-                    setCurrentIndex(1); // 첫 번째 카드로 바로 이동
-                }, 50); // 약간의 지연을 추가해 자연스럽게 이어짐
-            }
-
-            // 첫 번째에서 마지막 카드로 이동
-            else if (currentIndex <= 0) {
-                setTimeout(() => {
-                    setIsTransitioning(false);
-                    setCurrentIndex(projects.length - 2);
-                }, 50);
-            }
-        };
-
+        }, [containerRef.current]);
         // 하단 점 클릭 시 슬라이드 이동
-        const handleDotClick = (index) => {
-            if (currentIndex !== index + 1) {
-                setIsTransitioning(true);
-                setCurrentIndex(index + 1);
+        const handleDotClick = async(index) => {
+            if (currentIndex !== index ) {
+                //회전 방향 선택
+                const rightDistance = (index - currentIndex + projectCount) % projectCount;
+                const leftDistance = (currentIndex - index + projectCount) % projectCount;
+
+                if (rightDistance <= leftDistance) {
+                    prevImage();
+                } else {
+                    nextImage();
+                }
+                setCurrentIndex(index)
             }
         };
+
+        
 
         return (
             <div className="text-align-center padding85-0" ref={containerRef}>
@@ -133,39 +176,14 @@
                     </h2>
                     <p className="font-size-22 weight-400 project-text color-white">
                         저희가 만든 프로젝트, 궁금하신가요?
-                    </p>
+                    </p>                 
                 </div>
-
-                {/* 캐러셀 영역 */}
-                <div className="overflow-hidden position-relative project-text" style={{ width: '100%', maxWidth: '960px', margin: '0 auto' }}>
-                    <div
-                        className="display-flex"
-                        style={{
-                            display: 'flex',
-                            justifyContent: 'start',
-                            gap: '20px',
-                            transform: `translateX(-${(currentIndex - 1) * (300 + 20)}px)`,
-                            transition: isTransitioning ? "transform 0.8s ease" : "none",
-                        }}
-                        onTransitionEnd={handleTransitionEnd}
-                    >
-                        {projects.map((project, index) => {
-                            const isCenter = index === currentIndex; // 중앙 카드 확인
-                            const scale = isCenter ? 0.95 : 0.8; // 중앙 강조 크기
-                            const opacity = isCenter ? 0.95 : 0.7; // 중앙 강조 투명도
-
+                <div className="flex flex-col w-[75rem] rounded-[0.914375rem] bg-[#FFB020] pt-[1.25rem] px-[1.875rem] pb-[2rem] project-cards">
+                    <div style={{display:"flex",justifyContent:"center",gap:"30px",minHeight:"460px"}} className={`${MoveEvent?`l-effect`:""} ${MoveEventReverse?`r-effect`:""}`}>
+                        {cards.map((project, index) => {
                             return (
-                                <div
-                                    key={index}
-                                    ref={(el) => (cardsRef.current[index] = el)} // GSAP 참조
-                                    style={{
-                                        flexShrink: 0,
-                                        transform: `scale(${scale})`,
-                                        opacity: `${opacity}`,
-                                        transition: 'transform 0.5s ease, opacity 0.5s ease'
-                                    }}
-                                >
-                                    <ProjectCardBox project={project} />
+                                <div className="flex flex-col justify-center items-center h-[600px]" style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
+                                    <ProjectCardBox project={project} moveEvent={MoveEvent} moveEventReverse={MoveEventReverse} index={index} />
                                 </div>
                             );
                         })}
@@ -174,7 +192,7 @@
 
                 {/* 하단 점 */}
                 <div className="display-flex justify-center project-text" style={{ position: 'relative', gap: '10px', marginTop: '20px' }}>
-                    {projects.slice(1, -1).map((_, index) => (
+                    {Array.from({ length: projectCount }).map((_, index) => (
                         <div
                             key={index}
                             onClick={() => handleDotClick(index)}
@@ -182,13 +200,14 @@
                                 width: '7px',
                                 height: '7px',
                                 borderRadius: '50%',
-                                backgroundColor: currentIndex === index + 1 ? '#FFFFFF' : '#777',
+                                backgroundColor: currentIndex === index ? '#FFFFFF' : '#777',
                                 cursor: 'pointer',
                                 transition: 'background-color 0.3s ease'
                             }}
                         />
                     ))}
                 </div>
+
 
                 {/* 더 보기 링크 */}
                 <div className="project-text" style={{ marginTop: '20px', cursor: 'pointer', color: "#FFFFFF" }}>
