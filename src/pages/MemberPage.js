@@ -6,6 +6,7 @@ import '../css/style.css';
 import '../css/practice.css';
 import '../css/memberpage.css';
 import { FaGithub, FaLink } from 'react-icons/fa';
+// import {}
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -179,12 +180,17 @@ const MemberPage = () => {
                         <div className="team-members-row">
                             {team.members.map((member, i) => (
                                 <div key={i} className="team-member-card display-flex-column align-items-center justify-center">
-                                    <div className="member-image"/>
+                                    <div className="display-flex-column width-138 height-137 radius50 bg-gray box-shadow justify-center align-items-center">
+                                        <img className="height-110"
+                                             src={`/images/thumbnails/${member.thumbnail}`}
+                                             alt={`${member.memberName} thumbnail`}
+                                        />
+                                    </div>
                                     <div className="member-info">
                                         <span className="member-name">{member.memberName}</span>
                                     </div>
                                     <div className="member-roles">
-                                        {Array.isArray(member.memberRole) ? (
+                                    {Array.isArray(member.memberRole) ? (
                                             member.memberRole.map((role, idx) => (
                                                 <span key={idx} className="member-role">{role}</span>
                                             ))
