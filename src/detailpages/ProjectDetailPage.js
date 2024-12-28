@@ -62,7 +62,7 @@ const ProjectDetailPage = () => {
                 <div className="display-flex-column gap-2r">
                     <div className="display-flex-column gap-05r">
                         <div className="display-flex gap-2d5r">
-                            <h1 style={{ color: "#FFFFFF" }}>{project.title}</h1>
+                            <h1 className="representative-color">{project.title}</h1>
                             <div className="display-flex gap-1r">
                                 <img
                                     src={gitIcon}
@@ -82,7 +82,7 @@ const ProjectDetailPage = () => {
                         </div>
 
                         <div className="display-flex-end gap-05r">
-                            <p className="font-size-24 weight-600 representative-color">{project.team} |</p>
+                            <p className="font-size-24 weight-600" style={{ color: "#FFFFFF" }}>{project.team} </p>
                             <p className="font-size-20 weight-500" style={{ color: "#FFFFFF" }}>
                                 {projectMembers.map((member, index) => (
                                     <span key={member.id}>
@@ -92,10 +92,14 @@ const ProjectDetailPage = () => {
                                 ))}
                             </p>
                         </div>
+                        <div className="display-flex gap-05r">
+                            <p className="font-size-24 weight-600" style={{color: "#FFFFFF"}}>Stack </p>
+                            <p className="font-size-20 weight-500" style={{color: "#FFFFFF"}}>{project.stack}</p>
+                        </div>
                     </div>
 
-                    <div style={{ width: "500px" }}>
-                        <p className="font-size-18 weight-400" style={{ color: "#D6D6D6" }}>{project.description}</p>
+                    <div style={{width: "800px"}}>
+                        <p className="font-size-18 weight-400" style={{color: "#D6D6D6", whiteSpace: "pre-line"}}>{project.description}</p>
                     </div>
                 </div>
             </div>
