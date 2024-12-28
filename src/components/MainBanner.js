@@ -79,7 +79,7 @@ const MainBanner = () => {
                             position: "relative",
                             color: "rgba(74,182,37,0.52)",
                             fontFamily: "'Frank Ruhl Libre', serif",
-                            fontSize: "46px",
+                            fontSize: "41x",
                             fontStyle: "normal",
                             fontWeight: 800,
                             lineHeight: "normal",
