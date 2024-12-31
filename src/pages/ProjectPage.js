@@ -146,7 +146,7 @@ const ProjectPage = () => {
                 <div
                     className="dropdown-label font-size-16"
                     style={{
-                        marginRight: "30px",
+                        marginRight: "0px",
                     }}
                     ref={categoryDropdownRef}
                     onClick={toggleCategoryDropdown}
@@ -177,7 +177,8 @@ const ProjectPage = () => {
                 style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(3, 1fr)",
-                    gap: "20px",
+                    rowGap:"50px",
+                    columnGap:"30px",
                     justifyItems: "center",
                 }}
             >
