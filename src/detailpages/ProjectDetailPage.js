@@ -92,7 +92,7 @@ const ProjectDetailPage = () => {
                                 ))}
                             </p>
                         </div>
-                        <div className="display-flex gap-05r">
+                        <div className="display-flex gap-05r" style={{alignItems : "baseline"}}>
                             <p className="font-size-24 weight-600" style={{color: "#FFFFFF"}}>Stack </p>
                             <p className="font-size-20 weight-500" style={{color: "#FFFFFF"}}>{project.stack}</p>
                         </div>
