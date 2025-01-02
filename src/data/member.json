@@ -24,26 +24,26 @@
     {
       "teamName": "ShoppingMall",
       "members": [
-        { "id": 11, "memberName": "박찬엽", "memberRole": "PM", "githubUrl": "https://github.com/hong1",  "thumbnail": "season1/profile14.png" },
+        { "id": 11, "memberName": "박찬엽", "memberRole": "PM", "thumbnail": "season1/profile14.png" },
         { "id": 12, "memberName": "김진수", "memberRole": "DB", "githubUrl": "https://github.com/Jin-su-11",  "thumbnail": "season1/profile10.png" },
-        { "id": 13, "memberName": "박창윤", "memberRole": "BackEnd", "githubUrl": "https://github.com/kim2",  "thumbnail": "season1/박창윤.png" },
+        { "id": 13, "memberName": "박창윤", "memberRole": "BackEnd", "thumbnail": "season1/박창윤.png" },
         { "id": 14, "memberName": "이예은", "memberRole": "BackEnd", "thumbnail": "season1/profile12.png" },
-        { "id": 15, "memberName": "문종찬", "memberRole": "FrontEnd", "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/profile13.png" },
-        { "id": 16, "memberName": "표준수", "memberRole": "FrontEnd", "githubUrl": "https://github.com/hong1",  "thumbnail": "season1/profile15.png" },
+        { "id": 15, "memberName": "문종찬", "memberRole": "FrontEnd", "thumbnail": "season1/profile13.png" },
+        { "id": 16, "memberName": "표준수", "memberRole": "FrontEnd", "thumbnail": "season1/profile15.png" },
         { "id": 17, "memberName": "한보미", "memberRole": ["Server","security","Design"], "thumbnail": "season1/profile16.png" }
       ]
     },
     {
       "teamName": "Game & AI",
       "members": [
-        { "id": 18, "memberName": "박근태", "memberRole": ["PM","FrontEnd","BackEnd"], "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/박근태.png" },
-        { "id": 19, "memberName": "홍승민", "memberRole": ["BackEnd","Design"], "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/profile24.png" },
-        { "id": 20, "memberName": "김문석", "memberRole": ["BackEnd","FrontEnd","Server","Security"], "githubUrl": "https://github.com/hong1",  "thumbnail": "season1/profile17.png" },
-        { "id": 21, "memberName": "김동위", "memberRole": ["Server","DB","Security"], "githubUrl": "https://github.com/kim2",  "thumbnail": "season1/김동위.png" },
-        { "id": 22, "memberName": "진현명", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/진현명.png" },
-        { "id": 23, "memberName": "김석현", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/김석현.png" },
-        { "id": 24, "memberName": "채종인", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/채종인.png" },
-        { "id": 25, "memberName": "주홍진", "memberRole": ["FrontEnd","BackEnd"], "githubUrl": "https://github.com/kang5",  "thumbnail": "season1/주홍진ng" }
+        { "id": 18, "memberName": "박근태", "memberRole": ["PM","FrontEnd","BackEnd"], "thumbnail": "season1/박근태.png" },
+        { "id": 19, "memberName": "홍승민", "memberRole": ["BackEnd","Design"], "thumbnail": "season1/profile24.png" },
+        { "id": 20, "memberName": "김문석", "memberRole": ["BackEnd","FrontEnd","Server","Security"], "thumbnail": "season1/profile17.png" },
+        { "id": 21, "memberName": "김동위", "memberRole": ["Server","DB","Security"], "thumbnail": "season1/김동위.png" },
+        { "id": 22, "memberName": "진현명", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/진현명.png" },
+        { "id": 23, "memberName": "김석현", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/김석현.png" },
+        { "id": 24, "memberName": "채종인", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/채종인.png" },
+        { "id": 25, "memberName": "주홍진", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/주홍진ng" }
       ]
     },
     {
@@ -93,12 +93,12 @@
       "teamName": "AI",
       "members": [
         { "id": 49, "memberName": "전형주", "memberRole": "AI", "githubUrl": "https://github.com/kavu-multi",  "thumbnail": "season2/전형주.png" },
-        { "id": 50, "memberName": "임찬빈", "memberRole": "AI", "githubUrl": "https://github.com/",  "thumbnail": "season2/profile35.png" },
+        { "id": 50, "memberName": "임찬빈", "memberRole": "AI", "thumbnail": "season2/profile35.png" },
         { "id": 51, "memberName": "이진욱", "memberRole": "AI", "githubUrl": "https://github.com/jinjerry0927",  "thumbnail": "season2/profile37.png" },
-        { "id": 52, "memberName": "방상혁", "memberRole": "AI", "githubUrl": "https://github.com/",  "thumbnail": "season2/profile36.png" },
-        { "id": 53, "memberName": "배현진", "memberRole": "AI", "githubUrl": "https://github.com/",  "thumbnail": "season2/profile37.png" },
+        { "id": 52, "memberName": "방상혁", "memberRole": "AI", "thumbnail": "season2/profile36.png" },
+        { "id": 53, "memberName": "배현진", "memberRole": "AI", "thumbnail": "season2/profile37.png" },
         { "id": 54, "memberName": "이채민", "memberRole": "AI", "githubUrl": "https://github.com/lee-chaemin",  "thumbnail": "season2/이채민.png" },
-        { "id": 55, "memberName": "황도현", "memberRole": "AI", "githubUrl": "https://github.com/",  "thumbnail": "season2/profile37.png" }
+        { "id": 55, "memberName": "황도현", "memberRole": "AI", "thumbnail": "season2/profile37.png" }
       ]
     },
     {
@@ -107,11 +107,11 @@
       "members": [
         { "id": 56, "memberName": "김주찬", "memberRole": ["PM","Front","Back"], "githubUrl": "https://github.com/jc0818",  "thumbnail": "season2/김주찬.png",
           "review" : "처음으로 PM 역할을 맡아 진행한 프로젝트입니다. PM으로서 부족한 점도 많았지만, \n많은 것을 배울 수 있었습니다. 이번 디벨로퍼 활동을 통해 웹 개발 지식이 많이 향상되었고, \n특히 Python의 Flask와 SQLite에 대해 깊이 공부할 수 있었습니다. \n부족한 PM을 믿고 따라와 준 팀원들에게 진심으로 감사드립니다. \n또한, 1년 동안 좋은 활동 경험을 제공해 주신 디벨로퍼 회장님께도 깊은 감사를 드립니다."},
-        { "id": 57, "memberName": "이한샘", "memberRole": "Front", "githubUrl": "https://github.com/",  "thumbnail": "season2/profile39.png",
+        { "id": 57, "memberName": "이한샘", "memberRole": "Front", "githubUrl": "https://github.com/hhs116",  "thumbnail": "season2/profile39.png",
           "review" :  "다양한 배경과 전문성을 가진 사람들과 협업하면서 프로젝트를 진행하거나, \n다른 팀의 프로젝트를 관찰하면서 많은 인사이트와 경험을 얻을 수 있었습니다. \n이를 통해 개발에 대해 정말 많은 것을 알아가는 소중한 학습의 기회였습니다."},
-        { "id": 58, "memberName": "이김", "memberRole": "Front", "githubUrl": "https://github.com/",  "thumbnail": "season2/이김.png",
+        { "id": 58, "memberName": "이김", "memberRole": "Front", "thumbnail": "season2/이김.png",
           "review" :  "처음이고 별 도움이 안되었던 것 같아서 스스로 부끄럽고, \n기회가 다시 온다면 최선을 다해보겠습니다. 유익한 경험 감사합니다."},
-        { "id": 59, "memberName": "이채준", "memberRole": "Front", "githubUrl": "https://github.com/",  "thumbnail": "season2/이채준.png",
+        { "id": 59, "memberName": "이채준", "memberRole": "Front", "thumbnail": "season2/이채준.png",
           "review" :  " PM님의 훌륭한 리더십 덕분에 프로젝트가 성공적으로 마무리되었습니다. \n많은 것을 배우고 성장할 수 있어서 기쁩니다. 디벨로퍼 화이팅!"}
       ]
     },
