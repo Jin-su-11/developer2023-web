@@ -15,7 +15,7 @@ const DetailContainer = ({ children }) => {
 
                 // 각 child의 타입에 따라 배경색을 변경
                 if (child.type && child.type.name === "ProjectIntroduce") {
-                    backgroundColor = "#191919";
+                    backgroundColor = "#000000";
                 }
 
                 // 개별 child를 배경색을 가진 div로 감싸고, .main-container 스타일 유지

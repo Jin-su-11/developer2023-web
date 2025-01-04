@@ -11,7 +11,7 @@ import bottom from "../images/icon/vector_bottom_black.png";
  * ProjectPage 컴포넌트
  * @author 김진수
  * @since 2024.9.26
- * @lastmodified 2024.11.09
+ * @lastmodified 2024.01.04
  */
 
 const ProjectPage = () => {
@@ -54,16 +54,33 @@ const ProjectPage = () => {
         setIsCategoryDropdownOpen((prev) => !prev);
     };
 
-    // 옵션 클릭 시 드롭다운을 닫는 함수
     const handleOptionClick = (type, value) => {
         if (type === "team") {
-            setSelectedTeam(value === "전체" ? "기수" : value);
-            setFilteredProjects(value === "전체" ? projects : projects.filter((project) => project.season === `season${value.replace("기", "")}`));
-            setIsTeamDropdownOpen(true); // 옵션 클릭 시 팀 드롭다운 닫기
+            const newTeam = value === "전체" ? "기수" : value;
+            setSelectedTeam(newTeam);
+
+            const filteredByTeam = value === "전체"
+                ? projects
+                : projects.filter((project) => project.season === `season${value.replace("기", "")}`);
+
+            const finalFiltered = selectedCategory === "분야"
+                ? filteredByTeam
+                : filteredByTeam.filter((project) => project.field === selectedCategory);
+
+            setFilteredProjects(finalFiltered);
         } else if (type === "category") {
-            setSelectedCategory(value === "전체" ? "분야" : value);
-            setFilteredProjects(value === "전체" ? projects : projects.filter((project) => project.field === value));
-            setIsCategoryDropdownOpen(true); // 옵션 클릭 시 카테고리 드롭다운 닫기
+            const newCategory = value === "전체" ? "분야" : value;
+            setSelectedCategory(newCategory);
+
+            const filteredByCategory = value === "전체"
+                ? projects
+                : projects.filter((project) => project.field === value);
+
+            const finalFiltered = selectedTeam === "기수"
+                ? filteredByCategory
+                : filteredByCategory.filter((project) => project.season === `season${selectedTeam.replace("기", "")}`);
+
+            setFilteredProjects(finalFiltered);
         }
     };
 
@@ -83,7 +100,6 @@ const ProjectPage = () => {
         }
     };
 
-    // 외부 클릭 시 드롭다운 닫기
     useEffect(() => {
         const handleClickOutside = (event) => {
             if (teamDropdownRef.current && !teamDropdownRef.current.contains(event.target)) {
@@ -112,7 +128,6 @@ const ProjectPage = () => {
             </div>
 
             <div className="filter-dropdowns">
-                {/* 커스텀 기수 드롭다운 */}
                 <div
                     className="dropdown-label font-size-16"
                     style={{
@@ -121,20 +136,26 @@ const ProjectPage = () => {
                     ref={teamDropdownRef}
                     onClick={toggleTeamDropdown}
                 >
-                    <div style={{marginLeft:"10px"}}>
+                    <div style={{marginLeft: "10px"}}>
                         {selectedTeam}
                     </div>
 
                     <img src={isTeamDropdownOpen ? top : bottom} alt="dropdown icon"/>
                     {isTeamDropdownOpen && (
-                        <ul className='dropdown-button'>
-                            {["전체", ...seasons].map((team, index) => (
-                                <li className= 'dropdown-toggle'
+                        <ul className="dropdown-button">
+                            {["전체", ...seasons].map((team, index, categories) => (
+                                <li
+                                    className={`dropdown-toggle ${
+                                        index === 0 ? "radius-top" : index === categories.length - 1 ? "radius-bottom" : ""
+                                    }`}
                                     key={index}
                                     onClick={() => handleOptionClick("team", team)}
                                     onMouseEnter={() => handleMouseEnter("team", team)}
                                     onMouseLeave={() => handleMouseLeave("team")}
-                                    style={{color: hoveredTeamOption === team ? "#B751F2" : "#FFFFFF",}}>
+                                    style={{
+                                        color: hoveredTeamOption === team ? "#B751F2" : "#FFFFFF",
+                                    }}
+                                >
                                     {team}
                                 </li>
                             ))}
@@ -142,7 +163,6 @@ const ProjectPage = () => {
                     )}
                 </div>
 
-                {/* 커스텀 분야 드롭다운 */}
                 <div
                     className="dropdown-label font-size-16"
                     style={{
@@ -151,19 +171,25 @@ const ProjectPage = () => {
                     ref={categoryDropdownRef}
                     onClick={toggleCategoryDropdown}
                 >
-                    <div style={{marginLeft:"10px"}}>
+                    <div style={{marginLeft: "10px"}}>
                         {selectedCategory}
                     </div>
                     <img src={isCategoryDropdownOpen ? top : bottom} alt="dropdown icon"/>
                     {isCategoryDropdownOpen && (
-                        <ul className='dropdown-button'>
-                            {["전체", "웹", "앱"].map((category, index) => (
-                                <li className='dropdown-toggle'
+                        <ul className="dropdown-button">
+                            {["전체", "웹", "앱"].map((category, index, categories) => (
+                                <li
+                                    className={`dropdown-toggle ${
+                                        index === 0 ? "radius-top" : index === categories.length - 1 ? "radius-bottom" : ""
+                                    }`}
                                     key={index}
                                     onClick={() => handleOptionClick("category", category)}
                                     onMouseEnter={() => handleMouseEnter("category", category)}
                                     onMouseLeave={() => handleMouseLeave("category")}
-                                    style={{color: hoveredCategoryOption === category ? "#B751F2" : "#FFFFFF",}}>
+                                    style={{
+                                        color: hoveredCategoryOption === category ? "#B751F2" : "#FFFFFF",
+                                    }}
+                                >
                                     {category}
                                 </li>
                             ))}
@@ -177,14 +203,37 @@ const ProjectPage = () => {
                 style={{
                     display: "grid",
                     gridTemplateColumns: "repeat(3, 1fr)",
-                    rowGap:"50px",
-                    columnGap:"30px",
+                    rowGap: "50px",
+                    columnGap: "30px",
                     justifyItems: "center",
+                    minHeight: "400px", // 프로젝트 리스트 높이를 설정
                 }}
             >
-                {filteredProjects.map((project, index) => (
-                    <ProjectCardBox key={index} project={project} type="ProjectPage" />
-                ))}
+                {filteredProjects.length > 0 ? (
+                    filteredProjects.map((project, index) => (
+                        <ProjectCardBox key={index} project={project} type="ProjectPage"/>
+                    ))
+                ) : (
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            width: "100%",
+                            height: "100%", // 프로젝트 리스트 영역을 꽉 채우도록
+                            gridColumn: "1 / -1", // 모든 열을 차지하도록 설정
+                        }}
+                    >
+                        <p
+                            className="font-size-36 weight-500 color-white"
+                            style={{
+                                textAlign: "center", // 텍스트 중앙 정렬
+                            }}
+                        >
+                            프로젝트가 아직 없어요
+                        </p>
+                    </div>
+                )}
             </div>
         </div>
     );
