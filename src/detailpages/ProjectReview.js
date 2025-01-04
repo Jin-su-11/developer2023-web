@@ -16,11 +16,11 @@ const ProjectReview = ({ projectId }) => {
         ?.members.filter(member => member.review);
 
     if (!reviews || reviews.length === 0) {
-        return <p>리뷰가 없습니다.</p>;
+        return <p className="color-light-gray">아직 후기가 없어요</p>;
     }
 
     return (
-        <div className="detail-container" style={{ paddingBottom: "85px" }}>
+        <div className="detail-container">
             <div className="text-align-center padding85-0">
                 <h2 className="font-size-36 weight-700" style={{ color: "#FFFFFF" }}>프로젝트 후기</h2>
             </div>
