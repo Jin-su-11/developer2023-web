@@ -1,7 +1,7 @@
 .card-container {
-    width: 572px;
+    width: 500px;
     height: auto;
-    padding: 30px 20px;
+    padding: 30px 20px 50px 20px;
     background: #ffffff;
     border-radius: 20px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -12,8 +12,8 @@
 }
 
 .icon-image {
-    width: 300px;
-    height: 300px;
+    width: 230px;
+    height: 230px;
     margin: 0 auto 20px;
 }
 
@@ -62,11 +62,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 24px;
+    font-weight: 600;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    height: 70px;
 }
 
 .kakao-button:hover {
@@ -75,7 +73,7 @@
 }
 
 .kakao-icon {
-    width: 50px;
+    width: 30px;
     margin-right: 10px;
 }
 
