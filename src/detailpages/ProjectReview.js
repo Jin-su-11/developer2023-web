@@ -1,9 +1,6 @@
 import React from 'react';
 import memberData from '../data/member.json';
-import reviewImg from "../images/practice/review_img.png";
 import "../css/style.css";
-
-
 /**
  * ProjectReview 컴포넌트
  * @author 김진수
@@ -30,11 +27,16 @@ const ProjectReview = ({ projectId }) => {
                 {reviews.map((reviewer, index) => (
                     <div key={index} className="review-card representative-color">
                         <div className="reviewer-avatar">
-                            <img src={reviewImg} alt="리뷰 사진" className="review-img" />
+                            <img
+                                src={`/images/thumbnails/${reviewer.thumbnail}`}
+                                alt={`${reviewer.memberName} 사진`}
+                                className="review-img"
+                            />
+
                         </div>
                         <div className="review-content">
                             <h3 className="reviewer-name">
-                                {reviewer.memberName}{" "}
+                            {reviewer.memberName}{" "}
                                 <span className="font-size-14 representative-color">
                                     {Array.isArray(reviewer.memberRole) ? reviewer.memberRole.join(', ') : reviewer.memberRole}
                                 </span>
