@@ -369,6 +369,10 @@ li {
     padding-bottom: 60px;
 }
 
+.padding-bottom-100 {
+    padding-bottom: 100px;
+}
+
 .padding-right-5 {
     padding-right: 5px;
 }
@@ -450,6 +454,10 @@ li {
 
 .height-137 {
     height: 137px;
+}
+
+.height100 {
+    height: 100%;
 }
 
 .height-fit {
@@ -990,17 +998,17 @@ li {
 
 .l-effect{
     animation-name: leffect;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-direction: alternate; /*반대방향으로*/ 
     animation-iteration-count: 1; /*무한반복*/
     animation-delay: 0s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 .r-effect{
     animation-name: reffect;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-direction: alternate;
     animation-iteration-count: 1; /*무한반복*/
     animation-delay: 0s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }

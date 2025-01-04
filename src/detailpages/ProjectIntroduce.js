@@ -28,7 +28,7 @@ function ProjectIntroduce() {
     }
 
     return (
-        <div className="padding85-0">
+        <div className="padding15-0">
             <img
                 src={imageMap[numericProjectId] || ""}
                 alt={project.title}

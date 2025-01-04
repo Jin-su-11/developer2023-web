@@ -4,6 +4,7 @@ import ProjectDetailPage from "../detailpages/ProjectDetailPage";
 import DetailContainer from "../detailpages/DetailContainer";
 import ProjectIntroduce from "../detailpages/ProjectIntroduce";
 import ProjectReview from "../detailpages/ProjectReview";
+import OtherProjects from "./OtherProjects";
 
 /**
  * DetailPage 컴포넌트
@@ -22,6 +23,7 @@ const DetailPage = () => {
                 <ProjectDetailPage />
                 <ProjectIntroduce />
                 <ProjectReview projectId={projectIdNum} />  {/* projectId를 전달합니다 */}
+                <OtherProjects />
             </DetailContainer>
         </div>
     );
