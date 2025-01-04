@@ -46,7 +46,7 @@ const JoinWidget = ({ onClose }) => {
                         <span className="contact-text">010-5109-0625</span>
                     </div>
                     <a
-                        href="https://open.kakao.com/o/s2BRO63g"
+                        href="https://open.kakao.com/o/sNRJgI8g"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="kakao-button"
