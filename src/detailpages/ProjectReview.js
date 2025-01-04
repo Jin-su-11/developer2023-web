@@ -1,6 +1,7 @@
 import React from 'react';
 import memberData from '../data/member.json';
 import "../css/style.css";
+import "../css/projectreview.css"
 /**
  * ProjectReview 컴포넌트
  * @author 김진수

@@ -132,15 +132,18 @@
     margin-bottom: 40px;
     box-sizing: border-box;
 }
+
 .reviewer-avatar {
-    flex-shrink: 0; /* 이미지가 축소되지 않도록 */
-    width: 60px; /* 이미지 너비 */
-    height: 60px; /* 이미지 높이 */
-    border-radius: 50%;
-    overflow: hidden; /* 이미지가 컨테이너를 벗어나지 않도록 */
-    margin-right: 20px;
-    background-color: #C4C4C4;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* 이미지를 컨테이너 영역 밖으로 잘라냅니다 */
+    border-radius: 50%; /* 아바타도 둥글게 만들기 */
+    background-color: white; /* 필요 시 기본 배경색 */
 }
+
 
 
 
