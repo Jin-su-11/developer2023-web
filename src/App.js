@@ -64,8 +64,10 @@ function App() {
             <ScrollToTop />
             <Header onJoinClick={handleJoinClick} />
             <AppRoutes />
-            <Footer />
             <ContactWidget />
+            <div className="padding-top-180">
+                <Footer />
+            </div>
 
 
             {isJoinPopupVisible && (
