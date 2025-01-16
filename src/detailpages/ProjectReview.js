@@ -1,9 +1,7 @@
 import React from 'react';
 import memberData from '../data/member.json';
-import reviewImg from "../images/practice/review_img.png";
 import "../css/style.css";
-
-
+import "../css/projectreview.css"
 /**
  * ProjectReview 컴포넌트
  * @author 김진수
@@ -18,11 +16,11 @@ const ProjectReview = ({ projectId }) => {
         ?.members.filter(member => member.review);
 
     if (!reviews || reviews.length === 0) {
-        return <p>리뷰가 없습니다.</p>;
+        return <p className="color-light-gray">아직 후기가 없어요</p>;
     }
 
     return (
-        <div className="detail-container" style={{ paddingBottom: "85px" }}>
+        <div className="detail-container">
             <div className="text-align-center padding85-0">
                 <h2 className="font-size-36 weight-700" style={{ color: "#FFFFFF" }}>프로젝트 후기</h2>
             </div>
@@ -30,11 +28,16 @@ const ProjectReview = ({ projectId }) => {
                 {reviews.map((reviewer, index) => (
                     <div key={index} className="review-card representative-color">
                         <div className="reviewer-avatar">
-                            <img src={reviewImg} alt="리뷰 사진" className="review-img" />
+                            <img
+                                src={`/images/thumbnails/${reviewer.thumbnail}`}
+                                alt={`${reviewer.memberName} 사진`}
+                                className="review-img"
+                            />
+
                         </div>
                         <div className="review-content">
                             <h3 className="reviewer-name">
-                                {reviewer.memberName}{" "}
+                            {reviewer.memberName}{" "}
                                 <span className="font-size-14 representative-color">
                                     {Array.isArray(reviewer.memberRole) ? reviewer.memberRole.join(', ') : reviewer.memberRole}
                                 </span>

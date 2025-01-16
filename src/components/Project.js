@@ -183,7 +183,7 @@ import { Button } from "react-scroll";
                         {cards.map((project, index) => {
                             return (
                                 <div className="flex flex-col justify-center items-center h-[600px]" style={{display:"flex",flexDirection:"column",justifyContent:"center"}}>
-                                    <ProjectCardBox project={project} moveEvent={MoveEvent} moveEventReverse={MoveEventReverse} index={index} />
+                                    <ProjectCardBox project={project} moveEvent={MoveEvent} moveEventReverse={MoveEventReverse} index={index} type="MainPage" />
                                 </div>
                             );
                         })}

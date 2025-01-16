@@ -225,7 +225,7 @@ const ProjectPage = () => {
                         }}
                     >
                         <p
-                            className="font-size-36 weight-500 color-white"
+                            className="color-light-gray-second"
                             style={{
                                 textAlign: "center", // 텍스트 중앙 정렬
                             }}

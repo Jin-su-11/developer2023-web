@@ -5,7 +5,7 @@
       "teamName": "POQ",
       "members": [
         { "id": 1, "memberName": "전상은", "memberRole": ["BackEnd", "PM"], "githubUrl": "https://github.com/wowddok99",  "thumbnail": "season1/전상은.png" },
-        { "id": 2, "memberName": "김민성", "memberRole": "DB", "thumbnail": "season1/profile1.png" },
+        { "id": 2, "memberName": "김민성", "memberRole": "DB", "thumbnail": "season1/김민성.png" },
         { "id": 3, "memberName": "서종우", "memberRole": ["DB","Server"],  "thumbnail": "season1/서종우.png" },
         { "id": 4, "memberName": "양윤기", "memberRole": ["React","NodeJs"],  "thumbnail": "season1/양윤기.png" },
         { "id": 5, "memberName": "조준형", "memberRole": ["FrontEnd","BackEnd","Server"],  "thumbnail": "season1/조준형.png" }
@@ -24,26 +24,26 @@
     {
       "teamName": "ShoppingMall",
       "members": [
-        { "id": 11, "memberName": "박찬엽", "memberRole": "PM", "thumbnail": "season1/profile14.png" },
-        { "id": 12, "memberName": "김진수", "memberRole": "DB", "githubUrl": "https://github.com/Jin-su-11",  "thumbnail": "season1/profile10.png" },
+        { "id": 11, "memberName": "박찬엽", "memberRole": "PM", "thumbnail": "season1/박찬엽.png" },
+        { "id": 12, "memberName": "김진수", "memberRole": "DB", "githubUrl": "https://github.com/Jin-su-1",  "thumbnail": "season1/김진수.png" },
         { "id": 13, "memberName": "박창윤", "memberRole": "BackEnd", "thumbnail": "season1/박창윤.png" },
-        { "id": 14, "memberName": "이예은", "memberRole": "BackEnd", "thumbnail": "season1/profile12.png" },
-        { "id": 15, "memberName": "문종찬", "memberRole": "FrontEnd", "thumbnail": "season1/profile13.png" },
-        { "id": 16, "memberName": "표준수", "memberRole": "FrontEnd", "thumbnail": "season1/profile15.png" },
-        { "id": 17, "memberName": "한보미", "memberRole": ["Server","security","Design"], "thumbnail": "season1/profile16.png" }
+        { "id": 14, "memberName": "이예은", "memberRole": "BackEnd", "thumbnail": "season1/이예은.png" },
+        { "id": 15, "memberName": "문종찬", "memberRole": "FrontEnd", "thumbnail": "season1/문종찬.png" },
+        { "id": 16, "memberName": "표준수", "memberRole": "FrontEnd", "thumbnail": "season1/표준수.png" },
+        { "id": 17, "memberName": "한보미", "memberRole": ["Server","security","Design"], "thumbnail": "season1/한보미.png" }
       ]
     },
     {
       "teamName": "Game & AI",
       "members": [
         { "id": 18, "memberName": "박근태", "memberRole": ["PM","FrontEnd","BackEnd"], "thumbnail": "season1/박근태.png" },
-        { "id": 19, "memberName": "홍승민", "memberRole": ["BackEnd","Design"], "thumbnail": "season1/profile24.png" },
-        { "id": 20, "memberName": "김문석", "memberRole": ["BackEnd","FrontEnd","Server","Security"], "thumbnail": "season1/profile17.png" },
+        { "id": 19, "memberName": "홍승민", "memberRole": ["BackEnd","Design"], "thumbnail": "season1/홍승민.png" },
+        { "id": 20, "memberName": "김문석", "memberRole": ["BackEnd","FrontEnd","Server","Security"], "thumbnail": "season1/김문석.png" },
         { "id": 21, "memberName": "김동위", "memberRole": ["Server","DB","Security"], "thumbnail": "season1/김동위.png" },
         { "id": 22, "memberName": "진현명", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/진현명.png" },
         { "id": 23, "memberName": "김석현", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/김석현.png" },
         { "id": 24, "memberName": "채종인", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/채종인.png" },
-        { "id": 25, "memberName": "주홍진", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/주홍진ng" }
+        { "id": 25, "memberName": "주홍진", "memberRole": ["FrontEnd","BackEnd"], "thumbnail": "season1/주홍진.png" }
       ]
     },
     {
@@ -60,12 +60,12 @@
       "members": [
         { "id": 28, "memberName": "김이현", "memberRole": ["PM","Full Stack", "Server"], "githubUrl": "https://github.com/lh7721004",  "thumbnail": "season2/김이현.png",
           "review" :  "정말 많은 것을 얻어가고 배울 수 있는 프로젝트였습니다. PM으로써 첫 프로젝트였기 때문에 부족한 점을 많이 느꼈지만 팀원분들이 잘 따라와주신 덕분에 성공적으로 프로젝트를 마무리 할 수 있었습니다\n     기획 단계에서  Git/Git Action, Cloud 패널, 퍼블리싱, API 동작, 소켓통신, DB에 대해서 조금 더 깊게 배울 수 있었습니다.\n     특히, 원래는 사용한 경험이 없던 Git Action, Cloud 패널, 소켓통신에 대해서 조금 더 배워볼 수 있었습니다.\u2028     좋은 아이디어를 통해 시작했기 때문에 구현해야하는 기능 대비 주어진 시간이 부족했지만 정해진 기간동안 열심히 해주신 팀원분들 덕분에\u2028     성공적으로 프로젝트를 마무리 할 수 있었던 것 같습니다."},
-        { "id": 27, "memberName": "김진수", "memberRole": "DB", "githubUrl": "https://github.com/Jin-su-11", "thumbnail": "season1/profile26.png",
+        { "id": 27, "memberName": "김진수", "memberRole": "DB", "githubUrl": "https://github.com/Jin-su-11", "thumbnail": "season1/김진수.png",
           "review" :  "기획부터 구현까지 팀원들과 함께 프로젝트를 진행하며 프론트,백, 보안, 서버 등 여러분야를 한 명이 다 해내기에는 어려운 부분이 있었지만 제게 부족한 부분은 팀에게 도움을 받고 팀에 부족한 부분을 제가 채워주며 함께 협업을 통해 프로젝트를 성공적으로 완수하게 해준 팀원들에게 고맙고, 지속적인 소통을 통해 저의 분야가 아닌 다른 분야에 대해서도 공부해 보면서 다른 분야에 대한 견해를 넓힐 수 있는 기회를 만들 수 있었고, 이 프로젝트를 통한 저의 성장도 느낄 수 있어 뿌듯한 프로젝트였던 것 같습니다."},
 
         { "id": 29, "memberName": "김은채", "memberRole": ["Front", "Design"], "githubUrl": "https://github.com/KimEunChae0725",  "thumbnail": "season2/김은채.png",
           "review" :  "저는 이 프로젝트에서 제가 제시한 아이디어를 기반으로 와이어프레임을 제작하고 이를 바탕으로 주요 기능을 구현하였습니다.\n     로그인 페이지는 사용자가 가장 먼저 마주하는 화면으로, 카카오 로그인 버튼을 포함하여 구성하였으며습니다.\n     사용자 초기 정보 설정 페이지에서는 프로필 사진 설정과 텍스트박스를 통해 기본 정보를 입력할 수 있도록 설계하였습니다.\n     Calendar 페이지는 react-calendar 컴포넌트를 활용하여 일정을 추가하거나 확인할 수 있도록 구현하였고,\n     일정이 있는 날짜를 클릭하면 주간 캘린더 페이지로 이동할 수 있도록 설정하였습니다. \n     react-week-calendar 패키지를 사용해 주간 캘린더 페이지를 구성하고, 모달을 통해 일정 추가 기능을 제공하였습니다.\n     DaisyUI, react-calendar, npm datepicker 등의 패키지를 활용하여 깔끔하고 일관된 디자인을 구현하려 노력하였으며,\n       초기에는 웹 디자인 경험이 부족해 어려움을 겪었지만, 함수와 컴포넌트 사용법을 익히면서 많은 부분을 학습할 수 있었습니다.\n     다만, 충분한 시간을 확보하지 못해 완성도가 다소 아쉬운 점이 있었으며,\n     시간이 더 주어졌더라면 더욱 고민하고 완성도 높은 결과물을 만들 수 있었을 것이라는 아쉬움이 남습니다."},
-        { "id": 30, "memberName": "임채은", "memberRole": "Backend", "githubUrl": "https://github.com/lce0517",  "thumbnail": "season2/이태영.png" },
+        { "id": 30, "memberName": "임채은", "memberRole": "Backend", "githubUrl": "https://github.com/lce0517",  "thumbnail": "season2/임채은.png" },
         { "id": 31, "memberName": "김현나", "memberRole": ["FrontEnd","Design"], "githubUrl": "https://github.com/nanaring1",  "thumbnail": "season2/김현나.png",
         "review" :  "처음 협업을 해 보면서 어떤 방식으로 협업을 하는지 배웠고 소통을 하는 방법을 알 수 있었습니다. 이번 프로젝트를 수행하면서 api가 어떤 방식으로 작동하는지 알 수 있고 디자인과 프론트 제작을 더 깊이 있게 배우고 응용 해 볼 수 있었습니다. 프론트 역할을 맡으면서 웹 개발에는 불가능한게 없다는걸 알게 되었습니다. 그리고 프론트 뿐만 아니라 백엔드 작동에도 흥미가 갔습니다. 생각보다 시간이 빨리 지났지만 이 소중한 시간을 통해서 앞으로 계속 해서 겪을 협업의 중요성을 알게 되었습니다. 그리고 협업을 위해 지켜야 할 것들도 확실하게 깨닫게 되었습니다."}
       ]
@@ -80,9 +80,9 @@
         "review":  "스택네컷 프로젝트를 진행하면서 다양한 기능개발도 하고 환경구축도 하면서 너무 재밌었습니다.\u2028팀원분들도 프로젝트에 적극적으로 참여해주시고, 무엇보다 민지PM님께서 프로젝트를 진행하는 방식에 대해서 많이 배울 수 있었고, 체계적으로 프로젝트를 잘 이끌고 나가주신 덕분에 올해 제가 한 프로젝트중 가장 재미있는 프로젝트가 될 수 있었던 것 같습니다!\u2028이 프로젝트를 진행하면서 Springboot의 Service, Repository, Controller에 대해서 잘 배울 수 있었고, 브랜치 전략를 사용해서 프로젝트를 해본적이 있지만, 다양한 방면에서 아직 미숙한 부분이 있다고 느꼈고, 앞으로 제가 보완해나가야 할 방향을 잡을 수 있게 된 프로젝트였습니다.\u2028다들 정말 수고하셨습니다!"},
         { "id": 44, "memberName": "김현나", "memberRole": ["Front"], "githubUrl": "https://github.com/nanaring1",  "thumbnail": "season2/김현나.png",
         "review":  "이번에 스택네컷 프로젝트에 참여해보면서 그동안 혼자 끙끙대기만 했던 프로그래밍을 다른 팀원들과 같이 해보면서 깃 사용에 대한 이해도를 늘릴 수 있었고 협업이 어떤 방식으로 이루어지는지 배울 수 있었습니다. <br/>\n이번 프로젝트는 짧은 시간이라면 짧다고 말 할 수 있지만 그 시간 동안 아주 많은 걸 배울수 있었고 배우는 걸 넘어 잊을 수 없는 추억이 되었습니다. <br/>\n덕분에 프로그래밍하는것이 재미있다는걸 느낄 수 있었고 정말 즐거운 시간이었습니다. <br/>\n다들 부족했던 절 기다려주고 도와주셔서 감사합니다. 모두 수고하셨습니다!"},
-        { "id": 45, "memberName": "구세영", "memberRole": ["Front"], "githubUrl": "https://github.com/wybh930",  "thumbnail": "season2/권민지.png",
+        { "id": 45, "memberName": "구세영", "memberRole": ["Front"], "githubUrl": "https://github.com/wybh930",  "thumbnail": "season2/구세영.png",
         "review":  "이번에 스택네컷 활동을 하면서 정말 다양한 경험을 가졌습니다!\u2028아직 1학년이고 컴퓨터 공부를 시작한지 얼마 안 돼서 많이 어려웠지만, 그 과정에서 새로운 것도 많이 알게되었고, 많은 것들을 얻었습니다.\u2028프론트엔드, 백엔드라는 용어 조차 몰랐던 저는 이번 활동을 통해 많이 알게되었습니다.\u2028혼자 하면서 어려웠던 것들은 선배님들이 많이 알려주셨고, 많은 것들을 배웠습니다.\u2028매주 회의에서 제가 몰랐던 용어들, 사이트, 구현 과정 등 알게됐습니다. 다들 너무 감사드리고, 수고많았습니다 !!"},
-        { "id": 46, "memberName": "이수헌", "memberRole": ["Back"], "githubUrl": "https://github.com/suheon927",  "thumbnail": "season2/권민지.png",
+        { "id": 46, "memberName": "이수헌", "memberRole": ["Back"], "githubUrl": "https://github.com/suheon927",  "thumbnail": "season2/이수헌.png",
         "review":  "이번에 백엔드 개발을 경험할 수 있는 기회가 주어져 정말 좋았습니다.\u2028웹 프로그래밍의 전반적인 흐름을 이해하게 되어 개인적으로 매우 유익한 시간이었던 것 같습니다.\u2028다양한 툴과 기술 스택을 접하면서 배움의 즐거움을 느꼈고, 실제로 적용해 볼 수 있었던 점도 큰 도움이 되었습니다.\u2028능력이 부족해서 모든 부분을 개발할 수 없었던 아쉬움도 있지만, 이번 경험을 바탕으로 앞으로 더 다양한 것들을 시도하고 싶다는 의지가 생겼습니다.\u2028앞으로는 부족했던 점을 보완하고, 보다 체계적으로 기록하며 성장해 나갈 수 있기를 기대합니다.\u2028팀원들과 협업을 통해 많은 것을 배웠고, 서로의 노력이 모여 프로젝트를 완성해낸 것이 정말 뿌듯했습니다."},
         { "id": 47, "memberName": "임석진", "memberRole": ["Front", "Back"], "githubUrl": "https://github.com/seokjin925",  "thumbnail": "season2/임석진.png",
         "review":  "벡엔드 개발을 처음 경험해볼 수 있었던 소중한 기회였고, 능력 있는 팀장과 팀원들과의 소통의 중요성을 깨달은 좋은 시간이었습니다.\u2028겉으로는 간단해 보였던 프로젝트였지만, 실제로 부족했던 저의 역량을 알게 해주었고 조금씩 공부하며 성장할 수 있었습니다.\u2028팀원들 또한 다른 프로젝트와 학업, 시험, 대회 등 바쁜 와중에도 다들 각자의 자리에서 최선을 다하여 성공적으로 마무리 될 수 있었던 것 같습니다.\u2028아쉬웠던 점이 있다면 짧은 시간내에 기능 개발위주로 구현을 하게되어 페이지별 혹은 컨트롤러, 서비스 등의 정합성 검증, junit등 테스트코드 작성같은 화이트박스 테스트를 진행해보고 싶었지만 주어진 시간자원이 부족했던 점 인것 같습니다.\u2028다음 프로젝트에선 공정을 최소화하여 기능구현 뿐 아니라 검증도 철저히 해보고 싶습니다.\uD83D\uDC9B"}
@@ -93,12 +93,12 @@
       "teamName": "AI",
       "members": [
         { "id": 49, "memberName": "전형주", "memberRole": "AI", "githubUrl": "https://github.com/kavu-multi",  "thumbnail": "season2/전형주.png" },
-        { "id": 50, "memberName": "임찬빈", "memberRole": "AI", "thumbnail": "season2/profile35.png" },
-        { "id": 51, "memberName": "이진욱", "memberRole": "AI", "githubUrl": "https://github.com/jinjerry0927",  "thumbnail": "season2/profile37.png" },
-        { "id": 52, "memberName": "방상혁", "memberRole": "AI", "thumbnail": "season2/profile36.png" },
-        { "id": 53, "memberName": "배현진", "memberRole": "AI", "thumbnail": "season2/profile37.png" },
+        { "id": 50, "memberName": "임찬빈", "memberRole": "AI", "thumbnail": "season2/임찬빈.png" },
+        { "id": 51, "memberName": "이진욱", "memberRole": "AI", "githubUrl": "https://github.com/jinjerry0927",  "thumbnail": "season2/이진욱.png" },
+        { "id": 52, "memberName": "방상혁", "memberRole": "AI", "thumbnail": "season2/방상혁.png" },
+        { "id": 53, "memberName": "배현진", "memberRole": "AI", "thumbnail": "season2/배현진.png" },
         { "id": 54, "memberName": "이채민", "memberRole": "AI", "githubUrl": "https://github.com/lee-chaemin",  "thumbnail": "season2/이채민.png" },
-        { "id": 55, "memberName": "황도현", "memberRole": "AI", "thumbnail": "season2/profile37.png" }
+        { "id": 55, "memberName": "황도현", "memberRole": "AI", "thumbnail": "season2/황도현.png" }
       ]
     },
     {
@@ -107,7 +107,7 @@
       "members": [
         { "id": 56, "memberName": "김주찬", "memberRole": ["PM","Front","Back"], "githubUrl": "https://github.com/jc0818",  "thumbnail": "season2/김주찬.png",
           "review" : "처음으로 PM 역할을 맡아 진행한 프로젝트입니다. PM으로서 부족한 점도 많았지만, \n많은 것을 배울 수 있었습니다. 이번 디벨로퍼 활동을 통해 웹 개발 지식이 많이 향상되었고, \n특히 Python의 Flask와 SQLite에 대해 깊이 공부할 수 있었습니다. \n부족한 PM을 믿고 따라와 준 팀원들에게 진심으로 감사드립니다. \n또한, 1년 동안 좋은 활동 경험을 제공해 주신 디벨로퍼 회장님께도 깊은 감사를 드립니다."},
-        { "id": 57, "memberName": "이한샘", "memberRole": "Front", "githubUrl": "https://github.com/hhs116",  "thumbnail": "season2/profile39.png",
+        { "id": 57, "memberName": "이한샘", "memberRole": "Front", "githubUrl": "https://github.com/hhs116",  "thumbnail": "season2/이한샘.png",
           "review" :  "다양한 배경과 전문성을 가진 사람들과 협업하면서 프로젝트를 진행하거나, \n다른 팀의 프로젝트를 관찰하면서 많은 인사이트와 경험을 얻을 수 있었습니다. \n이를 통해 개발에 대해 정말 많은 것을 알아가는 소중한 학습의 기회였습니다."},
         { "id": 58, "memberName": "이김", "memberRole": "Front", "thumbnail": "season2/이김.png",
           "review" :  "처음이고 별 도움이 안되었던 것 같아서 스스로 부끄럽고, \n기회가 다시 온다면 최선을 다해보겠습니다. 유익한 경험 감사합니다."},

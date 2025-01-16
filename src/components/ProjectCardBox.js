@@ -8,7 +8,7 @@ import '../css/practice.css'
  * @lastmodified 2024.11.09
  */
 
-const ProjectCardBox = ({ project, type,moveEvent,moveEventReverse,index }) => {
+const ProjectCardBox = ({ project, type, moveEvent,moveEventReverse,index }) => {
     const navigate = useNavigate();
     const [isHovered, setIsHovered] = useState(false); // 마우스 오버 상태 추가
 
@@ -17,8 +17,8 @@ const ProjectCardBox = ({ project, type,moveEvent,moveEventReverse,index }) => {
     };
 
     const cardStyle = {
-        width: type === "ProjectPage" ? "320px" : "300px",
-        height: type === "ProjectPage" ? "430px" : "400px",
+        width: type === "ProjectPage" ? "320px" : "MainPage" ? "300px" : "210px",
+        height: type === "ProjectPage" ? "430px" : "MainPage" ? "400px" : "250px",
         borderRadius: "8px",
         background: "white",
         transition: "transform 0.3s ease",
@@ -36,23 +36,31 @@ const ProjectCardBox = ({ project, type,moveEvent,moveEventReverse,index }) => {
     // 시즌 표시 스타일 설정
     const seasonBoxStyle = {
         width: type === "ProjectPage" ? "60px" : "50px",
-        height: type === "ProjectPage" ? "16px" : "14px",
+        // height: type === "ProjectPage" ? "16px" : "14px",
         borderRadius: type === "ProjectPage" ? "7px" : "5px",
-        paddingTop: type === "ProjectPage" ? "5px" : "3px",
+        // paddingTop: type === "ProjectPage" ? "5px" : "3px",
         fontSize: type === "ProjectPage" ? "14px" : "13px",
         marginBottom: type === "ProjectPage" ? "5px" : "3px",
     };
 
+    // const titleStyle = {
+    //     fontSize: type === "DetailPage" ? "16px" : "18px",
+    // }
+    //
+    // const teamStyle = {
+    //     fontSize: type === "DetailPage" ? "14px" : "16px",
+    // }
+
     const descriptionStyle = {
         overflow: 'hidden',  		// 을 사용해 영역을 감출 것
-        textOverflow: 'ellipsis',  	// 로 ... 을 만들기 
+        textOverflow: 'ellipsis',  	// 로 ... 을 만들기
         wordBreak:'break-all',
         width: '100%',
-        height: '75px',
+        height: type === "DetailPage" ? "67px" : "75px",
         display: '-webkit-box',
         WebkitLineClamp:'4',
-        WebkitBoxOrient:'vertical'
-
+        WebkitBoxOrient:'vertical',
+        fontSize: type === "DetailPage" ? "14px" : "16px",
     }
 
     return (

@@ -253,6 +253,14 @@ li {
     padding: 10px 16px;
 }
 
+.padding15-20 {
+    padding: 15px 20px;
+}
+
+.padding15-0 {
+    padding: 15px 0;
+}
+
 .padding60-0 {
     padding: 60px 0;
 }
@@ -317,6 +325,18 @@ li {
     padding-top: 90px;
 }
 
+.padding-top-100 {
+    padding-top: 100px;
+}
+
+.padding-top-150 {
+    padding-top: 150px;
+}
+
+.padding-top-180 {
+    padding-top: 180px;
+}
+
 .padding-bottom-2 {
     padding-bottom: 2px;
 }
@@ -347,6 +367,10 @@ li {
 
 .padding-bottom-60 {
     padding-bottom: 60px;
+}
+
+.padding-bottom-100 {
+    padding-bottom: 100px;
 }
 
 .padding-right-5 {
@@ -392,6 +416,10 @@ li {
     width: 90px;
 }
 
+.width-100 {
+    width: 100px;
+}
+
 .width-138 {
     width: 138px;
 }
@@ -400,12 +428,20 @@ li {
     width: 140px;
 }
 
+.width-200 {
+    width: 200px;
+}
+
 .width100 {
     width: 100%;
 }
 
 .height-15 {
     height: 15px;
+}
+
+.height-80 {
+    height: 80px;
 }
 
 .height-100 {
@@ -418,6 +454,14 @@ li {
 
 .height-137 {
     height: 137px;
+}
+
+.height100 {
+    height: 100%;
+}
+
+.height-fit {
+    height: fit-content;
 }
 
 /* gap */
@@ -518,6 +562,10 @@ li {
     position: relative;
 }
 
+.bottom-0 {
+    bottom: 0;
+}
+
 .z-index-100 {
     z-index: 100;
 }
@@ -534,7 +582,6 @@ li {
 .color-white {
     color: #f4f4f4;
 }
-
 
 .color-blue {
     color: #3375fa;
@@ -572,8 +619,16 @@ li {
     background-color: #f1f1f1;
 }
 
+.bg-lightgray {
+    background-color: #f4f4f4;
+}
+
 .box-shadow {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow-solid {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* text */
@@ -943,17 +998,17 @@ li {
 
 .l-effect{
     animation-name: leffect;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-direction: alternate; /*반대방향으로*/ 
     animation-iteration-count: 1; /*무한반복*/
     animation-delay: 0s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }
 .r-effect{
     animation-name: reffect;
-    animation-duration: 0.5s;
+    animation-duration: 0.7s;
     animation-direction: alternate;
     animation-iteration-count: 1; /*무한반복*/
     animation-delay: 0s;
-    animation-timing-function: linear;
+    animation-timing-function: ease;
 }

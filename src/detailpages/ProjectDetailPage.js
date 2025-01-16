@@ -82,8 +82,8 @@ const ProjectDetailPage = () => {
                         </div>
 
                         <div className="display-flex-end gap-05r">
-                            <p className="font-size-24 weight-600" style={{ color: "#FFFFFF" }}>{project.team} </p>
-                            <p className="font-size-20 weight-500" style={{ color: "#FFFFFF" }}>
+                            <p className="font-size-20 weight-600 color-white">{project.team} </p>
+                            <p className="font-size-18 weight-400 color-white">
                                 {projectMembers.map((member, index) => (
                                     <span key={member.id}>
                                         {member.memberName}
@@ -93,8 +93,8 @@ const ProjectDetailPage = () => {
                             </p>
                         </div>
                         <div className="display-flex gap-05r" style={{alignItems : "baseline"}}>
-                            <p className="font-size-24 weight-600" style={{color: "#FFFFFF"}}>Stack </p>
-                            <p className="font-size-20 weight-500" style={{color: "#FFFFFF"}}>{project.stack}</p>
+                            <p className="font-size-20 weight-600 color-white">Stack </p>
+                            <p className="font-size-18 weight-400 color-white">{project.stack}</p>
                         </div>
                     </div>
 

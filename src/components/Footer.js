@@ -3,7 +3,7 @@ import '../css/style.css';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="position-absolute bottom-0 width100">
             <div className="display-flex-column gap-1r justify-center padding-70"
                  style={{background: "rgb(34 47 63)"}}>
                 <li>

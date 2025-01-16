@@ -34,34 +34,43 @@ const JoinWidget = ({ onClose }) => {
         <div ref={cardRef} className="card-container">
             {isJoinPeriod ? (
                 <>
-                    <img src={chatIconImage} alt="Chat Icon" className="icon-image"/>
-                    <h2 className="header">부원 모집 중 이에요!</h2>
-                    <p className="description">
-                        저희는 언제나 여러분을 기다리고 있습니다.<br/>
-                        함께 즐거운 개발 여정에 참여하고 싶으시다면,<br/>
-                        주저하지 말고 아래 연락처나 카카오 오픈 채팅으로 연락 주세요!
-                    </p>
+                    <div className="display-flex-column align-items-center gap-2r">
+                        <img src={chatIconImage} alt="Chat Icon" className="width-80 height-80"/>
 
-                    <div className="contact-box">
-                        <span className="contact-text">010-5109-0625</span>
+                        <div className="display-flex-column align-items-center gap-1r">
+                            <h2 className="weight-700 font-size-28">부원 모집 중 이에요!</h2>
+                            <p className="color-deep-gray font-size-18 line-height-1d5">
+                                저희는 언제나 여러분을 기다리고 있습니다.<br/>
+                                함께 즐거운 개발 여정에 참여하고 싶으시다면,<br/>
+                                주저하지 말고 아래 연락처나 카카오 오픈 채팅으로 연락 주세요!
+                            </p>
+                        </div>
+
+                        <div className="display-flex-column align-items-center gap-1d5r">
+                            <div className="width100 bg-lightgray padding15-0 radius-12 display-flex justify-center box-shadow">
+                                <p className="weight-600 color-deep-gray">010-5109-0625</p>
+                            </div>
+                            <a
+                                href="https://open.kakao.com/o/spWt0I8g"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="kakao-button"
+                            >
+                                <img src={kakaoLogo} alt="KakaoTalk" className="kakao-icon"/>
+                                카카오톡으로 문의하기
+                            </a>
+                        </div>
                     </div>
-                    <a
-                        href="https://open.kakao.com/o/sNRJgI8g"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="kakao-button"
-                    >
-                        <img src={kakaoLogo} alt="KakaoTalk" className="kakao-icon"/>
-                        카카오톡으로 문의하기
-                    </a>
                 </>
             ) : (
                 <>
                     <img src={paperPlaneImage} alt="Paper Plane" className="icon-image"/>
-                    <h2 className="header">지금은 모집 기간이 아니에요!</h2>
-                    <p className="description">
-                        모집 기간이 궁금하시다면 문의를 해 주세요.
-                    </p>
+                    <div className="display-flex-column align-items-center gap-1r">
+                        <h2 className="weight-700 font-size-28">지금은 모집 기간이 아니에요!</h2>
+                        <p className="color-deep-gray font-size-18 line-height-1d5">
+                            모집 기간이 궁금하시다면 문의를 해 주세요.
+                        </p>
+                    </div>
                 </>
             )}
             <button className="close-button" onClick={onClose}>X</button>
